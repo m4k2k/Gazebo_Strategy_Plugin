@@ -6,15 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/home/ubu/Gazebo_Strategy_Plugin/wkspace/guitest/GUIExampleSpawnWidget.cc
+/home/ubu/wkspace/guitest/GUIExampleSpawnWidget.cc
 sstream
 -
 gazebo/msgs/msgs.hh
 -
 GUIExampleSpawnWidget.hh
-/home/ubu/Gazebo_Strategy_Plugin/wkspace/guitest/GUIExampleSpawnWidget.hh
+/home/ubu/wkspace/guitest/GUIExampleSpawnWidget.hh
 
-/home/ubu/Gazebo_Strategy_Plugin/wkspace/guitest/GUIExampleSpawnWidget.hh
+/home/ubu/wkspace/guitest/GUIExampleSpawnWidget.hh
 gazebo/common/Plugin.hh
 -
 gazebo/gui/GuiPlugin.hh
@@ -23,10 +23,6 @@ gazebo/transport/transport.hh
 -
 gazebo/gui/gui.hh
 -
-
-/home/ubu/Gazebo_Strategy_Plugin/wkspace/guitest/build/moc_GUIExampleSpawnWidget.cxx
-../GUIExampleSpawnWidget.hh
-/home/ubu/Gazebo_Strategy_Plugin/wkspace/guitest/GUIExampleSpawnWidget.hh
 
 /usr/include/gazebo-5.3/gazebo/common/Assert.hh
 boost/assert.hpp

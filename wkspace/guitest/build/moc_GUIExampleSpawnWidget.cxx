@@ -22,7 +22,7 @@ static const uint qt_meta_data_gazebo__GUIExampleSpawnWidget[] = {
        6,       // revision
        0,       // classname
        0,    0, // classinfo
-       1,   14, // methods
+       3,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -31,13 +31,16 @@ static const uint qt_meta_data_gazebo__GUIExampleSpawnWidget[] = {
 
  // slots: signature, parameters, type, tag, flags
       31,   30,   30,   30, 0x09,
+      55,   30,   30,   30, 0x09,
+      81,   30,   30,   30, 0x09,
 
        0        // eod
 };
 
 static const char qt_meta_stringdata_gazebo__GUIExampleSpawnWidget[] = {
     "gazebo::GUIExampleSpawnWidget\0\0"
-    "OnButton()\0"
+    "OnButton_btnMoveRobot()\0"
+    "OnButton_btnSpawnSphere()\0OnButton_btnTest()\0"
 };
 
 void gazebo::GUIExampleSpawnWidget::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
@@ -46,7 +49,9 @@ void gazebo::GUIExampleSpawnWidget::qt_static_metacall(QObject *_o, QMetaObject:
         Q_ASSERT(staticMetaObject.cast(_o));
         GUIExampleSpawnWidget *_t = static_cast<GUIExampleSpawnWidget *>(_o);
         switch (_id) {
-        case 0: _t->OnButton(); break;
+        case 0: _t->OnButton_btnMoveRobot(); break;
+        case 1: _t->OnButton_btnSpawnSphere(); break;
+        case 2: _t->OnButton_btnTest(); break;
         default: ;
         }
     }
@@ -85,9 +90,9 @@ int gazebo::GUIExampleSpawnWidget::qt_metacall(QMetaObject::Call _c, int _id, vo
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 1)
+        if (_id < 3)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 1;
+        _id -= 3;
     }
     return _id;
 }

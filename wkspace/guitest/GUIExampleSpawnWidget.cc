@@ -25,51 +25,63 @@ GZ_REGISTER_GUI_PLUGIN(GUIExampleSpawnWidget)
 
 /////////////////////////////////////////////////
 GUIExampleSpawnWidget::GUIExampleSpawnWidget()
-  : GUIPlugin()
+    : GUIPlugin()
 {
-  this->counter = 0;
+    this->counter = 0;
 
-  // Set the frame background and foreground colors
-  this->setStyleSheet(
-      "QFrame { background-color : rgba(100, 100, 100, 255); color : white; }");
+    // Set the frame background and foreground colors
+    this->setStyleSheet(
+        "QFrame { background-color : rgba(100, 100, 100, 255); color : white; }");
 
-  // Create the main layout
-  QHBoxLayout *mainLayout = new QHBoxLayout;
+    // Create the main layout
+    QHBoxLayout *mainLayout = new QHBoxLayout;
 
-  // Create the frame to hold all the widgets
-  QFrame *mainFrame = new QFrame();
+    // Create the frame to hold all the widgets
+    QFrame *mainFrame = new QFrame();
 
-  // Create the layout that sits inside the frame
-  QVBoxLayout *frameLayout = new QVBoxLayout();
+    // Create the layout that sits inside the frame
+    QVBoxLayout *frameLayout = new QVBoxLayout();
 
-  // Create a push button, and connect it to the OnButton function
-  QPushButton *button = new QPushButton(tr("Spawn Sphere"));
-  connect(button, SIGNAL(clicked()), this, SLOT(OnButton()));
+    // Create a push button, and connect it to the OnButton function
+    QPushButton *btnSpawnSphere = new QPushButton(tr("Spawn Sphere"));
+    connect(btnSpawnSphere, SIGNAL(clicked()), this, SLOT(OnButton_btnSpawnSphere()));
 
-  // Add the button to the frame's layout
-  frameLayout->addWidget(button);
+    QPushButton *btnMoveRobot = new QPushButton(tr("Move Robot"));
+    connect(btnMoveRobot, SIGNAL(clicked()), this, SLOT(OnButton_btnMoveRobot()));
 
-  // Add frameLayout to the frame
-  mainFrame->setLayout(frameLayout);
+    QPushButton *btnTest = new QPushButton(tr("Test"));
+    connect(btnTest, SIGNAL(clicked()), this, SLOT(OnButton_btnTest()));
 
-  // Add the frame to the main layout
-  mainLayout->addWidget(mainFrame);
 
-  // Remove margins to reduce space
-  frameLayout->setContentsMargins(0, 0, 0, 0);
-  mainLayout->setContentsMargins(0, 0, 0, 0);
+    // Add the button to the frame's layout
+    frameLayout->addWidget(btnSpawnSphere);
+    frameLayout->addWidget(btnMoveRobot);
+    frameLayout->addWidget(btnTest);
 
-  this->setLayout(mainLayout);
+    // Add frameLayout to the frame
+    mainFrame->setLayout(frameLayout);
 
-  // Position and resize this widget
-  this->move(10, 10);
-  this->resize(120, 30);
+    // Add the frame to the main layout
+    mainLayout->addWidget(mainFrame);
 
-  // Create a node for transportation
-  this->node = transport::NodePtr(new transport::Node());
-  this->node->Init();
-  this->factoryPub = this->node->Advertise<msgs::Factory>("~/factory");
+    // Remove margins to reduce space
+    frameLayout->setContentsMargins(0, 0, 0, 0);
+    mainLayout->setContentsMargins(0, 0, 0, 0);
+
+    this->setLayout(mainLayout);
+
+    // Position and resize this widget
+    this->move(10, 10);
+    //this->resize(120, 30);
+    this->resize(160, 130);
+
+    // Create a node for transportation
+    this->node = transport::NodePtr(new transport::Node());
+    this->node->Init();
+    this->factoryPub = this->node->Advertise<msgs::Factory>("~/factory");
 }
+
+
 
 /////////////////////////////////////////////////
 GUIExampleSpawnWidget::~GUIExampleSpawnWidget()
@@ -77,36 +89,54 @@ GUIExampleSpawnWidget::~GUIExampleSpawnWidget()
 }
 
 /////////////////////////////////////////////////
-void GUIExampleSpawnWidget::OnButton()
+void GUIExampleSpawnWidget::OnButton_btnTest()
 {
-  std::ostringstream newModelStr;
-  newModelStr << "<sdf version ='" << SDF_VERSION << "'>"
-    << "<model name='plugin_unit_sphere_" << this->counter++ << "'>"
-    << "  <pose>0 0 1.5 0 0 0</pose>"
-    << "  <link name='link'>"
-    << "    <inertial><mass>1.0</mass></inertial>"
-    << "    <collision name='collision'>"
-    << "      <geometry>"
-    << "        <sphere><radius>0.5</radius></sphere>"
-    << "      </geometry>"
-    << "    </collision>"
-    << "    <visual name ='visual'>"
-    << "      <geometry>"
-    << "        <sphere><radius>0.5</radius></sphere>"
-    << "      </geometry>"
-    << "      <material>"
-    << "        <script>"
-    << "          <uri>file://media/materials/scripts/gazebo.material</uri>"
-    << "          <name>Gazebo/Grey</name>"
-    << "        </script>"
-    << "      </material>"
-    << "    </visual>"
-    << "  </link>"
-    << "  </model>"
-    << "</sdf>";
+    QMessageBox msgBox;
+    msgBox.setText("msgbox 1");
+    msgBox.exec();
 
-  // Send the model to the gazebo server
-  msgs::Factory msg;
-  msg.set_sdf(newModelStr.str());
-  this->factoryPub->Publish(msg);
+    QMessageBox::information(NULL, "msgbox 2", "Hi!");
+
+
+}
+
+/////////////////////////////////////////////////
+void GUIExampleSpawnWidget::OnButton_btnMoveRobot()
+{
+
+}
+
+/////////////////////////////////////////////////
+void GUIExampleSpawnWidget::OnButton_btnSpawnSphere()
+{
+    std::ostringstream newModelStr;
+    newModelStr << "<sdf version ='" << SDF_VERSION << "'>"
+                << "<model name='plugin_unit_sphere_" << this->counter++ << "'>"
+                << "  <pose>0 0 1.5 0 0 0</pose>"
+                << "  <link name='link'>"
+                << "    <inertial><mass>1.0</mass></inertial>"
+                << "    <collision name='collision'>"
+                << "      <geometry>"
+                << "        <sphere><radius>0.5</radius></sphere>"
+                << "      </geometry>"
+                << "    </collision>"
+                << "    <visual name ='visual'>"
+                << "      <geometry>"
+                << "        <sphere><radius>0.5</radius></sphere>"
+                << "      </geometry>"
+                << "      <material>"
+                << "        <script>"
+                << "          <uri>file://media/materials/scripts/gazebo.material</uri>"
+                << "          <name>Gazebo/Grey</name>"
+                << "        </script>"
+                << "      </material>"
+                << "    </visual>"
+                << "  </link>"
+                << "  </model>"
+                << "</sdf>";
+
+    // Send the model to the gazebo server
+    msgs::Factory msg;
+    msg.set_sdf(newModelStr.str());
+    this->factoryPub->Publish(msg);
 }

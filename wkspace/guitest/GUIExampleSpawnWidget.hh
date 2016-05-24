@@ -38,7 +38,12 @@ namespace gazebo
       public: virtual ~GUIExampleSpawnWidget();
 
       /// \brief Callback trigged when the button is pressed.
-      protected slots: void OnButton();
+      protected slots: void OnButton_btnMoveRobot();
+      protected slots: void OnButton_btnSpawnSphere();
+      protected slots: void OnButton_btnTest();
+
+
+
 
       /// \brief Counter used to create unique model names
       private: unsigned int counter;

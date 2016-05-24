@@ -1,21 +1,21 @@
 Determining if the Q_WS_WIN exist failed with the following output:
-Change Dir: /home/ubu/Gazebo_Strategy_Plugin/wkspace/guitest/build/CMakeFiles/CMakeTmp
+Change Dir: /home/ubu/wkspace/guitest/build/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec1516018888/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec1516018888.dir/build.make CMakeFiles/cmTryCompileExec1516018888.dir/build
-make[1]: Entering directory `/home/ubu/Gazebo_Strategy_Plugin/wkspace/guitest/build/CMakeFiles/CMakeTmp'
-/usr/bin/cmake -E cmake_progress_report /home/ubu/Gazebo_Strategy_Plugin/wkspace/guitest/build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building CXX object CMakeFiles/cmTryCompileExec1516018888.dir/CheckSymbolExists.cxx.o
-/usr/bin/c++    -I/usr/include/qt4    -o CMakeFiles/cmTryCompileExec1516018888.dir/CheckSymbolExists.cxx.o -c /home/ubu/Gazebo_Strategy_Plugin/wkspace/guitest/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
-/home/ubu/Gazebo_Strategy_Plugin/wkspace/guitest/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
-/home/ubu/Gazebo_Strategy_Plugin/wkspace/guitest/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_WIN’ was not declared in this scope
+Run Build Command:/usr/bin/make "cmTryCompileExec84026948/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec84026948.dir/build.make CMakeFiles/cmTryCompileExec84026948.dir/build
+make[1]: Entering directory `/home/ubu/wkspace/guitest/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubu/wkspace/guitest/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec84026948.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++    -I/usr/include/qt4    -o CMakeFiles/cmTryCompileExec84026948.dir/CheckSymbolExists.cxx.o -c /home/ubu/wkspace/guitest/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/home/ubu/wkspace/guitest/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/home/ubu/wkspace/guitest/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_WIN’ was not declared in this scope
    return ((int*)(&Q_WS_WIN))[argc];
                    ^
-make[1]: *** [CMakeFiles/cmTryCompileExec1516018888.dir/CheckSymbolExists.cxx.o] Error 1
-make[1]: Leaving directory `/home/ubu/Gazebo_Strategy_Plugin/wkspace/guitest/build/CMakeFiles/CMakeTmp'
-make: *** [cmTryCompileExec1516018888/fast] Error 2
+make[1]: Leaving directory `/home/ubu/wkspace/guitest/build/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec84026948.dir/CheckSymbolExists.cxx.o] Error 1
+make: *** [cmTryCompileExec84026948/fast] Error 2
 
-File /home/ubu/Gazebo_Strategy_Plugin/wkspace/guitest/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+File /home/ubu/wkspace/guitest/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
 /* */
 #include <QtCore/qglobal.h>
 
@@ -31,23 +31,23 @@ int main(int argc, char** argv)
 }
 
 Determining if the Q_WS_QWS exist failed with the following output:
-Change Dir: /home/ubu/Gazebo_Strategy_Plugin/wkspace/guitest/build/CMakeFiles/CMakeTmp
+Change Dir: /home/ubu/wkspace/guitest/build/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec2337811563/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec2337811563.dir/build.make CMakeFiles/cmTryCompileExec2337811563.dir/build
-make[1]: Entering directory `/home/ubu/Gazebo_Strategy_Plugin/wkspace/guitest/build/CMakeFiles/CMakeTmp'
-/usr/bin/cmake -E cmake_progress_report /home/ubu/Gazebo_Strategy_Plugin/wkspace/guitest/build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building CXX object CMakeFiles/cmTryCompileExec2337811563.dir/CheckSymbolExists.cxx.o
-/usr/bin/c++    -I/usr/include/qt4    -o CMakeFiles/cmTryCompileExec2337811563.dir/CheckSymbolExists.cxx.o -c /home/ubu/Gazebo_Strategy_Plugin/wkspace/guitest/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
-/home/ubu/Gazebo_Strategy_Plugin/wkspace/guitest/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
-/home/ubu/Gazebo_Strategy_Plugin/wkspace/guitest/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_QWS’ was not declared in this scope
+Run Build Command:/usr/bin/make "cmTryCompileExec46168335/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec46168335.dir/build.make CMakeFiles/cmTryCompileExec46168335.dir/build
+make[1]: Entering directory `/home/ubu/wkspace/guitest/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubu/wkspace/guitest/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec46168335.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++    -I/usr/include/qt4    -o CMakeFiles/cmTryCompileExec46168335.dir/CheckSymbolExists.cxx.o -c /home/ubu/wkspace/guitest/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/home/ubu/wkspace/guitest/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/home/ubu/wkspace/guitest/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_QWS’ was not declared in this scope
    return ((int*)(&Q_WS_QWS))[argc];
                    ^
-make[1]: Leaving directory `/home/ubu/Gazebo_Strategy_Plugin/wkspace/guitest/build/CMakeFiles/CMakeTmp'
-make[1]: *** [CMakeFiles/cmTryCompileExec2337811563.dir/CheckSymbolExists.cxx.o] Error 1
-make: *** [cmTryCompileExec2337811563/fast] Error 2
+make[1]: *** [CMakeFiles/cmTryCompileExec46168335.dir/CheckSymbolExists.cxx.o] Error 1
+make[1]: Leaving directory `/home/ubu/wkspace/guitest/build/CMakeFiles/CMakeTmp'
+make: *** [cmTryCompileExec46168335/fast] Error 2
 
-File /home/ubu/Gazebo_Strategy_Plugin/wkspace/guitest/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+File /home/ubu/wkspace/guitest/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
 /* */
 #include <QtCore/qglobal.h>
 
@@ -63,23 +63,23 @@ int main(int argc, char** argv)
 }
 
 Determining if the Q_WS_MAC exist failed with the following output:
-Change Dir: /home/ubu/Gazebo_Strategy_Plugin/wkspace/guitest/build/CMakeFiles/CMakeTmp
+Change Dir: /home/ubu/wkspace/guitest/build/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec2925626503/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec2925626503.dir/build.make CMakeFiles/cmTryCompileExec2925626503.dir/build
-make[1]: Entering directory `/home/ubu/Gazebo_Strategy_Plugin/wkspace/guitest/build/CMakeFiles/CMakeTmp'
-/usr/bin/cmake -E cmake_progress_report /home/ubu/Gazebo_Strategy_Plugin/wkspace/guitest/build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building CXX object CMakeFiles/cmTryCompileExec2925626503.dir/CheckSymbolExists.cxx.o
-/usr/bin/c++    -I/usr/include/qt4    -o CMakeFiles/cmTryCompileExec2925626503.dir/CheckSymbolExists.cxx.o -c /home/ubu/Gazebo_Strategy_Plugin/wkspace/guitest/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
-/home/ubu/Gazebo_Strategy_Plugin/wkspace/guitest/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
-/home/ubu/Gazebo_Strategy_Plugin/wkspace/guitest/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_MAC’ was not declared in this scope
+Run Build Command:/usr/bin/make "cmTryCompileExec1520209540/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1520209540.dir/build.make CMakeFiles/cmTryCompileExec1520209540.dir/build
+make[1]: Entering directory `/home/ubu/wkspace/guitest/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubu/wkspace/guitest/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec1520209540.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++    -I/usr/include/qt4    -o CMakeFiles/cmTryCompileExec1520209540.dir/CheckSymbolExists.cxx.o -c /home/ubu/wkspace/guitest/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/home/ubu/wkspace/guitest/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/home/ubu/wkspace/guitest/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_MAC’ was not declared in this scope
    return ((int*)(&Q_WS_MAC))[argc];
                    ^
-make[1]: *** [CMakeFiles/cmTryCompileExec2925626503.dir/CheckSymbolExists.cxx.o] Error 1
-make[1]: Leaving directory `/home/ubu/Gazebo_Strategy_Plugin/wkspace/guitest/build/CMakeFiles/CMakeTmp'
-make: *** [cmTryCompileExec2925626503/fast] Error 2
+make[1]: Leaving directory `/home/ubu/wkspace/guitest/build/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec1520209540.dir/CheckSymbolExists.cxx.o] Error 1
+make: *** [cmTryCompileExec1520209540/fast] Error 2
 
-File /home/ubu/Gazebo_Strategy_Plugin/wkspace/guitest/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+File /home/ubu/wkspace/guitest/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
 /* */
 #include <QtCore/qglobal.h>
 
@@ -95,25 +95,25 @@ int main(int argc, char** argv)
 }
 
 Determining if the pthread_create exist failed with the following output:
-Change Dir: /home/ubu/Gazebo_Strategy_Plugin/wkspace/guitest/build/CMakeFiles/CMakeTmp
+Change Dir: /home/ubu/wkspace/guitest/build/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec3440811143/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec3440811143.dir/build.make CMakeFiles/cmTryCompileExec3440811143.dir/build
-make[1]: Entering directory `/home/ubu/Gazebo_Strategy_Plugin/wkspace/guitest/build/CMakeFiles/CMakeTmp'
-/usr/bin/cmake -E cmake_progress_report /home/ubu/Gazebo_Strategy_Plugin/wkspace/guitest/build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec3440811143.dir/CheckSymbolExists.c.o
-/usr/bin/cc    -o CMakeFiles/cmTryCompileExec3440811143.dir/CheckSymbolExists.c.o   -c /home/ubu/Gazebo_Strategy_Plugin/wkspace/guitest/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTryCompileExec3440811143
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3440811143.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTryCompileExec3440811143.dir/CheckSymbolExists.c.o  -o cmTryCompileExec3440811143 -rdynamic 
-CMakeFiles/cmTryCompileExec3440811143.dir/CheckSymbolExists.c.o: In function `main':
+Run Build Command:/usr/bin/make "cmTryCompileExec3318672834/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3318672834.dir/build.make CMakeFiles/cmTryCompileExec3318672834.dir/build
+make[1]: Entering directory `/home/ubu/wkspace/guitest/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubu/wkspace/guitest/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3318672834.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec3318672834.dir/CheckSymbolExists.c.o   -c /home/ubu/wkspace/guitest/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec3318672834
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3318672834.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec3318672834.dir/CheckSymbolExists.c.o  -o cmTryCompileExec3318672834 -rdynamic 
+CMakeFiles/cmTryCompileExec3318672834.dir/CheckSymbolExists.c.o: In function `main':
 CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
 collect2: error: ld returned 1 exit status
-make[1]: *** [cmTryCompileExec3440811143] Error 1
-make[1]: Leaving directory `/home/ubu/Gazebo_Strategy_Plugin/wkspace/guitest/build/CMakeFiles/CMakeTmp'
-make: *** [cmTryCompileExec3440811143/fast] Error 2
+make[1]: *** [cmTryCompileExec3318672834] Error 1
+make[1]: Leaving directory `/home/ubu/wkspace/guitest/build/CMakeFiles/CMakeTmp'
+make: *** [cmTryCompileExec3318672834/fast] Error 2
 
-File /home/ubu/Gazebo_Strategy_Plugin/wkspace/guitest/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+File /home/ubu/wkspace/guitest/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
 /* */
 #include <pthread.h>
 
@@ -129,21 +129,21 @@ int main(int argc, char** argv)
 }
 
 Determining if the function pthread_create exists in the pthreads failed with the following output:
-Change Dir: /home/ubu/Gazebo_Strategy_Plugin/wkspace/guitest/build/CMakeFiles/CMakeTmp
+Change Dir: /home/ubu/wkspace/guitest/build/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec1794490541/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec1794490541.dir/build.make CMakeFiles/cmTryCompileExec1794490541.dir/build
-make[1]: Entering directory `/home/ubu/Gazebo_Strategy_Plugin/wkspace/guitest/build/CMakeFiles/CMakeTmp'
-/usr/bin/cmake -E cmake_progress_report /home/ubu/Gazebo_Strategy_Plugin/wkspace/guitest/build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec1794490541.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTryCompileExec1794490541.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
-Linking C executable cmTryCompileExec1794490541
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1794490541.dir/link.txt --verbose=1
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTryCompileExec1794490541.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1794490541 -rdynamic -lpthreads 
+Run Build Command:/usr/bin/make "cmTryCompileExec744923375/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec744923375.dir/build.make CMakeFiles/cmTryCompileExec744923375.dir/build
+make[1]: Entering directory `/home/ubu/wkspace/guitest/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubu/wkspace/guitest/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec744923375.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTryCompileExec744923375.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec744923375
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec744923375.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTryCompileExec744923375.dir/CheckFunctionExists.c.o  -o cmTryCompileExec744923375 -rdynamic -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-make[1]: *** [cmTryCompileExec1794490541] Error 1
-make[1]: Leaving directory `/home/ubu/Gazebo_Strategy_Plugin/wkspace/guitest/build/CMakeFiles/CMakeTmp'
-make: *** [cmTryCompileExec1794490541/fast] Error 2
+make[1]: Leaving directory `/home/ubu/wkspace/guitest/build/CMakeFiles/CMakeTmp'
+make[1]: *** [cmTryCompileExec744923375] Error 1
+make: *** [cmTryCompileExec744923375/fast] Error 2
 
 
