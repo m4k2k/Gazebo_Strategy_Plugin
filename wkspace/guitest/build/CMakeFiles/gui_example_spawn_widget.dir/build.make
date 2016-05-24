@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubu/Gazebo_Strategy_Plugin/wkspace/guitest
+CMAKE_SOURCE_DIR = /home/ubu/wkspace/guitest
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubu/Gazebo_Strategy_Plugin/wkspace/guitest/build
+CMAKE_BINARY_DIR = /home/ubu/wkspace/guitest/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/gui_example_spawn_widget.dir/depend.make
@@ -50,23 +50,23 @@ include CMakeFiles/gui_example_spawn_widget.dir/progress.make
 include CMakeFiles/gui_example_spawn_widget.dir/flags.make
 
 moc_GUIExampleSpawnWidget.cxx: ../GUIExampleSpawnWidget.hh
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubu/Gazebo_Strategy_Plugin/wkspace/guitest/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubu/wkspace/guitest/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating moc_GUIExampleSpawnWidget.cxx"
-	/usr/lib/x86_64-linux-gnu/qt4/bin/moc @/home/ubu/Gazebo_Strategy_Plugin/wkspace/guitest/build/moc_GUIExampleSpawnWidget.cxx_parameters
+	/usr/lib/x86_64-linux-gnu/qt4/bin/moc @/home/ubu/wkspace/guitest/build/moc_GUIExampleSpawnWidget.cxx_parameters
 
 CMakeFiles/gui_example_spawn_widget.dir/moc_GUIExampleSpawnWidget.cxx.o: CMakeFiles/gui_example_spawn_widget.dir/flags.make
 CMakeFiles/gui_example_spawn_widget.dir/moc_GUIExampleSpawnWidget.cxx.o: moc_GUIExampleSpawnWidget.cxx
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubu/Gazebo_Strategy_Plugin/wkspace/guitest/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubu/wkspace/guitest/build/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/gui_example_spawn_widget.dir/moc_GUIExampleSpawnWidget.cxx.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gui_example_spawn_widget.dir/moc_GUIExampleSpawnWidget.cxx.o -c /home/ubu/Gazebo_Strategy_Plugin/wkspace/guitest/build/moc_GUIExampleSpawnWidget.cxx
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gui_example_spawn_widget.dir/moc_GUIExampleSpawnWidget.cxx.o -c /home/ubu/wkspace/guitest/build/moc_GUIExampleSpawnWidget.cxx
 
 CMakeFiles/gui_example_spawn_widget.dir/moc_GUIExampleSpawnWidget.cxx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gui_example_spawn_widget.dir/moc_GUIExampleSpawnWidget.cxx.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ubu/Gazebo_Strategy_Plugin/wkspace/guitest/build/moc_GUIExampleSpawnWidget.cxx > CMakeFiles/gui_example_spawn_widget.dir/moc_GUIExampleSpawnWidget.cxx.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ubu/wkspace/guitest/build/moc_GUIExampleSpawnWidget.cxx > CMakeFiles/gui_example_spawn_widget.dir/moc_GUIExampleSpawnWidget.cxx.i
 
 CMakeFiles/gui_example_spawn_widget.dir/moc_GUIExampleSpawnWidget.cxx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gui_example_spawn_widget.dir/moc_GUIExampleSpawnWidget.cxx.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ubu/Gazebo_Strategy_Plugin/wkspace/guitest/build/moc_GUIExampleSpawnWidget.cxx -o CMakeFiles/gui_example_spawn_widget.dir/moc_GUIExampleSpawnWidget.cxx.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ubu/wkspace/guitest/build/moc_GUIExampleSpawnWidget.cxx -o CMakeFiles/gui_example_spawn_widget.dir/moc_GUIExampleSpawnWidget.cxx.s
 
 CMakeFiles/gui_example_spawn_widget.dir/moc_GUIExampleSpawnWidget.cxx.o.requires:
 .PHONY : CMakeFiles/gui_example_spawn_widget.dir/moc_GUIExampleSpawnWidget.cxx.o.requires
@@ -79,17 +79,17 @@ CMakeFiles/gui_example_spawn_widget.dir/moc_GUIExampleSpawnWidget.cxx.o.provides
 
 CMakeFiles/gui_example_spawn_widget.dir/GUIExampleSpawnWidget.cc.o: CMakeFiles/gui_example_spawn_widget.dir/flags.make
 CMakeFiles/gui_example_spawn_widget.dir/GUIExampleSpawnWidget.cc.o: ../GUIExampleSpawnWidget.cc
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubu/Gazebo_Strategy_Plugin/wkspace/guitest/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubu/wkspace/guitest/build/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/gui_example_spawn_widget.dir/GUIExampleSpawnWidget.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gui_example_spawn_widget.dir/GUIExampleSpawnWidget.cc.o -c /home/ubu/Gazebo_Strategy_Plugin/wkspace/guitest/GUIExampleSpawnWidget.cc
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gui_example_spawn_widget.dir/GUIExampleSpawnWidget.cc.o -c /home/ubu/wkspace/guitest/GUIExampleSpawnWidget.cc
 
 CMakeFiles/gui_example_spawn_widget.dir/GUIExampleSpawnWidget.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gui_example_spawn_widget.dir/GUIExampleSpawnWidget.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ubu/Gazebo_Strategy_Plugin/wkspace/guitest/GUIExampleSpawnWidget.cc > CMakeFiles/gui_example_spawn_widget.dir/GUIExampleSpawnWidget.cc.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ubu/wkspace/guitest/GUIExampleSpawnWidget.cc > CMakeFiles/gui_example_spawn_widget.dir/GUIExampleSpawnWidget.cc.i
 
 CMakeFiles/gui_example_spawn_widget.dir/GUIExampleSpawnWidget.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gui_example_spawn_widget.dir/GUIExampleSpawnWidget.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ubu/Gazebo_Strategy_Plugin/wkspace/guitest/GUIExampleSpawnWidget.cc -o CMakeFiles/gui_example_spawn_widget.dir/GUIExampleSpawnWidget.cc.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ubu/wkspace/guitest/GUIExampleSpawnWidget.cc -o CMakeFiles/gui_example_spawn_widget.dir/GUIExampleSpawnWidget.cc.s
 
 CMakeFiles/gui_example_spawn_widget.dir/GUIExampleSpawnWidget.cc.o.requires:
 .PHONY : CMakeFiles/gui_example_spawn_widget.dir/GUIExampleSpawnWidget.cc.o.requires
@@ -165,6 +165,6 @@ CMakeFiles/gui_example_spawn_widget.dir/clean:
 .PHONY : CMakeFiles/gui_example_spawn_widget.dir/clean
 
 CMakeFiles/gui_example_spawn_widget.dir/depend: moc_GUIExampleSpawnWidget.cxx
-	cd /home/ubu/Gazebo_Strategy_Plugin/wkspace/guitest/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubu/Gazebo_Strategy_Plugin/wkspace/guitest /home/ubu/Gazebo_Strategy_Plugin/wkspace/guitest /home/ubu/Gazebo_Strategy_Plugin/wkspace/guitest/build /home/ubu/Gazebo_Strategy_Plugin/wkspace/guitest/build /home/ubu/Gazebo_Strategy_Plugin/wkspace/guitest/build/CMakeFiles/gui_example_spawn_widget.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ubu/wkspace/guitest/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubu/wkspace/guitest /home/ubu/wkspace/guitest /home/ubu/wkspace/guitest/build /home/ubu/wkspace/guitest/build /home/ubu/wkspace/guitest/build/CMakeFiles/gui_example_spawn_widget.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/gui_example_spawn_widget.dir/depend
 

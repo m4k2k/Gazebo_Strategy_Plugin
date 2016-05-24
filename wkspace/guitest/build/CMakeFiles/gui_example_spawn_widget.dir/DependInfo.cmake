@@ -4,8 +4,8 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
-  "/home/ubu/Gazebo_Strategy_Plugin/wkspace/guitest/GUIExampleSpawnWidget.cc" "/home/ubu/Gazebo_Strategy_Plugin/wkspace/guitest/build/CMakeFiles/gui_example_spawn_widget.dir/GUIExampleSpawnWidget.cc.o"
-  "/home/ubu/Gazebo_Strategy_Plugin/wkspace/guitest/build/moc_GUIExampleSpawnWidget.cxx" "/home/ubu/Gazebo_Strategy_Plugin/wkspace/guitest/build/CMakeFiles/gui_example_spawn_widget.dir/moc_GUIExampleSpawnWidget.cxx.o"
+  "/home/ubu/wkspace/guitest/GUIExampleSpawnWidget.cc" "/home/ubu/wkspace/guitest/build/CMakeFiles/gui_example_spawn_widget.dir/GUIExampleSpawnWidget.cc.o"
+  "/home/ubu/wkspace/guitest/build/moc_GUIExampleSpawnWidget.cxx" "/home/ubu/wkspace/guitest/build/CMakeFiles/gui_example_spawn_widget.dir/moc_GUIExampleSpawnWidget.cxx.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 

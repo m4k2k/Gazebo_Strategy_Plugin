@@ -47,10 +47,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubu/Gazebo_Strategy_Plugin/wkspace/guitest
+CMAKE_SOURCE_DIR = /home/ubu/wkspace/guitest
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubu/Gazebo_Strategy_Plugin/wkspace/guitest/build
+CMAKE_BINARY_DIR = /home/ubu/wkspace/guitest/build
 
 #=============================================================================
 # Target rules for target CMakeFiles/gui_example_spawn_widget.dir
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/ubu/Gazebo_Strategy_Plugin/wkspace/guitest/build
 CMakeFiles/gui_example_spawn_widget.dir/all:
 	$(MAKE) -f CMakeFiles/gui_example_spawn_widget.dir/build.make CMakeFiles/gui_example_spawn_widget.dir/depend
 	$(MAKE) -f CMakeFiles/gui_example_spawn_widget.dir/build.make CMakeFiles/gui_example_spawn_widget.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubu/Gazebo_Strategy_Plugin/wkspace/guitest/build/CMakeFiles  1 2 3
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubu/wkspace/guitest/build/CMakeFiles  1 2 3
 	@echo "Built target gui_example_spawn_widget"
 .PHONY : CMakeFiles/gui_example_spawn_widget.dir/all
 
@@ -69,9 +69,9 @@ all: CMakeFiles/gui_example_spawn_widget.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/gui_example_spawn_widget.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubu/Gazebo_Strategy_Plugin/wkspace/guitest/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubu/wkspace/guitest/build/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/gui_example_spawn_widget.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubu/Gazebo_Strategy_Plugin/wkspace/guitest/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubu/wkspace/guitest/build/CMakeFiles 0
 .PHONY : CMakeFiles/gui_example_spawn_widget.dir/rule
 
 # Convenience name for target.

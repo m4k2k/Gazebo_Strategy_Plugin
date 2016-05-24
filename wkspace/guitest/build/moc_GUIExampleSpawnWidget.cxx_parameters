@@ -14,5 +14,5 @@
 -DQT_GUI_LIB
 -DQT_CORE_LIB
 -o
-/home/ubu/Gazebo_Strategy_Plugin/wkspace/guitest/build/moc_GUIExampleSpawnWidget.cxx
-/home/ubu/Gazebo_Strategy_Plugin/wkspace/guitest/GUIExampleSpawnWidget.hh
+/home/ubu/wkspace/guitest/build/moc_GUIExampleSpawnWidget.cxx
+/home/ubu/wkspace/guitest/GUIExampleSpawnWidget.hh
