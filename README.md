@@ -1,1 +1,0 @@
-Gazebo_Strategy_Plugin
