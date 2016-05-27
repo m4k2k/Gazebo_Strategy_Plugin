@@ -1,0 +1,8 @@
+/home/ubu/Gazebo_Strategy_Plugin/turtle/overlayws/build/turtlebot_simulator/turtlebot_gazebo/CMakeFiles/_catkin_empty_exported_target.dir
+/home/ubu/Gazebo_Strategy_Plugin/turtle/overlayws/build/CMakeFiles/clean_test_results.dir
+/home/ubu/Gazebo_Strategy_Plugin/turtle/overlayws/build/CMakeFiles/download_extra_data.dir
+/home/ubu/Gazebo_Strategy_Plugin/turtle/overlayws/build/CMakeFiles/doxygen.dir
+/home/ubu/Gazebo_Strategy_Plugin/turtle/overlayws/build/gtest/CMakeFiles/gtest.dir
+/home/ubu/Gazebo_Strategy_Plugin/turtle/overlayws/build/gtest/CMakeFiles/gtest_main.dir
+/home/ubu/Gazebo_Strategy_Plugin/turtle/overlayws/build/CMakeFiles/run_tests.dir
+/home/ubu/Gazebo_Strategy_Plugin/turtle/overlayws/build/CMakeFiles/tests.dir

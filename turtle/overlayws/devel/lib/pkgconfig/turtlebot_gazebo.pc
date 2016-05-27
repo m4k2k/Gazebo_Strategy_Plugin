@@ -1,0 +1,8 @@
+prefix=/home/ubu/Gazebo_Strategy_Plugin/turtle/overlayws/devel
+
+Name: turtlebot_gazebo
+Description: Description of turtlebot_gazebo
+Version: 2.2.2
+Cflags: 
+Libs: -L/home/ubu/Gazebo_Strategy_Plugin/turtle/overlayws/devel/lib 
+Requires: 
