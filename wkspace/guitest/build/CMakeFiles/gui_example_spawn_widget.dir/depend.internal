@@ -4,21 +4,51 @@
 CMakeFiles/gui_example_spawn_widget.dir/GUIExampleSpawnWidget.cc.o
  /home/ubu/Gazebo_Strategy_Plugin/wkspace/guitest/GUIExampleSpawnWidget.cc
  /home/ubu/Gazebo_Strategy_Plugin/wkspace/guitest/GUIExampleSpawnWidget.hh
+ /usr/include/gazebo-5.3/gazebo/Master.hh
+ /usr/include/gazebo-5.3/gazebo/Server.hh
+ /usr/include/gazebo-5.3/gazebo/common/Animation.hh
  /usr/include/gazebo-5.3/gazebo/common/Assert.hh
+ /usr/include/gazebo-5.3/gazebo/common/AudioDecoder.hh
+ /usr/include/gazebo-5.3/gazebo/common/BVHLoader.hh
+ /usr/include/gazebo-5.3/gazebo/common/Base64.hh
+ /usr/include/gazebo-5.3/gazebo/common/ColladaLoader.hh
  /usr/include/gazebo-5.3/gazebo/common/Color.hh
+ /usr/include/gazebo-5.3/gazebo/common/CommonIface.hh
  /usr/include/gazebo-5.3/gazebo/common/CommonTypes.hh
  /usr/include/gazebo-5.3/gazebo/common/Console.hh
+ /usr/include/gazebo-5.3/gazebo/common/Dem.hh
  /usr/include/gazebo-5.3/gazebo/common/Event.hh
+ /usr/include/gazebo-5.3/gazebo/common/Events.hh
  /usr/include/gazebo-5.3/gazebo/common/Exception.hh
+ /usr/include/gazebo-5.3/gazebo/common/HeightmapData.hh
  /usr/include/gazebo-5.3/gazebo/common/Image.hh
+ /usr/include/gazebo-5.3/gazebo/common/ImageHeightmap.hh
  /usr/include/gazebo-5.3/gazebo/common/KeyEvent.hh
+ /usr/include/gazebo-5.3/gazebo/common/KeyFrame.hh
+ /usr/include/gazebo-5.3/gazebo/common/Material.hh
+ /usr/include/gazebo-5.3/gazebo/common/Mesh.hh
+ /usr/include/gazebo-5.3/gazebo/common/MeshLoader.hh
+ /usr/include/gazebo-5.3/gazebo/common/MeshManager.hh
+ /usr/include/gazebo-5.3/gazebo/common/ModelDatabase.hh
  /usr/include/gazebo-5.3/gazebo/common/MouseEvent.hh
+ /usr/include/gazebo-5.3/gazebo/common/MovingWindowFilter.hh
+ /usr/include/gazebo-5.3/gazebo/common/PID.hh
  /usr/include/gazebo-5.3/gazebo/common/Plugin.hh
+ /usr/include/gazebo-5.3/gazebo/common/STLLoader.hh
  /usr/include/gazebo-5.3/gazebo/common/SingletonT.hh
+ /usr/include/gazebo-5.3/gazebo/common/Skeleton.hh
+ /usr/include/gazebo-5.3/gazebo/common/SkeletonAnimation.hh
  /usr/include/gazebo-5.3/gazebo/common/SphericalCoordinates.hh
  /usr/include/gazebo-5.3/gazebo/common/SystemPaths.hh
  /usr/include/gazebo-5.3/gazebo/common/Time.hh
+ /usr/include/gazebo-5.3/gazebo/common/Timer.hh
+ /usr/include/gazebo-5.3/gazebo/common/UpdateInfo.hh
+ /usr/include/gazebo-5.3/gazebo/common/Video.hh
+ /usr/include/gazebo-5.3/gazebo/common/common.hh
+ /usr/include/gazebo-5.3/gazebo/common/ffmpeg_inc.h
+ /usr/include/gazebo-5.3/gazebo/gazebo.hh
  /usr/include/gazebo-5.3/gazebo/gazebo_config.h
+ /usr/include/gazebo-5.3/gazebo/gazebo_core.hh
  /usr/include/gazebo-5.3/gazebo/gui/Actions.hh
  /usr/include/gazebo-5.3/gazebo/gui/AlignWidget.hh
  /usr/include/gazebo-5.3/gazebo/gui/BoxMaker.hh
@@ -58,16 +88,25 @@ CMakeFiles/gui_example_spawn_widget.dir/GUIExampleSpawnWidget.cc.o
  /usr/include/gazebo-5.3/gazebo/gui/qt_test.h
  /usr/include/gazebo-5.3/gazebo/math/Angle.hh
  /usr/include/gazebo-5.3/gazebo/math/Box.hh
+ /usr/include/gazebo-5.3/gazebo/math/Filter.hh
  /usr/include/gazebo-5.3/gazebo/math/Helpers.hh
+ /usr/include/gazebo-5.3/gazebo/math/Kmeans.hh
  /usr/include/gazebo-5.3/gazebo/math/MathTypes.hh
  /usr/include/gazebo-5.3/gazebo/math/Matrix3.hh
  /usr/include/gazebo-5.3/gazebo/math/Matrix4.hh
  /usr/include/gazebo-5.3/gazebo/math/Plane.hh
  /usr/include/gazebo-5.3/gazebo/math/Pose.hh
  /usr/include/gazebo-5.3/gazebo/math/Quaternion.hh
+ /usr/include/gazebo-5.3/gazebo/math/Rand.hh
+ /usr/include/gazebo-5.3/gazebo/math/RotationSpline.hh
+ /usr/include/gazebo-5.3/gazebo/math/SignalStats.hh
+ /usr/include/gazebo-5.3/gazebo/math/Spline.hh
  /usr/include/gazebo-5.3/gazebo/math/Vector2d.hh
  /usr/include/gazebo-5.3/gazebo/math/Vector2i.hh
  /usr/include/gazebo-5.3/gazebo/math/Vector3.hh
+ /usr/include/gazebo-5.3/gazebo/math/Vector3Stats.hh
+ /usr/include/gazebo-5.3/gazebo/math/Vector4.hh
+ /usr/include/gazebo-5.3/gazebo/math/gzmath.hh
  /usr/include/gazebo-5.3/gazebo/msgs/MessageTypes.hh
  /usr/include/gazebo-5.3/gazebo/msgs/MsgFactory.hh
  /usr/include/gazebo-5.3/gazebo/msgs/axis.pb.h

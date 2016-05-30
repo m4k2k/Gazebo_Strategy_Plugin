@@ -16,10 +16,10 @@
 */
 #include <sstream>
 #include <gazebo/msgs/msgs.hh>
-#include <gazebo/gui/MouseEventHandler.hh>
 #include <gazebo/gazebo.hh>
 
 #include "GUIExampleSpawnWidget.hh"
+
 
 using namespace gazebo;
 
@@ -78,43 +78,17 @@ GUIExampleSpawnWidget::GUIExampleSpawnWidget()
     //this->resize(120, 30);
     this->resize(160, 130);
 
-
-
-    gazebo::gui::MouseEventHandler::Instance()->AddReleaseFilter("glwidget_or_not",boost::bind(&GUIExampleSpawnWidget::OnMouseRelease, this, _1));
-
-
-
-
-
     // Create a node for transportation
     this->node = transport::NodePtr(new transport::Node());
     this->node->Init();
     this->factoryPub = this->node->Advertise<msgs::Factory>("~/factory");
 }
 
-/*
-boost::mutex mutexMouseClicked;
-math::Vector2i mouseClicked;
-bool isMouseClicked;
-*/
-private:
-bool OnMousePress(const common::MouseEvent& _event)
-{
-/*
-    boost::mutex::scoped_lock lock(mutexMouseClicked);
-    mouseClicked = _event.pos;
-    isMouseClicked = true;
-    std::cout<<"Clicked at "<<mouseClicked<<" of screen "<<std::endl;
-    */
-    std::cout << "mouse click" << std::endl;
-}
-
-
-
-
 /////////////////////////////////////////////////
 GUIExampleSpawnWidget::~GUIExampleSpawnWidget()
 {
+
+
 }
 
 /////////////////////////////////////////////////
