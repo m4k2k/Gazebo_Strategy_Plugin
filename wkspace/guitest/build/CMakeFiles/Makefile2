@@ -88,6 +88,41 @@ clean: CMakeFiles/gui_example_spawn_widget.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/system_gui.dir
+
+# All Build rule for target.
+CMakeFiles/system_gui.dir/all:
+	$(MAKE) -f CMakeFiles/system_gui.dir/build.make CMakeFiles/system_gui.dir/depend
+	$(MAKE) -f CMakeFiles/system_gui.dir/build.make CMakeFiles/system_gui.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubu/Gazebo_Strategy_Plugin/wkspace/guitest/build/CMakeFiles  4
+	@echo "Built target system_gui"
+.PHONY : CMakeFiles/system_gui.dir/all
+
+# Include target in all.
+all: CMakeFiles/system_gui.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/system_gui.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubu/Gazebo_Strategy_Plugin/wkspace/guitest/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/system_gui.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubu/Gazebo_Strategy_Plugin/wkspace/guitest/build/CMakeFiles 0
+.PHONY : CMakeFiles/system_gui.dir/rule
+
+# Convenience name for target.
+system_gui: CMakeFiles/system_gui.dir/rule
+.PHONY : system_gui
+
+# clean rule for target.
+CMakeFiles/system_gui.dir/clean:
+	$(MAKE) -f CMakeFiles/system_gui.dir/build.make CMakeFiles/system_gui.dir/clean
+.PHONY : CMakeFiles/system_gui.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/system_gui.dir/clean
+.PHONY : clean
+
+#=============================================================================
 # Special targets to cleanup operation of make.
 
 # Special rule to run CMake to check the build system integrity.

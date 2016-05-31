@@ -111,6 +111,19 @@ gui_example_spawn_widget/fast:
 	$(MAKE) -f CMakeFiles/gui_example_spawn_widget.dir/build.make CMakeFiles/gui_example_spawn_widget.dir/build
 .PHONY : gui_example_spawn_widget/fast
 
+#=============================================================================
+# Target rules for targets named system_gui
+
+# Build rule for target.
+system_gui: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 system_gui
+.PHONY : system_gui
+
+# fast build rule for target.
+system_gui/fast:
+	$(MAKE) -f CMakeFiles/system_gui.dir/build.make CMakeFiles/system_gui.dir/build
+.PHONY : system_gui/fast
+
 GUIExampleSpawnWidget.o: GUIExampleSpawnWidget.cc.o
 .PHONY : GUIExampleSpawnWidget.o
 
@@ -159,6 +172,30 @@ moc_GUIExampleSpawnWidget.cxx.s:
 	$(MAKE) -f CMakeFiles/gui_example_spawn_widget.dir/build.make CMakeFiles/gui_example_spawn_widget.dir/moc_GUIExampleSpawnWidget.cxx.s
 .PHONY : moc_GUIExampleSpawnWidget.cxx.s
 
+system_gui.o: system_gui.cc.o
+.PHONY : system_gui.o
+
+# target to build an object file
+system_gui.cc.o:
+	$(MAKE) -f CMakeFiles/system_gui.dir/build.make CMakeFiles/system_gui.dir/system_gui.cc.o
+.PHONY : system_gui.cc.o
+
+system_gui.i: system_gui.cc.i
+.PHONY : system_gui.i
+
+# target to preprocess a source file
+system_gui.cc.i:
+	$(MAKE) -f CMakeFiles/system_gui.dir/build.make CMakeFiles/system_gui.dir/system_gui.cc.i
+.PHONY : system_gui.cc.i
+
+system_gui.s: system_gui.cc.s
+.PHONY : system_gui.s
+
+# target to generate assembly for a file
+system_gui.cc.s:
+	$(MAKE) -f CMakeFiles/system_gui.dir/build.make CMakeFiles/system_gui.dir/system_gui.cc.s
+.PHONY : system_gui.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -168,12 +205,16 @@ help:
 	@echo "... edit_cache"
 	@echo "... gui_example_spawn_widget"
 	@echo "... rebuild_cache"
+	@echo "... system_gui"
 	@echo "... GUIExampleSpawnWidget.o"
 	@echo "... GUIExampleSpawnWidget.i"
 	@echo "... GUIExampleSpawnWidget.s"
 	@echo "... moc_GUIExampleSpawnWidget.o"
 	@echo "... moc_GUIExampleSpawnWidget.i"
 	@echo "... moc_GUIExampleSpawnWidget.s"
+	@echo "... system_gui.o"
+	@echo "... system_gui.i"
+	@echo "... system_gui.s"
 .PHONY : help
 
 

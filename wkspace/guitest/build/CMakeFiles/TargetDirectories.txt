@@ -1,1 +1,2 @@
 /home/ubu/Gazebo_Strategy_Plugin/wkspace/guitest/build/CMakeFiles/gui_example_spawn_widget.dir
+/home/ubu/Gazebo_Strategy_Plugin/wkspace/guitest/build/CMakeFiles/system_gui.dir
