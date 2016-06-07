@@ -1,6 +1,8 @@
 -I/usr/include/qt4
 -I/usr/include/qt4/QtGui
 -I/usr/include/qt4/QtCore
+-I/usr/include/gazebo-5.3
+-I/usr/include/sdformat-2.3
 -I/usr/include
 -I/usr/include/gazebo-5.3
 -I/usr/include

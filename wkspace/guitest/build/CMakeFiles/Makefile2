@@ -123,6 +123,76 @@ clean: CMakeFiles/system_gui.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/system_mouse.dir
+
+# All Build rule for target.
+CMakeFiles/system_mouse.dir/all:
+	$(MAKE) -f CMakeFiles/system_mouse.dir/build.make CMakeFiles/system_mouse.dir/depend
+	$(MAKE) -f CMakeFiles/system_mouse.dir/build.make CMakeFiles/system_mouse.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubu/Gazebo_Strategy_Plugin/wkspace/guitest/build/CMakeFiles  5
+	@echo "Built target system_mouse"
+.PHONY : CMakeFiles/system_mouse.dir/all
+
+# Include target in all.
+all: CMakeFiles/system_mouse.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/system_mouse.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubu/Gazebo_Strategy_Plugin/wkspace/guitest/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/system_mouse.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubu/Gazebo_Strategy_Plugin/wkspace/guitest/build/CMakeFiles 0
+.PHONY : CMakeFiles/system_mouse.dir/rule
+
+# Convenience name for target.
+system_mouse: CMakeFiles/system_mouse.dir/rule
+.PHONY : system_mouse
+
+# clean rule for target.
+CMakeFiles/system_mouse.dir/clean:
+	$(MAKE) -f CMakeFiles/system_mouse.dir/build.make CMakeFiles/system_mouse.dir/clean
+.PHONY : CMakeFiles/system_mouse.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/system_mouse.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/system_robot.dir
+
+# All Build rule for target.
+CMakeFiles/system_robot.dir/all:
+	$(MAKE) -f CMakeFiles/system_robot.dir/build.make CMakeFiles/system_robot.dir/depend
+	$(MAKE) -f CMakeFiles/system_robot.dir/build.make CMakeFiles/system_robot.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubu/Gazebo_Strategy_Plugin/wkspace/guitest/build/CMakeFiles  6
+	@echo "Built target system_robot"
+.PHONY : CMakeFiles/system_robot.dir/all
+
+# Include target in all.
+all: CMakeFiles/system_robot.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/system_robot.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubu/Gazebo_Strategy_Plugin/wkspace/guitest/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/system_robot.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubu/Gazebo_Strategy_Plugin/wkspace/guitest/build/CMakeFiles 0
+.PHONY : CMakeFiles/system_robot.dir/rule
+
+# Convenience name for target.
+system_robot: CMakeFiles/system_robot.dir/rule
+.PHONY : system_robot
+
+# clean rule for target.
+CMakeFiles/system_robot.dir/clean:
+	$(MAKE) -f CMakeFiles/system_robot.dir/build.make CMakeFiles/system_robot.dir/clean
+.PHONY : CMakeFiles/system_robot.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/system_robot.dir/clean
+.PHONY : clean
+
+#=============================================================================
 # Special targets to cleanup operation of make.
 
 # Special rule to run CMake to check the build system integrity.

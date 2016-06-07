@@ -124,6 +124,32 @@ system_gui/fast:
 	$(MAKE) -f CMakeFiles/system_gui.dir/build.make CMakeFiles/system_gui.dir/build
 .PHONY : system_gui/fast
 
+#=============================================================================
+# Target rules for targets named system_mouse
+
+# Build rule for target.
+system_mouse: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 system_mouse
+.PHONY : system_mouse
+
+# fast build rule for target.
+system_mouse/fast:
+	$(MAKE) -f CMakeFiles/system_mouse.dir/build.make CMakeFiles/system_mouse.dir/build
+.PHONY : system_mouse/fast
+
+#=============================================================================
+# Target rules for targets named system_robot
+
+# Build rule for target.
+system_robot: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 system_robot
+.PHONY : system_robot
+
+# fast build rule for target.
+system_robot/fast:
+	$(MAKE) -f CMakeFiles/system_robot.dir/build.make CMakeFiles/system_robot.dir/build
+.PHONY : system_robot/fast
+
 GUIExampleSpawnWidget.o: GUIExampleSpawnWidget.cc.o
 .PHONY : GUIExampleSpawnWidget.o
 
@@ -196,6 +222,54 @@ system_gui.cc.s:
 	$(MAKE) -f CMakeFiles/system_gui.dir/build.make CMakeFiles/system_gui.dir/system_gui.cc.s
 .PHONY : system_gui.cc.s
 
+system_mouse.o: system_mouse.cc.o
+.PHONY : system_mouse.o
+
+# target to build an object file
+system_mouse.cc.o:
+	$(MAKE) -f CMakeFiles/system_mouse.dir/build.make CMakeFiles/system_mouse.dir/system_mouse.cc.o
+.PHONY : system_mouse.cc.o
+
+system_mouse.i: system_mouse.cc.i
+.PHONY : system_mouse.i
+
+# target to preprocess a source file
+system_mouse.cc.i:
+	$(MAKE) -f CMakeFiles/system_mouse.dir/build.make CMakeFiles/system_mouse.dir/system_mouse.cc.i
+.PHONY : system_mouse.cc.i
+
+system_mouse.s: system_mouse.cc.s
+.PHONY : system_mouse.s
+
+# target to generate assembly for a file
+system_mouse.cc.s:
+	$(MAKE) -f CMakeFiles/system_mouse.dir/build.make CMakeFiles/system_mouse.dir/system_mouse.cc.s
+.PHONY : system_mouse.cc.s
+
+system_robot.o: system_robot.cc.o
+.PHONY : system_robot.o
+
+# target to build an object file
+system_robot.cc.o:
+	$(MAKE) -f CMakeFiles/system_robot.dir/build.make CMakeFiles/system_robot.dir/system_robot.cc.o
+.PHONY : system_robot.cc.o
+
+system_robot.i: system_robot.cc.i
+.PHONY : system_robot.i
+
+# target to preprocess a source file
+system_robot.cc.i:
+	$(MAKE) -f CMakeFiles/system_robot.dir/build.make CMakeFiles/system_robot.dir/system_robot.cc.i
+.PHONY : system_robot.cc.i
+
+system_robot.s: system_robot.cc.s
+.PHONY : system_robot.s
+
+# target to generate assembly for a file
+system_robot.cc.s:
+	$(MAKE) -f CMakeFiles/system_robot.dir/build.make CMakeFiles/system_robot.dir/system_robot.cc.s
+.PHONY : system_robot.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -206,6 +280,8 @@ help:
 	@echo "... gui_example_spawn_widget"
 	@echo "... rebuild_cache"
 	@echo "... system_gui"
+	@echo "... system_mouse"
+	@echo "... system_robot"
 	@echo "... GUIExampleSpawnWidget.o"
 	@echo "... GUIExampleSpawnWidget.i"
 	@echo "... GUIExampleSpawnWidget.s"
@@ -215,6 +291,12 @@ help:
 	@echo "... system_gui.o"
 	@echo "... system_gui.i"
 	@echo "... system_gui.s"
+	@echo "... system_mouse.o"
+	@echo "... system_mouse.i"
+	@echo "... system_mouse.s"
+	@echo "... system_robot.o"
+	@echo "... system_robot.i"
+	@echo "... system_robot.s"
 .PHONY : help
 
 

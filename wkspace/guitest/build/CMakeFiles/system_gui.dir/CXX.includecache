@@ -15,14 +15,6 @@ gazebo/rendering/rendering.hh
 -
 gazebo/gazebo.hh
 -
-gazebo/gui/MouseEventHandler.hh
--
-gazebo/common/MouseEvent.hh
--
-boost/thread/mutex.hpp
--
-boost/thread/thread.hpp
--
 
 /usr/include/gazebo-5.3/gazebo/Master.hh
 string
@@ -661,20 +653,6 @@ boost/filesystem.hpp
 -
 gazebo/rendering/RenderingIface.hh
 /usr/include/gazebo-5.3/gazebo/gui/gazebo/rendering/RenderingIface.hh
-gazebo/util/system.hh
-/usr/include/gazebo-5.3/gazebo/gui/gazebo/util/system.hh
-
-/usr/include/gazebo-5.3/gazebo/gui/MouseEventHandler.hh
-boost/function.hpp
--
-string
--
-list
--
-gazebo/common/SingletonT.hh
-/usr/include/gazebo-5.3/gazebo/gui/gazebo/common/SingletonT.hh
-gazebo/common/MouseEvent.hh
-/usr/include/gazebo-5.3/gazebo/gui/gazebo/common/MouseEvent.hh
 gazebo/util/system.hh
 /usr/include/gazebo-5.3/gazebo/gui/gazebo/util/system.hh
 

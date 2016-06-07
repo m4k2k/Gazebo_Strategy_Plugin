@@ -1,0 +1,8 @@
+prefix=/home/ubu/Gazebo_Strategy_Plugin/turtle/kobiplug_overlay/install
+
+Name: kobuki_gazebo
+Description: Description of kobuki_gazebo
+Version: 0.4.2
+Cflags: 
+Libs: -L/home/ubu/Gazebo_Strategy_Plugin/turtle/kobiplug_overlay/install/lib 
+Requires: 

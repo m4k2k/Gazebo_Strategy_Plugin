@@ -91,4 +91,6 @@ SET(CMAKE_MAKEFILE_PRODUCTS
 SET(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/gui_example_spawn_widget.dir/DependInfo.cmake"
   "CMakeFiles/system_gui.dir/DependInfo.cmake"
+  "CMakeFiles/system_mouse.dir/DependInfo.cmake"
+  "CMakeFiles/system_robot.dir/DependInfo.cmake"
   )

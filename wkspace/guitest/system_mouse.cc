@@ -9,12 +9,12 @@
 
 namespace gazebo
 {
-class SystemGUI : public SystemPlugin
+class SystemMouse : public SystemPlugin
 {
     /////////////////////////////////////////////
     /// \brief Destructor
 public:
-    virtual ~SystemGUI()
+    virtual ~SystemMouse()
     {
         this->connections.clear();
         if (this->userCam)
@@ -29,9 +29,9 @@ public:
     {
         this->connections.push_back(
             event::Events::ConnectPreRender(
-                boost::bind(&SystemGUI::Update, this)));
+                boost::bind(&SystemMouse::Update, this)));
 
-        gui::MouseEventHandler::Instance()->AddPressFilter("glwidget", boost::bind(&SystemGUI::OnMousePress, this, _1));
+        gui::MouseEventHandler::Instance()->AddPressFilter("glwidget", boost::bind(&SystemMouse::OnMousePress, this, _1));
     }
 
     /////////////////////////////////////////////
@@ -90,5 +90,5 @@ private:
 };
 
 // Register this plugin with the simulator
-GZ_REGISTER_SYSTEM_PLUGIN(SystemGUI)
+GZ_REGISTER_SYSTEM_PLUGIN(SystemMouse)
 }

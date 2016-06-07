@@ -49,7 +49,6 @@ CMakeFiles/system_gui.dir/system_gui.cc.o
  /usr/include/gazebo-5.3/gazebo/gazebo_config.h
  /usr/include/gazebo-5.3/gazebo/gazebo_core.hh
  /usr/include/gazebo-5.3/gazebo/gui/GuiIface.hh
- /usr/include/gazebo-5.3/gazebo/gui/MouseEventHandler.hh
  /usr/include/gazebo-5.3/gazebo/math/Angle.hh
  /usr/include/gazebo-5.3/gazebo/math/Box.hh
  /usr/include/gazebo-5.3/gazebo/math/Filter.hh
