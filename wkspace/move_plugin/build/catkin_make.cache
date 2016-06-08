@@ -1,0 +1,2 @@
+gazebo_plug
+-DCATKIN_DEVEL_PREFIX=/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel -DCMAKE_INSTALL_PREFIX=/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/install -G Unix Makefiles
