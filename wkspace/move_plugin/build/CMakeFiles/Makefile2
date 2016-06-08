@@ -230,13 +230,13 @@ gtest/preinstall:
 gtest/CMakeFiles/gtest.dir/all:
 	$(MAKE) -f gtest/CMakeFiles/gtest.dir/build.make gtest/CMakeFiles/gtest.dir/depend
 	$(MAKE) -f gtest/CMakeFiles/gtest.dir/build.make gtest/CMakeFiles/gtest.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/build/CMakeFiles 
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/build/CMakeFiles  2
 	@echo "Built target gtest"
 .PHONY : gtest/CMakeFiles/gtest.dir/all
 
 # Build rule for subdir invocation for target.
 gtest/CMakeFiles/gtest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 gtest/CMakeFiles/gtest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/build/CMakeFiles 0
 .PHONY : gtest/CMakeFiles/gtest.dir/rule
@@ -258,16 +258,16 @@ clean: gtest/CMakeFiles/gtest.dir/clean
 # Target rules for target gtest/CMakeFiles/gtest_main.dir
 
 # All Build rule for target.
-gtest/CMakeFiles/gtest_main.dir/all:
+gtest/CMakeFiles/gtest_main.dir/all: gtest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f gtest/CMakeFiles/gtest_main.dir/build.make gtest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) -f gtest/CMakeFiles/gtest_main.dir/build.make gtest/CMakeFiles/gtest_main.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/build/CMakeFiles 
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/build/CMakeFiles  3
 	@echo "Built target gtest_main"
 .PHONY : gtest/CMakeFiles/gtest_main.dir/all
 
 # Build rule for subdir invocation for target.
 gtest/CMakeFiles/gtest_main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 gtest/CMakeFiles/gtest_main.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/build/CMakeFiles 0
 .PHONY : gtest/CMakeFiles/gtest_main.dir/rule
@@ -783,7 +783,7 @@ clean: gazebo_plug/CMakeFiles/gazebo_msgs_generate_messages_py.dir/clean
 gazebo_plug/CMakeFiles/gazebo_plug.dir/all:
 	$(MAKE) -f gazebo_plug/CMakeFiles/gazebo_plug.dir/build.make gazebo_plug/CMakeFiles/gazebo_plug.dir/depend
 	$(MAKE) -f gazebo_plug/CMakeFiles/gazebo_plug.dir/build.make gazebo_plug/CMakeFiles/gazebo_plug.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/build/CMakeFiles 
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/build/CMakeFiles  1
 	@echo "Built target gazebo_plug"
 .PHONY : gazebo_plug/CMakeFiles/gazebo_plug.dir/all
 
@@ -793,7 +793,7 @@ all: gazebo_plug/CMakeFiles/gazebo_plug.dir/all
 
 # Build rule for subdir invocation for target.
 gazebo_plug/CMakeFiles/gazebo_plug.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/build/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 gazebo_plug/CMakeFiles/gazebo_plug.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/build/CMakeFiles 0
 .PHONY : gazebo_plug/CMakeFiles/gazebo_plug.dir/rule

@@ -9,6 +9,7 @@
 # modified environment variables
 export CMAKE_PREFIX_PATH="/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel:$CMAKE_PREFIX_PATH"
 export LD_LIBRARY_PATH="/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib:$LD_LIBRARY_PATH"
+export PKG_CONFIG_PATH="/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/pkgconfig:$PKG_CONFIG_PATH"
 export PWD="/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/build"
 export ROSLISP_PACKAGE_DIRECTORIES="/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
 export ROS_PACKAGE_PATH="/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/src:$ROS_PACKAGE_PATH"
