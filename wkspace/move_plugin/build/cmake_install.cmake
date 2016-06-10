@@ -117,7 +117,7 @@ ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unsp
 IF(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   INCLUDE("/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/build/gtest/cmake_install.cmake")
-  INCLUDE("/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/build/gazebo_plug/cmake_install.cmake")
+  INCLUDE("/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/build/gazebo_move/cmake_install.cmake")
 
 ENDIF(NOT CMAKE_INSTALL_LOCAL_ONLY)
 

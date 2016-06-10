@@ -14,8 +14,26 @@
 # EXTERNAL cache entries
 ########################
 
+//The threading library used by boost-thread
+BOOST_THREAD_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libpthread.so
+
 //Build shared libraries (DLLs).
 BUILD_SHARED_LIBS:BOOL=ON
+
+//The directory containing a CMake configuration file for Boost.
+Boost_DIR:PATH=Boost_DIR-NOTFOUND
+
+//Path to a file.
+Boost_INCLUDE_DIR:PATH=/usr/include
+
+//Boost library directory
+Boost_LIBRARY_DIR:PATH=/usr/lib/x86_64-linux-gnu
+
+//Boost thread library (debug)
+Boost_THREAD_LIBRARY_DEBUG:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_thread.so
+
+//Boost thread library (release)
+Boost_THREAD_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_thread.so
 
 //List of ';' separated packages to exclude
 CATKIN_BLACKLIST_PACKAGES:STRING=
@@ -221,6 +239,33 @@ LSB_RELEASE_EXECUTABLE:FILEPATH=/usr/bin/lsb_release
 //Path to a program.
 NOSETESTS:FILEPATH=/usr/bin/nosetests-2.7
 
+//pkg-config executable
+PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config
+
+//Path to a file.
+PROTOBUF_INCLUDE_DIR:PATH=/usr/include
+
+//Path to a library.
+PROTOBUF_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libprotobuf.so
+
+//Path to a library.
+PROTOBUF_LIBRARY_DEBUG:FILEPATH=/usr/lib/x86_64-linux-gnu/libprotobuf.so
+
+//Path to a library.
+PROTOBUF_LITE_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libprotobuf-lite.so
+
+//Path to a library.
+PROTOBUF_LITE_LIBRARY_DEBUG:FILEPATH=/usr/lib/x86_64-linux-gnu/libprotobuf-lite.so
+
+//The Google Protocol Buffers Compiler
+PROTOBUF_PROTOC_EXECUTABLE:FILEPATH=PROTOBUF_PROTOC_EXECUTABLE-NOTFOUND
+
+//Path to a library.
+PROTOBUF_PROTOC_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libprotoc.so
+
+//Path to a library.
+PROTOBUF_PROTOC_LIBRARY_DEBUG:FILEPATH=/usr/lib/x86_64-linux-gnu/libprotoc.so
+
 //Path to a program.
 PYTHON_EXECUTABLE:FILEPATH=/usr/bin/python
 
@@ -235,6 +280,9 @@ Project_SOURCE_DIR:STATIC=/home/ubu/Gazebo_Strategy_Plugin/turtle/overlayws/src
 
 //Path to a library.
 RT_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/librt.so
+
+//The directory containing a CMake configuration file for SDFormat.
+SDFormat_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/sdformat
 
 //Enable debian style python package layout
 SETUPTOOLS_DEB_LAYOUT:BOOL=ON
@@ -251,8 +299,83 @@ _CATKIN_GTEST_INCLUDE:FILEPATH=/usr/include/gtest/gtest.h
 //Path to a file.
 _CATKIN_GTEST_SRC:FILEPATH=/usr/src/gtest/src/gtest.cc
 
+//The directory containing a CMake configuration file for actionlib.
+actionlib_DIR:PATH=/opt/ros/indigo/share/actionlib/cmake
+
+//The directory containing a CMake configuration file for actionlib_msgs.
+actionlib_msgs_DIR:PATH=/opt/ros/indigo/share/actionlib_msgs/cmake
+
+//The directory containing a CMake configuration file for angles.
+angles_DIR:PATH=/opt/ros/indigo/share/angles/cmake
+
+//The directory containing a CMake configuration file for bond.
+bond_DIR:PATH=/opt/ros/indigo/share/bond/cmake
+
+//The directory containing a CMake configuration file for bondcpp.
+bondcpp_DIR:PATH=/opt/ros/indigo/share/bondcpp/cmake
+
+//The directory containing a CMake configuration file for camera_info_manager.
+camera_info_manager_DIR:PATH=/opt/ros/indigo/share/camera_info_manager/cmake
+
 //The directory containing a CMake configuration file for catkin.
 catkin_DIR:PATH=/opt/ros/indigo/share/catkin/cmake
+
+//The directory containing a CMake configuration file for class_loader.
+class_loader_DIR:PATH=/opt/ros/indigo/share/class_loader/cmake
+
+//The directory containing a CMake configuration file for controller_interface.
+controller_interface_DIR:PATH=/opt/ros/indigo/share/controller_interface/cmake
+
+//The directory containing a CMake configuration file for cpp_common.
+cpp_common_DIR:PATH=/opt/ros/indigo/share/cpp_common/cmake
+
+//The directory containing a CMake configuration file for cv_bridge.
+cv_bridge_DIR:PATH=/opt/ros/indigo/share/cv_bridge/cmake
+
+//The directory containing a CMake configuration file for diagnostic_msgs.
+diagnostic_msgs_DIR:PATH=/opt/ros/indigo/share/diagnostic_msgs/cmake
+
+//The directory containing a CMake configuration file for diagnostic_updater.
+diagnostic_updater_DIR:PATH=/opt/ros/indigo/share/diagnostic_updater/cmake
+
+//The directory containing a CMake configuration file for driver_base.
+driver_base_DIR:PATH=/opt/ros/indigo/share/driver_base/cmake
+
+//The directory containing a CMake configuration file for dynamic_reconfigure.
+dynamic_reconfigure_DIR:PATH=/opt/ros/indigo/share/dynamic_reconfigure/cmake
+
+//The directory containing a CMake configuration file for gazebo.
+gazebo_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/gazebo
+
+//The directory containing a CMake configuration file for gazebo_msgs.
+gazebo_msgs_DIR:PATH=/opt/ros/indigo/share/gazebo_msgs/cmake
+
+//The directory containing a CMake configuration file for gazebo_plugins.
+gazebo_plugins_DIR:PATH=/opt/ros/indigo/share/gazebo_plugins/cmake
+
+//Path to a library.
+gazebo_proto_msgs_lib:FILEPATH=/usr/lib/x86_64-linux-gnu/libgazebo_msgs.so
+
+//Dependencies for the target
+gazebo_ros_controller_manager_LIB_DEPENDS:STATIC=general;/opt/ros/indigo/lib/libcv_bridge.so;general;/usr/lib/x86_64-linux-gnu/libopencv_videostab.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_video.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_superres.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_stitching.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_photo.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_ocl.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_objdetect.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_ml.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_legacy.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_highgui.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_gpu.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_flann.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_features2d.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_core.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_contrib.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_calib3d.so.2.4.8;general;/opt/ros/indigo/lib/libvision_reconfigure.so;general;/opt/ros/indigo/lib/libgazebo_ros_utils.so;general;/opt/ros/indigo/lib/libgazebo_ros_camera_utils.so;general;/opt/ros/indigo/lib/libgazebo_ros_camera.so;general;/opt/ros/indigo/lib/libgazebo_ros_multicamera.so;general;/opt/ros/indigo/lib/libgazebo_ros_depth_camera.so;general;/opt/ros/indigo/lib/libgazebo_ros_openni_kinect.so;general;/opt/ros/indigo/lib/libgazebo_ros_gpu_laser.so;general;/opt/ros/indigo/lib/libgazebo_ros_laser.so;general;/opt/ros/indigo/lib/libgazebo_ros_block_laser.so;general;/opt/ros/indigo/lib/libgazebo_ros_p3d.so;general;/opt/ros/indigo/lib/libgazebo_ros_imu.so;general;/opt/ros/indigo/lib/libgazebo_ros_f3d.so;general;/opt/ros/indigo/lib/libgazebo_ros_ft_sensor.so;general;/opt/ros/indigo/lib/libgazebo_ros_bumper.so;general;/opt/ros/indigo/lib/libgazebo_ros_template.so;general;/opt/ros/indigo/lib/libgazebo_ros_projector.so;general;/opt/ros/indigo/lib/libgazebo_ros_prosilica.so;general;/opt/ros/indigo/lib/libgazebo_ros_force.so;general;/opt/ros/indigo/lib/libgazebo_ros_joint_trajectory.so;general;/opt/ros/indigo/lib/libgazebo_ros_joint_state_publisher.so;general;/opt/ros/indigo/lib/libgazebo_ros_joint_pose_trajectory.so;general;/opt/ros/indigo/lib/libgazebo_ros_diff_drive.so;general;/opt/ros/indigo/lib/libgazebo_ros_tricycle_drive.so;general;/opt/ros/indigo/lib/libgazebo_ros_skid_steer_drive.so;general;/opt/ros/indigo/lib/libgazebo_ros_video.so;general;/opt/ros/indigo/lib/libgazebo_ros_planar_move.so;general;/opt/ros/indigo/lib/libnodeletlib.so;general;/opt/ros/indigo/lib/libbondcpp.so;general;/usr/lib/x86_64-linux-gnu/libuuid.so;general;/opt/ros/indigo/lib/libtf.so;general;/opt/ros/indigo/lib/libtf2_ros.so;general;/opt/ros/indigo/lib/libactionlib.so;general;/opt/ros/indigo/lib/libtf2.so;general;/opt/ros/indigo/lib/libdynamic_reconfigure_config_init_mutex.so;general;/opt/ros/indigo/lib/libcamera_info_manager.so;general;/opt/ros/indigo/lib/libimage_transport.so;general;/opt/ros/indigo/lib/libmessage_filters.so;general;/opt/ros/indigo/lib/libpolled_camera.so;general;/opt/ros/indigo/lib/libpr2_controller_manager.so;general;/opt/ros/indigo/lib/librealtime_tools.so;general;/opt/ros/indigo/lib/libpr2_mechanism_model.so;general;/opt/ros/indigo/lib/libkdl_parser.so;general;/opt/ros/indigo/lib/liborocos-kdl.so;general;/opt/ros/indigo/lib/liborocos-kdl.so.1.3.0;general;/usr/lib/x86_64-linux-gnu/libtinyxml.so;general;/opt/ros/indigo/lib/libclass_loader.so;general;/usr/lib/libPocoFoundation.so;general;/usr/lib/x86_64-linux-gnu/libdl.so;general;/opt/ros/indigo/lib/libroslib.so;general;/opt/ros/indigo/lib/liburdf.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_sensor.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_model_state.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_model.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_world.so;general;/opt/ros/indigo/lib/librosconsole_bridge.so;general;/opt/ros/indigo/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_signals.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/opt/ros/indigo/lib/librosconsole.so;general;/opt/ros/indigo/lib/librosconsole_log4cxx.so;general;/opt/ros/indigo/lib/librosconsole_backend_interface.so;general;/usr/lib/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/indigo/lib/libroscpp_serialization.so;general;/opt/ros/indigo/lib/librostime.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/opt/ros/indigo/lib/libxmlrpcpp.so;general;/opt/ros/indigo/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;
+
+//Dependencies for the target
+gazebo_ros_power_monitor_LIB_DEPENDS:STATIC=general;/opt/ros/indigo/lib/libcv_bridge.so;general;/usr/lib/x86_64-linux-gnu/libopencv_videostab.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_video.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_superres.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_stitching.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_photo.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_ocl.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_objdetect.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_ml.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_legacy.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_highgui.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_gpu.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_flann.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_features2d.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_core.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_contrib.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_calib3d.so.2.4.8;general;/opt/ros/indigo/lib/libvision_reconfigure.so;general;/opt/ros/indigo/lib/libgazebo_ros_utils.so;general;/opt/ros/indigo/lib/libgazebo_ros_camera_utils.so;general;/opt/ros/indigo/lib/libgazebo_ros_camera.so;general;/opt/ros/indigo/lib/libgazebo_ros_multicamera.so;general;/opt/ros/indigo/lib/libgazebo_ros_depth_camera.so;general;/opt/ros/indigo/lib/libgazebo_ros_openni_kinect.so;general;/opt/ros/indigo/lib/libgazebo_ros_gpu_laser.so;general;/opt/ros/indigo/lib/libgazebo_ros_laser.so;general;/opt/ros/indigo/lib/libgazebo_ros_block_laser.so;general;/opt/ros/indigo/lib/libgazebo_ros_p3d.so;general;/opt/ros/indigo/lib/libgazebo_ros_imu.so;general;/opt/ros/indigo/lib/libgazebo_ros_f3d.so;general;/opt/ros/indigo/lib/libgazebo_ros_ft_sensor.so;general;/opt/ros/indigo/lib/libgazebo_ros_bumper.so;general;/opt/ros/indigo/lib/libgazebo_ros_template.so;general;/opt/ros/indigo/lib/libgazebo_ros_projector.so;general;/opt/ros/indigo/lib/libgazebo_ros_prosilica.so;general;/opt/ros/indigo/lib/libgazebo_ros_force.so;general;/opt/ros/indigo/lib/libgazebo_ros_joint_trajectory.so;general;/opt/ros/indigo/lib/libgazebo_ros_joint_state_publisher.so;general;/opt/ros/indigo/lib/libgazebo_ros_joint_pose_trajectory.so;general;/opt/ros/indigo/lib/libgazebo_ros_diff_drive.so;general;/opt/ros/indigo/lib/libgazebo_ros_tricycle_drive.so;general;/opt/ros/indigo/lib/libgazebo_ros_skid_steer_drive.so;general;/opt/ros/indigo/lib/libgazebo_ros_video.so;general;/opt/ros/indigo/lib/libgazebo_ros_planar_move.so;general;/opt/ros/indigo/lib/libnodeletlib.so;general;/opt/ros/indigo/lib/libbondcpp.so;general;/usr/lib/x86_64-linux-gnu/libuuid.so;general;/opt/ros/indigo/lib/libtf.so;general;/opt/ros/indigo/lib/libtf2_ros.so;general;/opt/ros/indigo/lib/libactionlib.so;general;/opt/ros/indigo/lib/libtf2.so;general;/opt/ros/indigo/lib/libdynamic_reconfigure_config_init_mutex.so;general;/opt/ros/indigo/lib/libcamera_info_manager.so;general;/opt/ros/indigo/lib/libimage_transport.so;general;/opt/ros/indigo/lib/libmessage_filters.so;general;/opt/ros/indigo/lib/libpolled_camera.so;general;/opt/ros/indigo/lib/libpr2_controller_manager.so;general;/opt/ros/indigo/lib/librealtime_tools.so;general;/opt/ros/indigo/lib/libpr2_mechanism_model.so;general;/opt/ros/indigo/lib/libkdl_parser.so;general;/opt/ros/indigo/lib/liborocos-kdl.so;general;/opt/ros/indigo/lib/liborocos-kdl.so.1.3.0;general;/usr/lib/x86_64-linux-gnu/libtinyxml.so;general;/opt/ros/indigo/lib/libclass_loader.so;general;/usr/lib/libPocoFoundation.so;general;/usr/lib/x86_64-linux-gnu/libdl.so;general;/opt/ros/indigo/lib/libroslib.so;general;/opt/ros/indigo/lib/liburdf.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_sensor.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_model_state.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_model.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_world.so;general;/opt/ros/indigo/lib/librosconsole_bridge.so;general;/opt/ros/indigo/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_signals.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/opt/ros/indigo/lib/librosconsole.so;general;/opt/ros/indigo/lib/librosconsole_log4cxx.so;general;/opt/ros/indigo/lib/librosconsole_backend_interface.so;general;/usr/lib/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/indigo/lib/libroscpp_serialization.so;general;/opt/ros/indigo/lib/librostime.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/opt/ros/indigo/lib/libxmlrpcpp.so;general;/opt/ros/indigo/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;
+
+//The directory containing a CMake configuration file for gencpp.
+gencpp_DIR:PATH=/opt/ros/indigo/share/gencpp/cmake
+
+//The directory containing a CMake configuration file for genlisp.
+genlisp_DIR:PATH=/opt/ros/indigo/share/genlisp/cmake
+
+//The directory containing a CMake configuration file for genmsg.
+genmsg_DIR:PATH=/opt/ros/indigo/share/genmsg/cmake
+
+//The directory containing a CMake configuration file for genpy.
+genpy_DIR:PATH=/opt/ros/indigo/share/genpy/cmake
+
+//The directory containing a CMake configuration file for geometry_msgs.
+geometry_msgs_DIR:PATH=/opt/ros/indigo/share/geometry_msgs/cmake
 
 //Value Computed by CMake
 gtest_BINARY_DIR:STATIC=/home/ubu/Gazebo_Strategy_Plugin/turtle/overlayws/build/gtest
@@ -279,6 +402,156 @@ gtest_force_shared_crt:BOOL=OFF
 //Dependencies for the target
 gtest_main_LIB_DEPENDS:STATIC=general;-lpthread;general;gtest;
 
+//The directory containing a CMake configuration file for hardware_interface.
+hardware_interface_DIR:PATH=/opt/ros/indigo/share/hardware_interface/cmake
+
+//The directory containing a CMake configuration file for image_transport.
+image_transport_DIR:PATH=/opt/ros/indigo/share/image_transport/cmake
+
+//The directory containing a CMake configuration file for kdl_parser.
+kdl_parser_DIR:PATH=/opt/ros/indigo/share/kdl_parser/cmake
+
+//Path to a library.
+lib:FILEPATH=/opt/ros/indigo/lib/librealtime_tools.so
+
+//The directory containing a CMake configuration file for message_filters.
+message_filters_DIR:PATH=/opt/ros/indigo/share/message_filters/cmake
+
+//The directory containing a CMake configuration file for message_generation.
+message_generation_DIR:PATH=/opt/ros/indigo/share/message_generation/cmake
+
+//The directory containing a CMake configuration file for message_runtime.
+message_runtime_DIR:PATH=/opt/ros/indigo/share/message_runtime/cmake
+
+//The directory containing a CMake configuration file for nav_msgs.
+nav_msgs_DIR:PATH=/opt/ros/indigo/share/nav_msgs/cmake
+
+//The directory containing a CMake configuration file for nodelet.
+nodelet_DIR:PATH=/opt/ros/indigo/share/nodelet/cmake
+
+//Path to a library.
+onelib:FILEPATH=/usr/lib/x86_64-linux-gnu/libsdformat.so
+
+//The directory containing a CMake configuration file for orocos_kdl.
+orocos_kdl_DIR:PATH=/opt/ros/indigo/share/orocos_kdl
+
+//The directory containing a CMake configuration file for pluginlib.
+pluginlib_DIR:PATH=/opt/ros/indigo/share/pluginlib/cmake
+
+//The directory containing a CMake configuration file for polled_camera.
+polled_camera_DIR:PATH=/opt/ros/indigo/share/polled_camera/cmake
+
+//Value Computed by CMake
+pr2_controller_configuration_gazebo_BINARY_DIR:STATIC=/home/ubu/Gazebo_Strategy_Plugin/turtle/overlayws/build/pr2_simulator/pr2_controller_configuration_gazebo
+
+//Value Computed by CMake
+pr2_controller_configuration_gazebo_SOURCE_DIR:STATIC=/home/ubu/Gazebo_Strategy_Plugin/turtle/overlayws/src/pr2_simulator/pr2_controller_configuration_gazebo
+
+//The directory containing a CMake configuration file for pr2_controller_interface.
+pr2_controller_interface_DIR:PATH=/opt/ros/indigo/share/pr2_controller_interface/cmake
+
+//The directory containing a CMake configuration file for pr2_controller_manager.
+pr2_controller_manager_DIR:PATH=/opt/ros/indigo/share/pr2_controller_manager/cmake
+
+//The directory containing a CMake configuration file for pr2_description.
+pr2_description_DIR:PATH=/opt/ros/indigo/share/pr2_description/cmake
+
+//Value Computed by CMake
+pr2_gazebo_BINARY_DIR:STATIC=/home/ubu/Gazebo_Strategy_Plugin/turtle/overlayws/build/pr2_simulator/pr2_gazebo
+
+//Value Computed by CMake
+pr2_gazebo_SOURCE_DIR:STATIC=/home/ubu/Gazebo_Strategy_Plugin/turtle/overlayws/src/pr2_simulator/pr2_gazebo
+
+//Value Computed by CMake
+pr2_gazebo_plugins_BINARY_DIR:STATIC=/home/ubu/Gazebo_Strategy_Plugin/turtle/overlayws/build/pr2_simulator/pr2_gazebo_plugins
+
+//Value Computed by CMake
+pr2_gazebo_plugins_SOURCE_DIR:STATIC=/home/ubu/Gazebo_Strategy_Plugin/turtle/overlayws/src/pr2_simulator/pr2_gazebo_plugins
+
+//The directory containing a CMake configuration file for pr2_hardware_interface.
+pr2_hardware_interface_DIR:PATH=/opt/ros/indigo/share/pr2_hardware_interface/cmake
+
+//The directory containing a CMake configuration file for pr2_mechanism_diagnostics.
+pr2_mechanism_diagnostics_DIR:PATH=/opt/ros/indigo/share/pr2_mechanism_diagnostics/cmake
+
+//The directory containing a CMake configuration file for pr2_mechanism_model.
+pr2_mechanism_model_DIR:PATH=/opt/ros/indigo/share/pr2_mechanism_model/cmake
+
+//The directory containing a CMake configuration file for pr2_mechanism_msgs.
+pr2_mechanism_msgs_DIR:PATH=/opt/ros/indigo/share/pr2_mechanism_msgs/cmake
+
+//The directory containing a CMake configuration file for pr2_msgs.
+pr2_msgs_DIR:PATH=/opt/ros/indigo/share/pr2_msgs/cmake
+
+//Value Computed by CMake
+pr2_simulator_BINARY_DIR:STATIC=/home/ubu/Gazebo_Strategy_Plugin/turtle/overlayws/build/pr2_simulator/pr2_simulator
+
+//Value Computed by CMake
+pr2_simulator_SOURCE_DIR:STATIC=/home/ubu/Gazebo_Strategy_Plugin/turtle/overlayws/src/pr2_simulator/pr2_simulator
+
+//The directory containing a CMake configuration file for realtime_tools.
+realtime_tools_DIR:PATH=/opt/ros/indigo/share/realtime_tools/cmake
+
+//The directory containing a CMake configuration file for rosconsole.
+rosconsole_DIR:PATH=/opt/ros/indigo/share/rosconsole/cmake
+
+//The directory containing a CMake configuration file for rosconsole_bridge.
+rosconsole_bridge_DIR:PATH=/opt/ros/indigo/share/rosconsole_bridge/cmake
+
+//The directory containing a CMake configuration file for roscpp.
+roscpp_DIR:PATH=/opt/ros/indigo/share/roscpp/cmake
+
+//The directory containing a CMake configuration file for roscpp_serialization.
+roscpp_serialization_DIR:PATH=/opt/ros/indigo/share/roscpp_serialization/cmake
+
+//The directory containing a CMake configuration file for roscpp_traits.
+roscpp_traits_DIR:PATH=/opt/ros/indigo/share/roscpp_traits/cmake
+
+//The directory containing a CMake configuration file for rosgraph.
+rosgraph_DIR:PATH=/opt/ros/indigo/share/rosgraph/cmake
+
+//The directory containing a CMake configuration file for rosgraph_msgs.
+rosgraph_msgs_DIR:PATH=/opt/ros/indigo/share/rosgraph_msgs/cmake
+
+//The directory containing a CMake configuration file for roslib.
+roslib_DIR:PATH=/opt/ros/indigo/share/roslib/cmake
+
+//The directory containing a CMake configuration file for rospy.
+rospy_DIR:PATH=/opt/ros/indigo/share/rospy/cmake
+
+//The directory containing a CMake configuration file for rostime.
+rostime_DIR:PATH=/opt/ros/indigo/share/rostime/cmake
+
+//The directory containing a CMake configuration file for sensor_msgs.
+sensor_msgs_DIR:PATH=/opt/ros/indigo/share/sensor_msgs/cmake
+
+//The directory containing a CMake configuration file for smclib.
+smclib_DIR:PATH=/opt/ros/indigo/share/smclib/cmake
+
+//The directory containing a CMake configuration file for std_msgs.
+std_msgs_DIR:PATH=/opt/ros/indigo/share/std_msgs/cmake
+
+//The directory containing a CMake configuration file for std_srvs.
+std_srvs_DIR:PATH=/opt/ros/indigo/share/std_srvs/cmake
+
+//The directory containing a CMake configuration file for tf2.
+tf2_DIR:PATH=/opt/ros/indigo/share/tf2/cmake
+
+//The directory containing a CMake configuration file for tf2_msgs.
+tf2_msgs_DIR:PATH=/opt/ros/indigo/share/tf2_msgs/cmake
+
+//The directory containing a CMake configuration file for tf2_py.
+tf2_py_DIR:PATH=/opt/ros/indigo/share/tf2_py/cmake
+
+//The directory containing a CMake configuration file for tf2_ros.
+tf2_ros_DIR:PATH=/opt/ros/indigo/share/tf2_ros/cmake
+
+//The directory containing a CMake configuration file for tf.
+tf_DIR:PATH=/opt/ros/indigo/share/tf/cmake
+
+//The directory containing a CMake configuration file for trajectory_msgs.
+trajectory_msgs_DIR:PATH=/opt/ros/indigo/share/trajectory_msgs/cmake
+
 //Value Computed by CMake
 turtlebot_gazebo_BINARY_DIR:STATIC=/home/ubu/Gazebo_Strategy_Plugin/turtle/overlayws/build/turtlebot_simulator/turtlebot_gazebo
 
@@ -303,11 +576,30 @@ turtlebot_stdr_BINARY_DIR:STATIC=/home/ubu/Gazebo_Strategy_Plugin/turtle/overlay
 //Value Computed by CMake
 turtlebot_stdr_SOURCE_DIR:STATIC=/home/ubu/Gazebo_Strategy_Plugin/turtle/overlayws/src/turtlebot_simulator/turtlebot_stdr
 
+//The directory containing a CMake configuration file for urdf.
+urdf_DIR:PATH=/opt/ros/indigo/share/urdf/cmake
+
+//The directory containing a CMake configuration file for xacro.
+xacro_DIR:PATH=/opt/ros/indigo/share/xacro/cmake
+
+//The directory containing a CMake configuration file for xmlrpcpp.
+xmlrpcpp_DIR:PATH=/opt/ros/indigo/share/xmlrpcpp/cmake
+
 
 ########################
 # INTERNAL cache entries
 ########################
 
+//ADVANCED property for variable: Boost_DIR
+Boost_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_INCLUDE_DIR
+Boost_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_LIBRARY_DIR
+Boost_LIBRARY_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_THREAD_LIBRARY_DEBUG
+Boost_THREAD_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_THREAD_LIBRARY_RELEASE
+Boost_THREAD_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 //catkin environment
 CATKIN_ENV:INTERNAL=/home/ubu/Gazebo_Strategy_Plugin/turtle/overlayws/build/catkin_generated/env_cached.sh
 CATKIN_TEST_RESULTS_DIR:INTERNAL=/home/ubu/Gazebo_Strategy_Plugin/turtle/overlayws/build/test_results
@@ -405,7 +697,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=6
+CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=10
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -446,6 +738,10 @@ CMAKE_UNAME:INTERNAL=/bin/uname
 CMAKE_USE_RELATIVE_PATHS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//Details about finding PROTOBUF
+FIND_PACKAGE_MESSAGE_DETAILS_PROTOBUF:INTERNAL=[/usr/lib/x86_64-linux-gnu/libprotobuf.so][/usr/include][v()]
+//Details about finding PkgConfig
+FIND_PACKAGE_MESSAGE_DETAILS_PkgConfig:INTERNAL=[/usr/bin/pkg-config][v0.26()]
 //Details about finding PythonInterp
 FIND_PACKAGE_MESSAGE_DETAILS_PythonInterp:INTERNAL=[/usr/bin/python][v2.7.6()]
 //Details about finding Threads
@@ -465,10 +761,141 @@ GTEST_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
 GTEST_MAIN_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: GTEST_MAIN_LIBRARY_DEBUG
 GTEST_MAIN_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+OGRE-Terrain_CFLAGS:INTERNAL=-pthread;-I/usr/include/OGRE/Terrain;-I/usr/include/OGRE;-I/usr/include/OGRE/Paging
+OGRE-Terrain_CFLAGS_I:INTERNAL=
+OGRE-Terrain_CFLAGS_OTHER:INTERNAL=-pthread
+OGRE-Terrain_FOUND:INTERNAL=1
+OGRE-Terrain_INCLUDEDIR:INTERNAL=/usr/include
+OGRE-Terrain_INCLUDE_DIRS:INTERNAL=/usr/include/OGRE/Terrain;/usr/include/OGRE;/usr/include/OGRE/Paging
+OGRE-Terrain_LDFLAGS:INTERNAL=-lOgreTerrain;-lOgrePaging;-lOgreMain;-lpthread
+OGRE-Terrain_LDFLAGS_OTHER:INTERNAL=
+OGRE-Terrain_LIBDIR:INTERNAL=/usr/lib/x86_64-linux-gnu
+OGRE-Terrain_LIBRARIES:INTERNAL=OgreTerrain;OgrePaging;OgreMain;pthread
+OGRE-Terrain_LIBRARY_DIRS:INTERNAL=
+OGRE-Terrain_LIBS:INTERNAL=
+OGRE-Terrain_LIBS_L:INTERNAL=
+OGRE-Terrain_LIBS_OTHER:INTERNAL=
+OGRE-Terrain_LIBS_PATHS:INTERNAL=
+OGRE-Terrain_OGRE-Terrain_INCLUDEDIR:INTERNAL=
+OGRE-Terrain_OGRE-Terrain_LIBDIR:INTERNAL=
+OGRE-Terrain_OGRE-Terrain_PREFIX:INTERNAL=
+OGRE-Terrain_OGRE-Terrain_VERSION:INTERNAL=
+OGRE-Terrain_PREFIX:INTERNAL=/usr
+OGRE-Terrain_STATIC_CFLAGS:INTERNAL=-pthread;-I/usr/include/OGRE/Terrain;-I/usr/include/OGRE;-I/usr/include/OGRE/Paging
+OGRE-Terrain_STATIC_CFLAGS_I:INTERNAL=
+OGRE-Terrain_STATIC_CFLAGS_OTHER:INTERNAL=-pthread
+OGRE-Terrain_STATIC_INCLUDE_DIRS:INTERNAL=/usr/include/OGRE/Terrain;/usr/include/OGRE;/usr/include/OGRE/Paging
+OGRE-Terrain_STATIC_LDFLAGS:INTERNAL=-lOgreTerrain;-lOgrePaging;-lOgreMain;-lpthread
+OGRE-Terrain_STATIC_LDFLAGS_OTHER:INTERNAL=
+OGRE-Terrain_STATIC_LIBDIR:INTERNAL=
+OGRE-Terrain_STATIC_LIBRARIES:INTERNAL=OgreTerrain;OgrePaging;OgreMain;pthread
+OGRE-Terrain_STATIC_LIBRARY_DIRS:INTERNAL=
+OGRE-Terrain_STATIC_LIBS:INTERNAL=
+OGRE-Terrain_STATIC_LIBS_L:INTERNAL=
+OGRE-Terrain_STATIC_LIBS_OTHER:INTERNAL=
+OGRE-Terrain_STATIC_LIBS_PATHS:INTERNAL=
+OGRE-Terrain_VERSION:INTERNAL=1.8.1
+OGRE_CFLAGS:INTERNAL=-pthread;-I/usr/include/OGRE
+OGRE_CFLAGS_I:INTERNAL=
+OGRE_CFLAGS_OTHER:INTERNAL=-pthread
+OGRE_FOUND:INTERNAL=1
+OGRE_INCLUDEDIR:INTERNAL=/usr/include
+OGRE_INCLUDE_DIRS:INTERNAL=/usr/include/OGRE
+OGRE_LDFLAGS:INTERNAL=-lOgreMain;-lpthread
+OGRE_LDFLAGS_OTHER:INTERNAL=
+OGRE_LIBDIR:INTERNAL=/usr/lib/x86_64-linux-gnu
+OGRE_LIBRARIES:INTERNAL=OgreMain;pthread
+OGRE_LIBRARY_DIRS:INTERNAL=
+OGRE_LIBS:INTERNAL=
+OGRE_LIBS_L:INTERNAL=
+OGRE_LIBS_OTHER:INTERNAL=
+OGRE_LIBS_PATHS:INTERNAL=
+OGRE_OGRE_INCLUDEDIR:INTERNAL=
+OGRE_OGRE_LIBDIR:INTERNAL=
+OGRE_OGRE_PREFIX:INTERNAL=
+OGRE_OGRE_VERSION:INTERNAL=
+OGRE_PREFIX:INTERNAL=/usr
+OGRE_STATIC_CFLAGS:INTERNAL=-pthread;-I/usr/include/OGRE
+OGRE_STATIC_CFLAGS_I:INTERNAL=
+OGRE_STATIC_CFLAGS_OTHER:INTERNAL=-pthread
+OGRE_STATIC_INCLUDE_DIRS:INTERNAL=/usr/include/OGRE
+OGRE_STATIC_LDFLAGS:INTERNAL=-lOgreMain;-lpthread
+OGRE_STATIC_LDFLAGS_OTHER:INTERNAL=
+OGRE_STATIC_LIBDIR:INTERNAL=
+OGRE_STATIC_LIBRARIES:INTERNAL=OgreMain;pthread
+OGRE_STATIC_LIBRARY_DIRS:INTERNAL=
+OGRE_STATIC_LIBS:INTERNAL=
+OGRE_STATIC_LIBS_L:INTERNAL=
+OGRE_STATIC_LIBS_OTHER:INTERNAL=
+OGRE_STATIC_LIBS_PATHS:INTERNAL=
+OGRE_VERSION:INTERNAL=1.8.1
+//ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
+PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PROTOBUF_INCLUDE_DIR
+PROTOBUF_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PROTOBUF_LIBRARY
+PROTOBUF_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PROTOBUF_LIBRARY_DEBUG
+PROTOBUF_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PROTOBUF_LITE_LIBRARY
+PROTOBUF_LITE_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PROTOBUF_LITE_LIBRARY_DEBUG
+PROTOBUF_LITE_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PROTOBUF_PROTOC_EXECUTABLE
+PROTOBUF_PROTOC_EXECUTABLE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PROTOBUF_PROTOC_LIBRARY
+PROTOBUF_PROTOC_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PROTOBUF_PROTOC_LIBRARY_DEBUG
+PROTOBUF_PROTOC_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: PYTHON_EXECUTABLE
 PYTHON_EXECUTABLE-ADVANCED:INTERNAL=1
 //This needs to be in PYTHONPATH when 'setup.py install' is called.
 //  And it needs to match.  But setuptools won't tell us where
 // it will install things.
 PYTHON_INSTALL_DIR:INTERNAL=lib/python2.7/dist-packages
+XML_CFLAGS:INTERNAL=-I/usr/include/libxml2
+XML_CFLAGS_I:INTERNAL=
+XML_CFLAGS_OTHER:INTERNAL=
+XML_FOUND:INTERNAL=1
+XML_INCLUDEDIR:INTERNAL=/usr/include
+XML_INCLUDE_DIRS:INTERNAL=/usr/include/libxml2
+XML_LDFLAGS:INTERNAL=-lxml2
+XML_LDFLAGS_OTHER:INTERNAL=
+XML_LIBDIR:INTERNAL=/usr/lib/x86_64-linux-gnu
+XML_LIBRARIES:INTERNAL=xml2
+XML_LIBRARY_DIRS:INTERNAL=
+XML_LIBS:INTERNAL=
+XML_LIBS_L:INTERNAL=
+XML_LIBS_OTHER:INTERNAL=
+XML_LIBS_PATHS:INTERNAL=
+XML_PREFIX:INTERNAL=/usr
+XML_STATIC_CFLAGS:INTERNAL=-I/usr/include/libxml2
+XML_STATIC_CFLAGS_I:INTERNAL=
+XML_STATIC_CFLAGS_OTHER:INTERNAL=
+XML_STATIC_INCLUDE_DIRS:INTERNAL=/usr/include/libxml2
+XML_STATIC_LDFLAGS:INTERNAL=-lxml2;-lz;-lm;-llzma
+XML_STATIC_LDFLAGS_OTHER:INTERNAL=
+XML_STATIC_LIBDIR:INTERNAL=
+XML_STATIC_LIBRARIES:INTERNAL=xml2;z;m;lzma
+XML_STATIC_LIBRARY_DIRS:INTERNAL=
+XML_STATIC_LIBS:INTERNAL=
+XML_STATIC_LIBS_L:INTERNAL=
+XML_STATIC_LIBS_OTHER:INTERNAL=
+XML_STATIC_LIBS_PATHS:INTERNAL=
+XML_VERSION:INTERNAL=2.9.1
+XML_libxml-2.0_INCLUDEDIR:INTERNAL=
+XML_libxml-2.0_LIBDIR:INTERNAL=
+XML_libxml-2.0_PREFIX:INTERNAL=
+XML_libxml-2.0_VERSION:INTERNAL=
+//Components requested for this build tree.
+_Boost_COMPONENTS_SEARCHED:INTERNAL=thread
+//Last used Boost_INCLUDE_DIR value.
+_Boost_INCLUDE_DIR_LAST:INTERNAL=/usr/include
+//Last used Boost_LIBRARY_DIR value.
+_Boost_LIBRARY_DIR_LAST:INTERNAL=/usr/lib/x86_64-linux-gnu
+//Last used Boost_USE_MULTITHREADED value.
+_Boost_USE_MULTITHREADED_LAST:INTERNAL=TRUE
+__pkg_config_checked_OGRE:INTERNAL=1
+__pkg_config_checked_OGRE-Terrain:INTERNAL=1
+__pkg_config_checked_XML:INTERNAL=1
 

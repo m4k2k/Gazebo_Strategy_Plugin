@@ -117,10 +117,14 @@ ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unsp
 IF(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   INCLUDE("/home/ubu/Gazebo_Strategy_Plugin/turtle/overlayws/build/gtest/cmake_install.cmake")
+  INCLUDE("/home/ubu/Gazebo_Strategy_Plugin/turtle/overlayws/build/pr2_simulator/pr2_controller_configuration_gazebo/cmake_install.cmake")
+  INCLUDE("/home/ubu/Gazebo_Strategy_Plugin/turtle/overlayws/build/pr2_simulator/pr2_simulator/cmake_install.cmake")
   INCLUDE("/home/ubu/Gazebo_Strategy_Plugin/turtle/overlayws/build/turtlebot_simulator/turtlebot_gazebo/cmake_install.cmake")
   INCLUDE("/home/ubu/Gazebo_Strategy_Plugin/turtle/overlayws/build/turtlebot_simulator/turtlebot_simulator/cmake_install.cmake")
   INCLUDE("/home/ubu/Gazebo_Strategy_Plugin/turtle/overlayws/build/turtlebot_simulator/turtlebot_stage/cmake_install.cmake")
   INCLUDE("/home/ubu/Gazebo_Strategy_Plugin/turtle/overlayws/build/turtlebot_simulator/turtlebot_stdr/cmake_install.cmake")
+  INCLUDE("/home/ubu/Gazebo_Strategy_Plugin/turtle/overlayws/build/pr2_simulator/pr2_gazebo_plugins/cmake_install.cmake")
+  INCLUDE("/home/ubu/Gazebo_Strategy_Plugin/turtle/overlayws/build/pr2_simulator/pr2_gazebo/cmake_install.cmake")
 
 ENDIF(NOT CMAKE_INSTALL_LOCAL_ONLY)
 

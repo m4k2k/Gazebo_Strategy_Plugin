@@ -1,0 +1,8 @@
+prefix=/home/ubu/Gazebo_Strategy_Plugin/turtle/overlayws/devel
+
+Name: pr2_controller_configuration_gazebo
+Description: Description of pr2_controller_configuration_gazebo
+Version: 2.0.7
+Cflags: 
+Libs: -L/home/ubu/Gazebo_Strategy_Plugin/turtle/overlayws/devel/lib 
+Requires: 
