@@ -72,7 +72,7 @@ GazeboMove::GazeboMove()
     QVBoxLayout *frameLayout = new QVBoxLayout();
 
     // Create a push button, and connect it to the OnButton function
-    QPushButton *btnSpawnSphere = new QPushButton(tr("Spawn Sphere"));
+    QPushButton *btnSpawnSphere = new QPushButton(tr("Spawn Object"));
     connect(btnSpawnSphere, SIGNAL(clicked()), this, SLOT(OnButton_btnSpawnSphere()));
 
     QPushButton *btnMoveRobot = new QPushButton(tr("Move Robot"));
@@ -109,21 +109,24 @@ GazeboMove::GazeboMove()
     this->node->Init();
     this->factoryPub = this->node->Advertise<msgs::Factory>("~/factory");
 
-
-    if (!ros::isInitialized())
-
+    if(ros::master::check())
     {
-        ROS_INFO("ROS is not initialized, trying to initialize it..");
+        if (!ros::isInitialized())
+        {
+            ROS_INFO("ROS is not initialized, trying to initialize it..");
 
-        int argc = 0;
+            int argc = 0;
 
-        char** argv = NULL;
+            char** argv = NULL;
 
-        ros::init(argc, argv, "gazebo", ros::init_options::NoSigintHandler |
+            ros::init(argc, argv, "gazebo", ros::init_options::NoSigintHandler |
 
-                  ros::init_options::AnonymousName);
+                      ros::init_options::AnonymousName);
 
+        }
     }
+    else
+        std::cout << "ROS Master not running.." << std::endl;
 
 
 //    ros::NodeHandle b;
@@ -191,9 +194,9 @@ void GazeboMove::OnButton_btnMoveRobot()
         //delete t1;
     }
 
-    t1 = new boost::thread(&Test);
+    t1 = new boost::thread(&MoveRobot);
 
-    // GazeboMove::Test();
+    // GazeboMove::MoveRobot();
 }
 
 /////////////////////////////////////////////////
@@ -235,7 +238,7 @@ void GazeboMove::OnButton_btnSpawnSphere()
 
 
 
-void GazeboMove::Test()// const
+void GazeboMove::MoveRobot()// const
 {
 
     // Make sure the ROS node for Gazebo has already been initialized
@@ -249,16 +252,16 @@ void GazeboMove::Test()// const
     {
 
 
-    //GazeboMove::com
+        //GazeboMove::com
 
-
+        ros::NodeHandle nod;
 
         ros::Publisher pub;
 
 
+        pub = nod.advertise<geometry_msgs::Twist>("cmd_vel_mux/input/teleop", 100);
 
-
-        pub = this->nod.advertise<geometry_msgs::Twist>("cmd_vel_mux/input/teleop", 100);
+        //pub = this->nod.advertise<geometry_msgs::Twist>("cmd_vel_mux/input/teleop", 100);
 
         ros::Rate rate(100);
         srand(time(0));

@@ -55,8 +55,14 @@ public:
 //private:
 //    communication com;
 
+/*
 private:
         ros::NodeHandle nod;
+
+*/
+
+    //ros::Publisher * pub;
+
 
 //      public: int main();
 
@@ -73,8 +79,6 @@ private:
     unsigned int counter;
 
 
-    //ros::Publisher * pub;
-
 
     /// \brief Node used to establish communication with gzserver.
 private:
@@ -86,7 +90,7 @@ private:
     transport::PublisherPtr factoryPub;
 
 private:
-    static void Test(); //const;
+    static void MoveRobot(); //const;
     // private: void Load();
 
 };
