@@ -1,5 +1,7 @@
 FILE(REMOVE_RECURSE
-  "CMakeFiles/gazebo_move.dir/src/gazebo_move.cpp.o"
+  "src/moc_gazebo_move.cxx"
+  "CMakeFiles/gazebo_move.dir/src/moc_gazebo_move.cxx.o"
+  "CMakeFiles/gazebo_move.dir/src/gazebo_move.cc.o"
   "/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.pdb"
   "/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so"
 )

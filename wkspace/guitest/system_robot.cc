@@ -104,7 +104,7 @@ public:
 
             ros::NodeHandle n;
 
-            pub = n.advertise<geometry_msgs::Twist>("cmd_vel_mux/input/teleop", 10);
+            pub = n.advertise<geometry_msgs::Twist>("cmd_vel_mux/input/teleop", 1000);
 
 
 

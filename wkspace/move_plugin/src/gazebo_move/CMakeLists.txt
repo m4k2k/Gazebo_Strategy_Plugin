@@ -1,5 +1,10 @@
-cmake_minimum_required(VERSION 2.8.3)
+cmake_minimum_required(VERSION 2.8.3 FATAL_ERROR)
 project(gazebo_move)
+
+include (FindPkgConfig)
+if (PKG_CONFIG_FOUND)
+  pkg_check_modules(GAZEBO gazebo)
+endif()
 
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
@@ -11,7 +16,16 @@ find_package(catkin REQUIRED COMPONENTS
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
+find_package(Qt4)
+find_package(Protobuf REQUIRED)
 find_package(gazebo REQUIRED)
+
+include (${QT_USE_FILE})
+add_definitions(${QT_DEFINITIONS})
+
+include(FindBoost)
+find_package(Boost ${MIN_BOOST_VERSION} REQUIRED system filesystem regex)
+
 
 ## Uncomment this if the package has a setup.py. This macro ensures
 ## modules and global scripts declared therein get installed
@@ -111,6 +125,9 @@ catkin_package(
     gazebo_ros
 )
 
+set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${GAZEBO_CXX_FLAGS}")
+
+QT4_WRAP_CPP(headers_MOC src/${PROJECT_NAME}.hh)
 
 ###########
 ## Build ##
@@ -128,7 +145,7 @@ include_directories(${Boost_INCLUDE_DIR} ${catkin_INCLUDE_DIRS} ${GAZEBO_INCLUDE
 # add_library(gazebo_plug
 #   src/${PROJECT_NAME}/gazebo_plug.cpp
 # )
-add_library(${PROJECT_NAME} src/gazebo_move.cpp)
+#add_library(${PROJECT_NAME} src/gazebo_move.cpp)
 
 ## Add cmake target dependencies of the library
 ## as an example, code may need to be generated before libraries
@@ -147,9 +164,18 @@ add_library(${PROJECT_NAME} src/gazebo_move.cpp)
 #   ${catkin_LIBRARIES}
 # )
 
-target_link_libraries(${PROJECT_NAME} ${catkin_LIBRARIES} ${GAZEBO_LIBRARIES})
+# target_link_libraries(${PROJECT_NAME} ${catkin_LIBRARIES} ${GAZEBO_LIBRARIES})
 
 link_directories(${GAZEBO_LIBRARY_DIRS})
+
+
+add_library(${PROJECT_NAME} SHARED ${headers_MOC}
+  src/${PROJECT_NAME}.cc)
+
+target_link_libraries(${PROJECT_NAME} ${GAZEBO_LIBRARIES}
+    ${QT_LIBRARIES}
+    ${PROTOBUF_LIBRARIES}
+    ${catkin_LIBRARIES})
 
 
 #############

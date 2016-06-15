@@ -99,45 +99,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named gui_example_spawn_widget
-
-# Build rule for target.
-gui_example_spawn_widget: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 gui_example_spawn_widget
-.PHONY : gui_example_spawn_widget
-
-# fast build rule for target.
-gui_example_spawn_widget/fast:
-	$(MAKE) -f CMakeFiles/gui_example_spawn_widget.dir/build.make CMakeFiles/gui_example_spawn_widget.dir/build
-.PHONY : gui_example_spawn_widget/fast
-
-#=============================================================================
-# Target rules for targets named system_gui
-
-# Build rule for target.
-system_gui: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 system_gui
-.PHONY : system_gui
-
-# fast build rule for target.
-system_gui/fast:
-	$(MAKE) -f CMakeFiles/system_gui.dir/build.make CMakeFiles/system_gui.dir/build
-.PHONY : system_gui/fast
-
-#=============================================================================
-# Target rules for targets named system_mouse
-
-# Build rule for target.
-system_mouse: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 system_mouse
-.PHONY : system_mouse
-
-# fast build rule for target.
-system_mouse/fast:
-	$(MAKE) -f CMakeFiles/system_mouse.dir/build.make CMakeFiles/system_mouse.dir/build
-.PHONY : system_mouse/fast
-
-#=============================================================================
 # Target rules for targets named system_robot
 
 # Build rule for target.
@@ -149,102 +110,6 @@ system_robot: cmake_check_build_system
 system_robot/fast:
 	$(MAKE) -f CMakeFiles/system_robot.dir/build.make CMakeFiles/system_robot.dir/build
 .PHONY : system_robot/fast
-
-GUIExampleSpawnWidget.o: GUIExampleSpawnWidget.cc.o
-.PHONY : GUIExampleSpawnWidget.o
-
-# target to build an object file
-GUIExampleSpawnWidget.cc.o:
-	$(MAKE) -f CMakeFiles/gui_example_spawn_widget.dir/build.make CMakeFiles/gui_example_spawn_widget.dir/GUIExampleSpawnWidget.cc.o
-.PHONY : GUIExampleSpawnWidget.cc.o
-
-GUIExampleSpawnWidget.i: GUIExampleSpawnWidget.cc.i
-.PHONY : GUIExampleSpawnWidget.i
-
-# target to preprocess a source file
-GUIExampleSpawnWidget.cc.i:
-	$(MAKE) -f CMakeFiles/gui_example_spawn_widget.dir/build.make CMakeFiles/gui_example_spawn_widget.dir/GUIExampleSpawnWidget.cc.i
-.PHONY : GUIExampleSpawnWidget.cc.i
-
-GUIExampleSpawnWidget.s: GUIExampleSpawnWidget.cc.s
-.PHONY : GUIExampleSpawnWidget.s
-
-# target to generate assembly for a file
-GUIExampleSpawnWidget.cc.s:
-	$(MAKE) -f CMakeFiles/gui_example_spawn_widget.dir/build.make CMakeFiles/gui_example_spawn_widget.dir/GUIExampleSpawnWidget.cc.s
-.PHONY : GUIExampleSpawnWidget.cc.s
-
-moc_GUIExampleSpawnWidget.o: moc_GUIExampleSpawnWidget.cxx.o
-.PHONY : moc_GUIExampleSpawnWidget.o
-
-# target to build an object file
-moc_GUIExampleSpawnWidget.cxx.o:
-	$(MAKE) -f CMakeFiles/gui_example_spawn_widget.dir/build.make CMakeFiles/gui_example_spawn_widget.dir/moc_GUIExampleSpawnWidget.cxx.o
-.PHONY : moc_GUIExampleSpawnWidget.cxx.o
-
-moc_GUIExampleSpawnWidget.i: moc_GUIExampleSpawnWidget.cxx.i
-.PHONY : moc_GUIExampleSpawnWidget.i
-
-# target to preprocess a source file
-moc_GUIExampleSpawnWidget.cxx.i:
-	$(MAKE) -f CMakeFiles/gui_example_spawn_widget.dir/build.make CMakeFiles/gui_example_spawn_widget.dir/moc_GUIExampleSpawnWidget.cxx.i
-.PHONY : moc_GUIExampleSpawnWidget.cxx.i
-
-moc_GUIExampleSpawnWidget.s: moc_GUIExampleSpawnWidget.cxx.s
-.PHONY : moc_GUIExampleSpawnWidget.s
-
-# target to generate assembly for a file
-moc_GUIExampleSpawnWidget.cxx.s:
-	$(MAKE) -f CMakeFiles/gui_example_spawn_widget.dir/build.make CMakeFiles/gui_example_spawn_widget.dir/moc_GUIExampleSpawnWidget.cxx.s
-.PHONY : moc_GUIExampleSpawnWidget.cxx.s
-
-system_gui.o: system_gui.cc.o
-.PHONY : system_gui.o
-
-# target to build an object file
-system_gui.cc.o:
-	$(MAKE) -f CMakeFiles/system_gui.dir/build.make CMakeFiles/system_gui.dir/system_gui.cc.o
-.PHONY : system_gui.cc.o
-
-system_gui.i: system_gui.cc.i
-.PHONY : system_gui.i
-
-# target to preprocess a source file
-system_gui.cc.i:
-	$(MAKE) -f CMakeFiles/system_gui.dir/build.make CMakeFiles/system_gui.dir/system_gui.cc.i
-.PHONY : system_gui.cc.i
-
-system_gui.s: system_gui.cc.s
-.PHONY : system_gui.s
-
-# target to generate assembly for a file
-system_gui.cc.s:
-	$(MAKE) -f CMakeFiles/system_gui.dir/build.make CMakeFiles/system_gui.dir/system_gui.cc.s
-.PHONY : system_gui.cc.s
-
-system_mouse.o: system_mouse.cc.o
-.PHONY : system_mouse.o
-
-# target to build an object file
-system_mouse.cc.o:
-	$(MAKE) -f CMakeFiles/system_mouse.dir/build.make CMakeFiles/system_mouse.dir/system_mouse.cc.o
-.PHONY : system_mouse.cc.o
-
-system_mouse.i: system_mouse.cc.i
-.PHONY : system_mouse.i
-
-# target to preprocess a source file
-system_mouse.cc.i:
-	$(MAKE) -f CMakeFiles/system_mouse.dir/build.make CMakeFiles/system_mouse.dir/system_mouse.cc.i
-.PHONY : system_mouse.cc.i
-
-system_mouse.s: system_mouse.cc.s
-.PHONY : system_mouse.s
-
-# target to generate assembly for a file
-system_mouse.cc.s:
-	$(MAKE) -f CMakeFiles/system_mouse.dir/build.make CMakeFiles/system_mouse.dir/system_mouse.cc.s
-.PHONY : system_mouse.cc.s
 
 system_robot.o: system_robot.cc.o
 .PHONY : system_robot.o
@@ -277,23 +142,8 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
-	@echo "... gui_example_spawn_widget"
 	@echo "... rebuild_cache"
-	@echo "... system_gui"
-	@echo "... system_mouse"
 	@echo "... system_robot"
-	@echo "... GUIExampleSpawnWidget.o"
-	@echo "... GUIExampleSpawnWidget.i"
-	@echo "... GUIExampleSpawnWidget.s"
-	@echo "... moc_GUIExampleSpawnWidget.o"
-	@echo "... moc_GUIExampleSpawnWidget.i"
-	@echo "... moc_GUIExampleSpawnWidget.s"
-	@echo "... system_gui.o"
-	@echo "... system_gui.i"
-	@echo "... system_gui.s"
-	@echo "... system_mouse.o"
-	@echo "... system_mouse.i"
-	@echo "... system_mouse.s"
 	@echo "... system_robot.o"
 	@echo "... system_robot.i"
 	@echo "... system_robot.s"

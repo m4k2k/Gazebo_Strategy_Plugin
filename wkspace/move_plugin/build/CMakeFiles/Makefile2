@@ -230,7 +230,7 @@ gtest/preinstall:
 gtest/CMakeFiles/gtest.dir/all:
 	$(MAKE) -f gtest/CMakeFiles/gtest.dir/build.make gtest/CMakeFiles/gtest.dir/depend
 	$(MAKE) -f gtest/CMakeFiles/gtest.dir/build.make gtest/CMakeFiles/gtest.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/build/CMakeFiles  2
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/build/CMakeFiles  4
 	@echo "Built target gtest"
 .PHONY : gtest/CMakeFiles/gtest.dir/all
 
@@ -261,7 +261,7 @@ clean: gtest/CMakeFiles/gtest.dir/clean
 gtest/CMakeFiles/gtest_main.dir/all: gtest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f gtest/CMakeFiles/gtest_main.dir/build.make gtest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) -f gtest/CMakeFiles/gtest_main.dir/build.make gtest/CMakeFiles/gtest_main.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/build/CMakeFiles  3
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/build/CMakeFiles  5
 	@echo "Built target gtest_main"
 .PHONY : gtest/CMakeFiles/gtest_main.dir/all
 
@@ -690,7 +690,7 @@ clean: gazebo_move/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/clean
 gazebo_move/CMakeFiles/gazebo_move.dir/all:
 	$(MAKE) -f gazebo_move/CMakeFiles/gazebo_move.dir/build.make gazebo_move/CMakeFiles/gazebo_move.dir/depend
 	$(MAKE) -f gazebo_move/CMakeFiles/gazebo_move.dir/build.make gazebo_move/CMakeFiles/gazebo_move.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/build/CMakeFiles  1
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/build/CMakeFiles  1 2 3
 	@echo "Built target gazebo_move"
 .PHONY : gazebo_move/CMakeFiles/gazebo_move.dir/all
 
@@ -700,7 +700,7 @@ all: gazebo_move/CMakeFiles/gazebo_move.dir/all
 
 # Build rule for subdir invocation for target.
 gazebo_move/CMakeFiles/gazebo_move.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/build/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 gazebo_move/CMakeFiles/gazebo_move.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/build/CMakeFiles 0
 .PHONY : gazebo_move/CMakeFiles/gazebo_move.dir/rule

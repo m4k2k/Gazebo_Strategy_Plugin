@@ -49,65 +49,68 @@ include gazebo_move/CMakeFiles/gazebo_move.dir/progress.make
 # Include the compile flags for this target's objects.
 include gazebo_move/CMakeFiles/gazebo_move.dir/flags.make
 
-gazebo_move/CMakeFiles/gazebo_move.dir/src/gazebo_move.cpp.o: gazebo_move/CMakeFiles/gazebo_move.dir/flags.make
-gazebo_move/CMakeFiles/gazebo_move.dir/src/gazebo_move.cpp.o: /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/src/gazebo_move/src/gazebo_move.cpp
+gazebo_move/src/moc_gazebo_move.cxx: /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/src/gazebo_move/src/gazebo_move.hh
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/build/CMakeFiles $(CMAKE_PROGRESS_1)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object gazebo_move/CMakeFiles/gazebo_move.dir/src/gazebo_move.cpp.o"
-	cd /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/build/gazebo_move && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gazebo_move.dir/src/gazebo_move.cpp.o -c /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/src/gazebo_move/src/gazebo_move.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating src/moc_gazebo_move.cxx"
+	cd /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/build/gazebo_move/src && /usr/lib/x86_64-linux-gnu/qt4/bin/moc @/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/build/gazebo_move/src/moc_gazebo_move.cxx_parameters
 
-gazebo_move/CMakeFiles/gazebo_move.dir/src/gazebo_move.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gazebo_move.dir/src/gazebo_move.cpp.i"
-	cd /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/build/gazebo_move && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/src/gazebo_move/src/gazebo_move.cpp > CMakeFiles/gazebo_move.dir/src/gazebo_move.cpp.i
+gazebo_move/CMakeFiles/gazebo_move.dir/src/moc_gazebo_move.cxx.o: gazebo_move/CMakeFiles/gazebo_move.dir/flags.make
+gazebo_move/CMakeFiles/gazebo_move.dir/src/moc_gazebo_move.cxx.o: gazebo_move/src/moc_gazebo_move.cxx
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object gazebo_move/CMakeFiles/gazebo_move.dir/src/moc_gazebo_move.cxx.o"
+	cd /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/build/gazebo_move && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gazebo_move.dir/src/moc_gazebo_move.cxx.o -c /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/build/gazebo_move/src/moc_gazebo_move.cxx
 
-gazebo_move/CMakeFiles/gazebo_move.dir/src/gazebo_move.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gazebo_move.dir/src/gazebo_move.cpp.s"
-	cd /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/build/gazebo_move && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/src/gazebo_move/src/gazebo_move.cpp -o CMakeFiles/gazebo_move.dir/src/gazebo_move.cpp.s
+gazebo_move/CMakeFiles/gazebo_move.dir/src/moc_gazebo_move.cxx.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gazebo_move.dir/src/moc_gazebo_move.cxx.i"
+	cd /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/build/gazebo_move && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/build/gazebo_move/src/moc_gazebo_move.cxx > CMakeFiles/gazebo_move.dir/src/moc_gazebo_move.cxx.i
 
-gazebo_move/CMakeFiles/gazebo_move.dir/src/gazebo_move.cpp.o.requires:
-.PHONY : gazebo_move/CMakeFiles/gazebo_move.dir/src/gazebo_move.cpp.o.requires
+gazebo_move/CMakeFiles/gazebo_move.dir/src/moc_gazebo_move.cxx.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gazebo_move.dir/src/moc_gazebo_move.cxx.s"
+	cd /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/build/gazebo_move && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/build/gazebo_move/src/moc_gazebo_move.cxx -o CMakeFiles/gazebo_move.dir/src/moc_gazebo_move.cxx.s
 
-gazebo_move/CMakeFiles/gazebo_move.dir/src/gazebo_move.cpp.o.provides: gazebo_move/CMakeFiles/gazebo_move.dir/src/gazebo_move.cpp.o.requires
-	$(MAKE) -f gazebo_move/CMakeFiles/gazebo_move.dir/build.make gazebo_move/CMakeFiles/gazebo_move.dir/src/gazebo_move.cpp.o.provides.build
-.PHONY : gazebo_move/CMakeFiles/gazebo_move.dir/src/gazebo_move.cpp.o.provides
+gazebo_move/CMakeFiles/gazebo_move.dir/src/moc_gazebo_move.cxx.o.requires:
+.PHONY : gazebo_move/CMakeFiles/gazebo_move.dir/src/moc_gazebo_move.cxx.o.requires
 
-gazebo_move/CMakeFiles/gazebo_move.dir/src/gazebo_move.cpp.o.provides.build: gazebo_move/CMakeFiles/gazebo_move.dir/src/gazebo_move.cpp.o
+gazebo_move/CMakeFiles/gazebo_move.dir/src/moc_gazebo_move.cxx.o.provides: gazebo_move/CMakeFiles/gazebo_move.dir/src/moc_gazebo_move.cxx.o.requires
+	$(MAKE) -f gazebo_move/CMakeFiles/gazebo_move.dir/build.make gazebo_move/CMakeFiles/gazebo_move.dir/src/moc_gazebo_move.cxx.o.provides.build
+.PHONY : gazebo_move/CMakeFiles/gazebo_move.dir/src/moc_gazebo_move.cxx.o.provides
+
+gazebo_move/CMakeFiles/gazebo_move.dir/src/moc_gazebo_move.cxx.o.provides.build: gazebo_move/CMakeFiles/gazebo_move.dir/src/moc_gazebo_move.cxx.o
+
+gazebo_move/CMakeFiles/gazebo_move.dir/src/gazebo_move.cc.o: gazebo_move/CMakeFiles/gazebo_move.dir/flags.make
+gazebo_move/CMakeFiles/gazebo_move.dir/src/gazebo_move.cc.o: /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/src/gazebo_move/src/gazebo_move.cc
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object gazebo_move/CMakeFiles/gazebo_move.dir/src/gazebo_move.cc.o"
+	cd /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/build/gazebo_move && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/gazebo_move.dir/src/gazebo_move.cc.o -c /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/src/gazebo_move/src/gazebo_move.cc
+
+gazebo_move/CMakeFiles/gazebo_move.dir/src/gazebo_move.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gazebo_move.dir/src/gazebo_move.cc.i"
+	cd /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/build/gazebo_move && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/src/gazebo_move/src/gazebo_move.cc > CMakeFiles/gazebo_move.dir/src/gazebo_move.cc.i
+
+gazebo_move/CMakeFiles/gazebo_move.dir/src/gazebo_move.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gazebo_move.dir/src/gazebo_move.cc.s"
+	cd /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/build/gazebo_move && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/src/gazebo_move/src/gazebo_move.cc -o CMakeFiles/gazebo_move.dir/src/gazebo_move.cc.s
+
+gazebo_move/CMakeFiles/gazebo_move.dir/src/gazebo_move.cc.o.requires:
+.PHONY : gazebo_move/CMakeFiles/gazebo_move.dir/src/gazebo_move.cc.o.requires
+
+gazebo_move/CMakeFiles/gazebo_move.dir/src/gazebo_move.cc.o.provides: gazebo_move/CMakeFiles/gazebo_move.dir/src/gazebo_move.cc.o.requires
+	$(MAKE) -f gazebo_move/CMakeFiles/gazebo_move.dir/build.make gazebo_move/CMakeFiles/gazebo_move.dir/src/gazebo_move.cc.o.provides.build
+.PHONY : gazebo_move/CMakeFiles/gazebo_move.dir/src/gazebo_move.cc.o.provides
+
+gazebo_move/CMakeFiles/gazebo_move.dir/src/gazebo_move.cc.o.provides.build: gazebo_move/CMakeFiles/gazebo_move.dir/src/gazebo_move.cc.o
 
 # Object files for target gazebo_move
 gazebo_move_OBJECTS = \
-"CMakeFiles/gazebo_move.dir/src/gazebo_move.cpp.o"
+"CMakeFiles/gazebo_move.dir/src/moc_gazebo_move.cxx.o" \
+"CMakeFiles/gazebo_move.dir/src/gazebo_move.cc.o"
 
 # External object files for target gazebo_move
 gazebo_move_EXTERNAL_OBJECTS =
 
-/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: gazebo_move/CMakeFiles/gazebo_move.dir/src/gazebo_move.cpp.o
+/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: gazebo_move/CMakeFiles/gazebo_move.dir/src/moc_gazebo_move.cxx.o
+/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: gazebo_move/CMakeFiles/gazebo_move.dir/src/gazebo_move.cc.o
 /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: gazebo_move/CMakeFiles/gazebo_move.dir/build.make
-/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /opt/ros/indigo/lib/libgazebo_ros_api_plugin.so
-/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /opt/ros/indigo/lib/libgazebo_ros_paths_plugin.so
-/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /usr/lib/x86_64-linux-gnu/libtinyxml.so
-/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /opt/ros/indigo/lib/libroslib.so
-/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /opt/ros/indigo/lib/libtf.so
-/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /opt/ros/indigo/lib/libtf2_ros.so
-/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /opt/ros/indigo/lib/libactionlib.so
-/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /opt/ros/indigo/lib/libmessage_filters.so
-/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /opt/ros/indigo/lib/libtf2.so
-/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /opt/ros/indigo/lib/libdynamic_reconfigure_config_init_mutex.so
-/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /opt/ros/indigo/lib/libroscpp.so
-/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /usr/lib/x86_64-linux-gnu/libboost_signals.so
-/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
-/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /opt/ros/indigo/lib/librosconsole.so
-/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /opt/ros/indigo/lib/librosconsole_log4cxx.so
-/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /opt/ros/indigo/lib/librosconsole_backend_interface.so
-/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /usr/lib/liblog4cxx.so
-/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /usr/lib/x86_64-linux-gnu/libboost_regex.so
-/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /opt/ros/indigo/lib/libroscpp_serialization.so
-/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /opt/ros/indigo/lib/librostime.so
-/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
-/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /opt/ros/indigo/lib/libxmlrpcpp.so
-/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /opt/ros/indigo/lib/libcpp_common.so
-/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /usr/lib/x86_64-linux-gnu/libboost_system.so
-/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /usr/lib/x86_64-linux-gnu/libboost_thread.so
-/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /usr/lib/x86_64-linux-gnu/libpthread.so
-/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so
 /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /usr/lib/x86_64-linux-gnu/libgazebo.so
 /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /usr/lib/x86_64-linux-gnu/libgazebo_common.so
 /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /usr/lib/x86_64-linux-gnu/libgazebo_gimpact.so
@@ -136,6 +139,69 @@ gazebo_move_EXTERNAL_OBJECTS =
 /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /usr/lib/x86_64-linux-gnu/libOgreMain.so
 /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /usr/lib/x86_64-linux-gnu/libOgreTerrain.so
 /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /usr/lib/x86_64-linux-gnu/libOgrePaging.so
+/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /usr/lib/x86_64-linux-gnu/libQtGui.so
+/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /usr/lib/x86_64-linux-gnu/libQtCore.so
+/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /usr/lib/x86_64-linux-gnu/libprotobuf.so
+/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /opt/ros/indigo/lib/libgazebo_ros_api_plugin.so
+/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /opt/ros/indigo/lib/libgazebo_ros_paths_plugin.so
+/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /usr/lib/x86_64-linux-gnu/libtinyxml.so
+/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /opt/ros/indigo/lib/libroslib.so
+/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /opt/ros/indigo/lib/libtf.so
+/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /opt/ros/indigo/lib/libtf2_ros.so
+/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /opt/ros/indigo/lib/libactionlib.so
+/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /opt/ros/indigo/lib/libmessage_filters.so
+/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /opt/ros/indigo/lib/libtf2.so
+/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /opt/ros/indigo/lib/libdynamic_reconfigure_config_init_mutex.so
+/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /opt/ros/indigo/lib/libroscpp.so
+/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /usr/lib/x86_64-linux-gnu/libboost_signals.so
+/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
+/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /opt/ros/indigo/lib/librosconsole.so
+/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /opt/ros/indigo/lib/librosconsole_log4cxx.so
+/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /opt/ros/indigo/lib/librosconsole_backend_interface.so
+/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /usr/lib/liblog4cxx.so
+/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /usr/lib/x86_64-linux-gnu/libboost_regex.so
+/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /opt/ros/indigo/lib/libroscpp_serialization.so
+/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /opt/ros/indigo/lib/librostime.so
+/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
+/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /opt/ros/indigo/lib/libxmlrpcpp.so
+/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /opt/ros/indigo/lib/libcpp_common.so
+/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /usr/lib/x86_64-linux-gnu/libboost_system.so
+/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /usr/lib/x86_64-linux-gnu/libboost_thread.so
+/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /usr/lib/x86_64-linux-gnu/libpthread.so
+/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so
+/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /usr/lib/x86_64-linux-gnu/libsdformat.so
+/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /usr/lib/x86_64-linux-gnu/libOgreMain.so
+/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /usr/lib/x86_64-linux-gnu/libOgreTerrain.so
+/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /usr/lib/x86_64-linux-gnu/libOgrePaging.so
+/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /usr/lib/x86_64-linux-gnu/libQtGui.so
+/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /usr/lib/x86_64-linux-gnu/libQtCore.so
+/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /opt/ros/indigo/lib/libgazebo_ros_api_plugin.so
+/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /opt/ros/indigo/lib/libgazebo_ros_paths_plugin.so
+/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /usr/lib/x86_64-linux-gnu/libtinyxml.so
+/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /opt/ros/indigo/lib/libroslib.so
+/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /opt/ros/indigo/lib/libtf.so
+/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /opt/ros/indigo/lib/libtf2_ros.so
+/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /opt/ros/indigo/lib/libactionlib.so
+/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /opt/ros/indigo/lib/libmessage_filters.so
+/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /opt/ros/indigo/lib/libtf2.so
+/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /opt/ros/indigo/lib/libdynamic_reconfigure_config_init_mutex.so
+/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /opt/ros/indigo/lib/libroscpp.so
+/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /usr/lib/x86_64-linux-gnu/libboost_signals.so
+/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
+/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /opt/ros/indigo/lib/librosconsole.so
+/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /opt/ros/indigo/lib/librosconsole_log4cxx.so
+/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /opt/ros/indigo/lib/librosconsole_backend_interface.so
+/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /usr/lib/liblog4cxx.so
+/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /usr/lib/x86_64-linux-gnu/libboost_regex.so
+/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /opt/ros/indigo/lib/libroscpp_serialization.so
+/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /opt/ros/indigo/lib/librostime.so
+/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
+/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /opt/ros/indigo/lib/libxmlrpcpp.so
+/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /opt/ros/indigo/lib/libcpp_common.so
+/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /usr/lib/x86_64-linux-gnu/libboost_system.so
+/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /usr/lib/x86_64-linux-gnu/libboost_thread.so
+/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /usr/lib/x86_64-linux-gnu/libpthread.so
+/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so
 /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: gazebo_move/CMakeFiles/gazebo_move.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX shared library /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so"
 	cd /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/build/gazebo_move && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/gazebo_move.dir/link.txt --verbose=$(VERBOSE)
@@ -144,14 +210,15 @@ gazebo_move_EXTERNAL_OBJECTS =
 gazebo_move/CMakeFiles/gazebo_move.dir/build: /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so
 .PHONY : gazebo_move/CMakeFiles/gazebo_move.dir/build
 
-gazebo_move/CMakeFiles/gazebo_move.dir/requires: gazebo_move/CMakeFiles/gazebo_move.dir/src/gazebo_move.cpp.o.requires
+gazebo_move/CMakeFiles/gazebo_move.dir/requires: gazebo_move/CMakeFiles/gazebo_move.dir/src/moc_gazebo_move.cxx.o.requires
+gazebo_move/CMakeFiles/gazebo_move.dir/requires: gazebo_move/CMakeFiles/gazebo_move.dir/src/gazebo_move.cc.o.requires
 .PHONY : gazebo_move/CMakeFiles/gazebo_move.dir/requires
 
 gazebo_move/CMakeFiles/gazebo_move.dir/clean:
 	cd /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/build/gazebo_move && $(CMAKE_COMMAND) -P CMakeFiles/gazebo_move.dir/cmake_clean.cmake
 .PHONY : gazebo_move/CMakeFiles/gazebo_move.dir/clean
 
-gazebo_move/CMakeFiles/gazebo_move.dir/depend:
+gazebo_move/CMakeFiles/gazebo_move.dir/depend: gazebo_move/src/moc_gazebo_move.cxx
 	cd /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/src /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/src/gazebo_move /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/build /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/build/gazebo_move /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/build/gazebo_move/CMakeFiles/gazebo_move.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : gazebo_move/CMakeFiles/gazebo_move.dir/depend
 

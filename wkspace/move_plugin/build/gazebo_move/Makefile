@@ -751,29 +751,53 @@ trajectory_msgs_generate_messages_py/fast:
 	cd /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/build && $(MAKE) -f gazebo_move/CMakeFiles/trajectory_msgs_generate_messages_py.dir/build.make gazebo_move/CMakeFiles/trajectory_msgs_generate_messages_py.dir/build
 .PHONY : trajectory_msgs_generate_messages_py/fast
 
-src/gazebo_move.o: src/gazebo_move.cpp.o
+src/gazebo_move.o: src/gazebo_move.cc.o
 .PHONY : src/gazebo_move.o
 
 # target to build an object file
-src/gazebo_move.cpp.o:
-	cd /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/build && $(MAKE) -f gazebo_move/CMakeFiles/gazebo_move.dir/build.make gazebo_move/CMakeFiles/gazebo_move.dir/src/gazebo_move.cpp.o
-.PHONY : src/gazebo_move.cpp.o
+src/gazebo_move.cc.o:
+	cd /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/build && $(MAKE) -f gazebo_move/CMakeFiles/gazebo_move.dir/build.make gazebo_move/CMakeFiles/gazebo_move.dir/src/gazebo_move.cc.o
+.PHONY : src/gazebo_move.cc.o
 
-src/gazebo_move.i: src/gazebo_move.cpp.i
+src/gazebo_move.i: src/gazebo_move.cc.i
 .PHONY : src/gazebo_move.i
 
 # target to preprocess a source file
-src/gazebo_move.cpp.i:
-	cd /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/build && $(MAKE) -f gazebo_move/CMakeFiles/gazebo_move.dir/build.make gazebo_move/CMakeFiles/gazebo_move.dir/src/gazebo_move.cpp.i
-.PHONY : src/gazebo_move.cpp.i
+src/gazebo_move.cc.i:
+	cd /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/build && $(MAKE) -f gazebo_move/CMakeFiles/gazebo_move.dir/build.make gazebo_move/CMakeFiles/gazebo_move.dir/src/gazebo_move.cc.i
+.PHONY : src/gazebo_move.cc.i
 
-src/gazebo_move.s: src/gazebo_move.cpp.s
+src/gazebo_move.s: src/gazebo_move.cc.s
 .PHONY : src/gazebo_move.s
 
 # target to generate assembly for a file
-src/gazebo_move.cpp.s:
-	cd /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/build && $(MAKE) -f gazebo_move/CMakeFiles/gazebo_move.dir/build.make gazebo_move/CMakeFiles/gazebo_move.dir/src/gazebo_move.cpp.s
-.PHONY : src/gazebo_move.cpp.s
+src/gazebo_move.cc.s:
+	cd /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/build && $(MAKE) -f gazebo_move/CMakeFiles/gazebo_move.dir/build.make gazebo_move/CMakeFiles/gazebo_move.dir/src/gazebo_move.cc.s
+.PHONY : src/gazebo_move.cc.s
+
+src/moc_gazebo_move.o: src/moc_gazebo_move.cxx.o
+.PHONY : src/moc_gazebo_move.o
+
+# target to build an object file
+src/moc_gazebo_move.cxx.o:
+	cd /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/build && $(MAKE) -f gazebo_move/CMakeFiles/gazebo_move.dir/build.make gazebo_move/CMakeFiles/gazebo_move.dir/src/moc_gazebo_move.cxx.o
+.PHONY : src/moc_gazebo_move.cxx.o
+
+src/moc_gazebo_move.i: src/moc_gazebo_move.cxx.i
+.PHONY : src/moc_gazebo_move.i
+
+# target to preprocess a source file
+src/moc_gazebo_move.cxx.i:
+	cd /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/build && $(MAKE) -f gazebo_move/CMakeFiles/gazebo_move.dir/build.make gazebo_move/CMakeFiles/gazebo_move.dir/src/moc_gazebo_move.cxx.i
+.PHONY : src/moc_gazebo_move.cxx.i
+
+src/moc_gazebo_move.s: src/moc_gazebo_move.cxx.s
+.PHONY : src/moc_gazebo_move.s
+
+# target to generate assembly for a file
+src/moc_gazebo_move.cxx.s:
+	cd /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/build && $(MAKE) -f gazebo_move/CMakeFiles/gazebo_move.dir/build.make gazebo_move/CMakeFiles/gazebo_move.dir/src/moc_gazebo_move.cxx.s
+.PHONY : src/moc_gazebo_move.cxx.s
 
 # Help Target
 help:
@@ -834,6 +858,9 @@ help:
 	@echo "... src/gazebo_move.o"
 	@echo "... src/gazebo_move.i"
 	@echo "... src/gazebo_move.s"
+	@echo "... src/moc_gazebo_move.o"
+	@echo "... src/moc_gazebo_move.i"
+	@echo "... src/moc_gazebo_move.s"
 .PHONY : help
 
 

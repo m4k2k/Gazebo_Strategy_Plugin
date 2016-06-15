@@ -44,16 +44,18 @@ target_link_libraries(system_robot ${GAZEBO_LIBRARIES} ${Boost_LIBRARIES} ${PROT
 ##########################################################################################################
 
 
-set(OutputLibName "gui_example_spawn_widget")
-set(InputLibName "GUIExampleSpawnWidget")
+#set(OutputLibName "gui_example_spawn_widget")
+#set(InputLibName "GUIExampleSpawnWidget")
 
-QT4_WRAP_CPP(headers_MOC ${InputLibName}.hh)
+#QT4_WRAP_CPP(headers_MOC ${InputLibName}.hh)
 
-add_library(${OutputLibName} SHARED ${headers_MOC}
-  ${InputLibName}.cc)
-target_link_libraries(${OutputLibName} ${GAZEBO_LIBRARIES}
-    ${QT_LIBRARIES}
-    ${PROTOBUF_LIBRARIES})
+#add_library(${OutputLibName} SHARED ${headers_MOC}
+#  ${InputLibName}.cc)
+#target_link_libraries(${OutputLibName} ${GAZEBO_LIBRARIES}
+#    ${QT_LIBRARIES}
+#    ${PROTOBUF_LIBRARIES})
+
+
 
 #add_custom_command(TARGET ${OutputLibName} POST_BUILD        # Adds a post-build event to MyTest
 #    COMMAND ${CMAKE_COMMAND} -E copy_if_different  # which executes "cmake - E copy_if_different..."
@@ -66,8 +68,8 @@ target_link_libraries(${OutputLibName} ${GAZEBO_LIBRARIES}
 ##########################################################################################################
 
 
-add_library(system_gui SHARED system_gui.cc)
-target_link_libraries(system_gui ${GAZEBO_LIBRARIES})
+#add_library(system_gui SHARED system_gui.cc)
+#target_link_libraries(system_gui ${GAZEBO_LIBRARIES})
 
 #add_custom_command(TARGET system_gui POST_BUILD        # Adds a post-build event to MyTest
 #    COMMAND ${CMAKE_COMMAND} -E copy_if_different  # which executes "cmake - E copy_if_different..."
@@ -81,8 +83,8 @@ target_link_libraries(system_gui ${GAZEBO_LIBRARIES})
 
 
 
-add_library(system_mouse SHARED system_mouse.cc)
-target_link_libraries(system_mouse ${GAZEBO_LIBRARIES})
+#add_library(system_mouse SHARED system_mouse.cc)
+#target_link_libraries(system_mouse ${GAZEBO_LIBRARIES})
 
 #add_custom_command(TARGET system_mouse POST_BUILD        # Adds a post-build event to MyTest
 #    COMMAND ${CMAKE_COMMAND} -E copy_if_different  # which executes "cmake - E copy_if_different..."
