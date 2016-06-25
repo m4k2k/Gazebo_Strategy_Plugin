@@ -60,26 +60,6 @@ kobuki_msgs/CliffEvent.h
 kobuki_msgs/BumperEvent.h
 -
 
-/home/ubu/Gazebo_Strategy_Plugin/turtle/kobiplug_overlay/src/kobuki_desktop/kobuki_gazebo_plugins/src/gazebo_ros_kobuki.cpp
-cmath
--
-cstring
--
-boost/bind.hpp
--
-sensor_msgs/JointState.h
--
-tf/LinearMath/Quaternion.h
--
-gazebo/math/gzmath.hh
--
-kobuki_gazebo_plugins/gazebo_ros_kobuki.h
-/home/ubu/Gazebo_Strategy_Plugin/turtle/kobiplug_overlay/src/kobuki_desktop/kobuki_gazebo_plugins/src/kobuki_gazebo_plugins/gazebo_ros_kobuki.h
-
-/home/ubu/Gazebo_Strategy_Plugin/turtle/kobiplug_overlay/src/kobuki_desktop/kobuki_gazebo_plugins/src/gazebo_ros_kobuki_loads.cpp
-kobuki_gazebo_plugins/gazebo_ros_kobuki.h
-/home/ubu/Gazebo_Strategy_Plugin/turtle/kobiplug_overlay/src/kobuki_desktop/kobuki_gazebo_plugins/src/kobuki_gazebo_plugins/gazebo_ros_kobuki.h
-
 /home/ubu/Gazebo_Strategy_Plugin/turtle/kobiplug_overlay/src/kobuki_desktop/kobuki_gazebo_plugins/src/gazebo_ros_kobuki_updates.cpp
 kobuki_gazebo_plugins/gazebo_ros_kobuki.h
 /home/ubu/Gazebo_Strategy_Plugin/turtle/kobiplug_overlay/src/kobuki_desktop/kobuki_gazebo_plugins/src/kobuki_gazebo_plugins/gazebo_ros_kobuki.h

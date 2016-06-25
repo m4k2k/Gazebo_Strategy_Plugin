@@ -250,7 +250,7 @@ _catkin_empty_exported_target: cmake_check_build_system
 
 # fast build rule for target.
 _catkin_empty_exported_target/fast:
-	$(MAKE) -f kobuki_desktop/kobuki_desktop/CMakeFiles/_catkin_empty_exported_target.dir/build.make kobuki_desktop/kobuki_desktop/CMakeFiles/_catkin_empty_exported_target.dir/build
+	$(MAKE) -f kobuki/kobuki/CMakeFiles/_catkin_empty_exported_target.dir/build.make kobuki/kobuki/CMakeFiles/_catkin_empty_exported_target.dir/build
 .PHONY : _catkin_empty_exported_target/fast
 
 #=============================================================================
@@ -263,7 +263,7 @@ actionlib_msgs_generate_messages_cpp: cmake_check_build_system
 
 # fast build rule for target.
 actionlib_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f kobuki_desktop/kobuki_dashboard/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build.make kobuki_desktop/kobuki_dashboard/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build
+	$(MAKE) -f kobuki/kobuki_keyop/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build.make kobuki/kobuki_keyop/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build
 .PHONY : actionlib_msgs_generate_messages_cpp/fast
 
 #=============================================================================
@@ -276,7 +276,7 @@ actionlib_msgs_generate_messages_lisp: cmake_check_build_system
 
 # fast build rule for target.
 actionlib_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f kobuki_desktop/kobuki_dashboard/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build.make kobuki_desktop/kobuki_dashboard/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build
+	$(MAKE) -f kobuki/kobuki_keyop/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build.make kobuki/kobuki_keyop/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build
 .PHONY : actionlib_msgs_generate_messages_lisp/fast
 
 #=============================================================================
@@ -289,8 +289,47 @@ actionlib_msgs_generate_messages_py: cmake_check_build_system
 
 # fast build rule for target.
 actionlib_msgs_generate_messages_py/fast:
-	$(MAKE) -f kobuki_desktop/kobuki_dashboard/CMakeFiles/actionlib_msgs_generate_messages_py.dir/build.make kobuki_desktop/kobuki_dashboard/CMakeFiles/actionlib_msgs_generate_messages_py.dir/build
+	$(MAKE) -f kobuki/kobuki_keyop/CMakeFiles/actionlib_msgs_generate_messages_py.dir/build.make kobuki/kobuki_keyop/CMakeFiles/actionlib_msgs_generate_messages_py.dir/build
 .PHONY : actionlib_msgs_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named geometry_msgs_generate_messages_cpp
+
+# Build rule for target.
+geometry_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_cpp
+.PHONY : geometry_msgs_generate_messages_cpp
+
+# fast build rule for target.
+geometry_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f kobuki/kobuki_keyop/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make kobuki/kobuki_keyop/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
+.PHONY : geometry_msgs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named geometry_msgs_generate_messages_lisp
+
+# Build rule for target.
+geometry_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_lisp
+.PHONY : geometry_msgs_generate_messages_lisp
+
+# fast build rule for target.
+geometry_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f kobuki/kobuki_keyop/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make kobuki/kobuki_keyop/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
+.PHONY : geometry_msgs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named geometry_msgs_generate_messages_py
+
+# Build rule for target.
+geometry_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_py
+.PHONY : geometry_msgs_generate_messages_py
+
+# fast build rule for target.
+geometry_msgs_generate_messages_py/fast:
+	$(MAKE) -f kobuki/kobuki_keyop/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make kobuki/kobuki_keyop/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
+.PHONY : geometry_msgs_generate_messages_py/fast
 
 #=============================================================================
 # Target rules for targets named kobuki_msgs_generate_messages_cpp
@@ -302,7 +341,7 @@ kobuki_msgs_generate_messages_cpp: cmake_check_build_system
 
 # fast build rule for target.
 kobuki_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f kobuki_desktop/kobuki_dashboard/CMakeFiles/kobuki_msgs_generate_messages_cpp.dir/build.make kobuki_desktop/kobuki_dashboard/CMakeFiles/kobuki_msgs_generate_messages_cpp.dir/build
+	$(MAKE) -f kobuki/kobuki_keyop/CMakeFiles/kobuki_msgs_generate_messages_cpp.dir/build.make kobuki/kobuki_keyop/CMakeFiles/kobuki_msgs_generate_messages_cpp.dir/build
 .PHONY : kobuki_msgs_generate_messages_cpp/fast
 
 #=============================================================================
@@ -315,7 +354,7 @@ kobuki_msgs_generate_messages_lisp: cmake_check_build_system
 
 # fast build rule for target.
 kobuki_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f kobuki_desktop/kobuki_dashboard/CMakeFiles/kobuki_msgs_generate_messages_lisp.dir/build.make kobuki_desktop/kobuki_dashboard/CMakeFiles/kobuki_msgs_generate_messages_lisp.dir/build
+	$(MAKE) -f kobuki/kobuki_keyop/CMakeFiles/kobuki_msgs_generate_messages_lisp.dir/build.make kobuki/kobuki_keyop/CMakeFiles/kobuki_msgs_generate_messages_lisp.dir/build
 .PHONY : kobuki_msgs_generate_messages_lisp/fast
 
 #=============================================================================
@@ -328,8 +367,86 @@ kobuki_msgs_generate_messages_py: cmake_check_build_system
 
 # fast build rule for target.
 kobuki_msgs_generate_messages_py/fast:
-	$(MAKE) -f kobuki_desktop/kobuki_dashboard/CMakeFiles/kobuki_msgs_generate_messages_py.dir/build.make kobuki_desktop/kobuki_dashboard/CMakeFiles/kobuki_msgs_generate_messages_py.dir/build
+	$(MAKE) -f kobuki/kobuki_keyop/CMakeFiles/kobuki_msgs_generate_messages_py.dir/build.make kobuki/kobuki_keyop/CMakeFiles/kobuki_msgs_generate_messages_py.dir/build
 .PHONY : kobuki_msgs_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named roscpp_generate_messages_cpp
+
+# Build rule for target.
+roscpp_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_cpp
+.PHONY : roscpp_generate_messages_cpp
+
+# fast build rule for target.
+roscpp_generate_messages_cpp/fast:
+	$(MAKE) -f kobuki/kobuki_keyop/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make kobuki/kobuki_keyop/CMakeFiles/roscpp_generate_messages_cpp.dir/build
+.PHONY : roscpp_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named roscpp_generate_messages_lisp
+
+# Build rule for target.
+roscpp_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_lisp
+.PHONY : roscpp_generate_messages_lisp
+
+# fast build rule for target.
+roscpp_generate_messages_lisp/fast:
+	$(MAKE) -f kobuki/kobuki_keyop/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make kobuki/kobuki_keyop/CMakeFiles/roscpp_generate_messages_lisp.dir/build
+.PHONY : roscpp_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named roscpp_generate_messages_py
+
+# Build rule for target.
+roscpp_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_py
+.PHONY : roscpp_generate_messages_py
+
+# fast build rule for target.
+roscpp_generate_messages_py/fast:
+	$(MAKE) -f kobuki/kobuki_keyop/CMakeFiles/roscpp_generate_messages_py.dir/build.make kobuki/kobuki_keyop/CMakeFiles/roscpp_generate_messages_py.dir/build
+.PHONY : roscpp_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named rosgraph_msgs_generate_messages_cpp
+
+# Build rule for target.
+rosgraph_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_cpp
+.PHONY : rosgraph_msgs_generate_messages_cpp
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f kobuki/kobuki_keyop/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make kobuki/kobuki_keyop/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
+.PHONY : rosgraph_msgs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named rosgraph_msgs_generate_messages_lisp
+
+# Build rule for target.
+rosgraph_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_lisp
+.PHONY : rosgraph_msgs_generate_messages_lisp
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f kobuki/kobuki_keyop/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make kobuki/kobuki_keyop/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
+.PHONY : rosgraph_msgs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named rosgraph_msgs_generate_messages_py
+
+# Build rule for target.
+rosgraph_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_py
+.PHONY : rosgraph_msgs_generate_messages_py
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_py/fast:
+	$(MAKE) -f kobuki/kobuki_keyop/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make kobuki/kobuki_keyop/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
+.PHONY : rosgraph_msgs_generate_messages_py/fast
 
 #=============================================================================
 # Target rules for targets named std_msgs_generate_messages_cpp
@@ -341,7 +458,7 @@ std_msgs_generate_messages_cpp: cmake_check_build_system
 
 # fast build rule for target.
 std_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f kobuki_desktop/kobuki_dashboard/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make kobuki_desktop/kobuki_dashboard/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
+	$(MAKE) -f kobuki/kobuki_keyop/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make kobuki/kobuki_keyop/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
 .PHONY : std_msgs_generate_messages_cpp/fast
 
 #=============================================================================
@@ -354,7 +471,7 @@ std_msgs_generate_messages_lisp: cmake_check_build_system
 
 # fast build rule for target.
 std_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f kobuki_desktop/kobuki_dashboard/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make kobuki_desktop/kobuki_dashboard/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
+	$(MAKE) -f kobuki/kobuki_keyop/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make kobuki/kobuki_keyop/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
 .PHONY : std_msgs_generate_messages_lisp/fast
 
 #=============================================================================
@@ -367,47 +484,60 @@ std_msgs_generate_messages_py: cmake_check_build_system
 
 # fast build rule for target.
 std_msgs_generate_messages_py/fast:
-	$(MAKE) -f kobuki_desktop/kobuki_dashboard/CMakeFiles/std_msgs_generate_messages_py.dir/build.make kobuki_desktop/kobuki_dashboard/CMakeFiles/std_msgs_generate_messages_py.dir/build
+	$(MAKE) -f kobuki/kobuki_keyop/CMakeFiles/std_msgs_generate_messages_py.dir/build.make kobuki/kobuki_keyop/CMakeFiles/std_msgs_generate_messages_py.dir/build
 .PHONY : std_msgs_generate_messages_py/fast
 
 #=============================================================================
-# Target rules for targets named actionlib_generate_messages_cpp
+# Target rules for targets named std_srvs_generate_messages_cpp
 
 # Build rule for target.
-actionlib_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 actionlib_generate_messages_cpp
-.PHONY : actionlib_generate_messages_cpp
+std_srvs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_srvs_generate_messages_cpp
+.PHONY : std_srvs_generate_messages_cpp
 
 # fast build rule for target.
-actionlib_generate_messages_cpp/fast:
-	$(MAKE) -f kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/actionlib_generate_messages_cpp.dir/build.make kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/actionlib_generate_messages_cpp.dir/build
-.PHONY : actionlib_generate_messages_cpp/fast
+std_srvs_generate_messages_cpp/fast:
+	$(MAKE) -f kobuki/kobuki_keyop/CMakeFiles/std_srvs_generate_messages_cpp.dir/build.make kobuki/kobuki_keyop/CMakeFiles/std_srvs_generate_messages_cpp.dir/build
+.PHONY : std_srvs_generate_messages_cpp/fast
 
 #=============================================================================
-# Target rules for targets named actionlib_generate_messages_lisp
+# Target rules for targets named std_srvs_generate_messages_lisp
 
 # Build rule for target.
-actionlib_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 actionlib_generate_messages_lisp
-.PHONY : actionlib_generate_messages_lisp
+std_srvs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_srvs_generate_messages_lisp
+.PHONY : std_srvs_generate_messages_lisp
 
 # fast build rule for target.
-actionlib_generate_messages_lisp/fast:
-	$(MAKE) -f kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/actionlib_generate_messages_lisp.dir/build.make kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/actionlib_generate_messages_lisp.dir/build
-.PHONY : actionlib_generate_messages_lisp/fast
+std_srvs_generate_messages_lisp/fast:
+	$(MAKE) -f kobuki/kobuki_keyop/CMakeFiles/std_srvs_generate_messages_lisp.dir/build.make kobuki/kobuki_keyop/CMakeFiles/std_srvs_generate_messages_lisp.dir/build
+.PHONY : std_srvs_generate_messages_lisp/fast
 
 #=============================================================================
-# Target rules for targets named actionlib_generate_messages_py
+# Target rules for targets named std_srvs_generate_messages_py
 
 # Build rule for target.
-actionlib_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 actionlib_generate_messages_py
-.PHONY : actionlib_generate_messages_py
+std_srvs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 std_srvs_generate_messages_py
+.PHONY : std_srvs_generate_messages_py
 
 # fast build rule for target.
-actionlib_generate_messages_py/fast:
-	$(MAKE) -f kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/actionlib_generate_messages_py.dir/build.make kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/actionlib_generate_messages_py.dir/build
-.PHONY : actionlib_generate_messages_py/fast
+std_srvs_generate_messages_py/fast:
+	$(MAKE) -f kobuki/kobuki_keyop/CMakeFiles/std_srvs_generate_messages_py.dir/build.make kobuki/kobuki_keyop/CMakeFiles/std_srvs_generate_messages_py.dir/build
+.PHONY : std_srvs_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named keyop
+
+# Build rule for target.
+keyop: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 keyop
+.PHONY : keyop
+
+# fast build rule for target.
+keyop/fast:
+	$(MAKE) -f kobuki/kobuki_keyop/src/CMakeFiles/keyop.dir/build.make kobuki/kobuki_keyop/src/CMakeFiles/keyop.dir/build
+.PHONY : keyop/fast
 
 #=============================================================================
 # Target rules for targets named bond_generate_messages_cpp
@@ -419,7 +549,7 @@ bond_generate_messages_cpp: cmake_check_build_system
 
 # fast build rule for target.
 bond_generate_messages_cpp/fast:
-	$(MAKE) -f kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/bond_generate_messages_cpp.dir/build.make kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/bond_generate_messages_cpp.dir/build
+	$(MAKE) -f kobuki/kobuki_bumper2pc/CMakeFiles/bond_generate_messages_cpp.dir/build.make kobuki/kobuki_bumper2pc/CMakeFiles/bond_generate_messages_cpp.dir/build
 .PHONY : bond_generate_messages_cpp/fast
 
 #=============================================================================
@@ -432,7 +562,7 @@ bond_generate_messages_lisp: cmake_check_build_system
 
 # fast build rule for target.
 bond_generate_messages_lisp/fast:
-	$(MAKE) -f kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/bond_generate_messages_lisp.dir/build.make kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/bond_generate_messages_lisp.dir/build
+	$(MAKE) -f kobuki/kobuki_bumper2pc/CMakeFiles/bond_generate_messages_lisp.dir/build.make kobuki/kobuki_bumper2pc/CMakeFiles/bond_generate_messages_lisp.dir/build
 .PHONY : bond_generate_messages_lisp/fast
 
 #=============================================================================
@@ -445,8 +575,164 @@ bond_generate_messages_py: cmake_check_build_system
 
 # fast build rule for target.
 bond_generate_messages_py/fast:
-	$(MAKE) -f kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/bond_generate_messages_py.dir/build.make kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/bond_generate_messages_py.dir/build
+	$(MAKE) -f kobuki/kobuki_bumper2pc/CMakeFiles/bond_generate_messages_py.dir/build.make kobuki/kobuki_bumper2pc/CMakeFiles/bond_generate_messages_py.dir/build
 .PHONY : bond_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named kobuki_bumper2pc_nodelet
+
+# Build rule for target.
+kobuki_bumper2pc_nodelet: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 kobuki_bumper2pc_nodelet
+.PHONY : kobuki_bumper2pc_nodelet
+
+# fast build rule for target.
+kobuki_bumper2pc_nodelet/fast:
+	$(MAKE) -f kobuki/kobuki_bumper2pc/CMakeFiles/kobuki_bumper2pc_nodelet.dir/build.make kobuki/kobuki_bumper2pc/CMakeFiles/kobuki_bumper2pc_nodelet.dir/build
+.PHONY : kobuki_bumper2pc_nodelet/fast
+
+#=============================================================================
+# Target rules for targets named nodelet_generate_messages_cpp
+
+# Build rule for target.
+nodelet_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 nodelet_generate_messages_cpp
+.PHONY : nodelet_generate_messages_cpp
+
+# fast build rule for target.
+nodelet_generate_messages_cpp/fast:
+	$(MAKE) -f kobuki/kobuki_bumper2pc/CMakeFiles/nodelet_generate_messages_cpp.dir/build.make kobuki/kobuki_bumper2pc/CMakeFiles/nodelet_generate_messages_cpp.dir/build
+.PHONY : nodelet_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named nodelet_generate_messages_lisp
+
+# Build rule for target.
+nodelet_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 nodelet_generate_messages_lisp
+.PHONY : nodelet_generate_messages_lisp
+
+# fast build rule for target.
+nodelet_generate_messages_lisp/fast:
+	$(MAKE) -f kobuki/kobuki_bumper2pc/CMakeFiles/nodelet_generate_messages_lisp.dir/build.make kobuki/kobuki_bumper2pc/CMakeFiles/nodelet_generate_messages_lisp.dir/build
+.PHONY : nodelet_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named nodelet_generate_messages_py
+
+# Build rule for target.
+nodelet_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 nodelet_generate_messages_py
+.PHONY : nodelet_generate_messages_py
+
+# fast build rule for target.
+nodelet_generate_messages_py/fast:
+	$(MAKE) -f kobuki/kobuki_bumper2pc/CMakeFiles/nodelet_generate_messages_py.dir/build.make kobuki/kobuki_bumper2pc/CMakeFiles/nodelet_generate_messages_py.dir/build
+.PHONY : nodelet_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named sensor_msgs_generate_messages_cpp
+
+# Build rule for target.
+sensor_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_cpp
+.PHONY : sensor_msgs_generate_messages_cpp
+
+# fast build rule for target.
+sensor_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f kobuki/kobuki_bumper2pc/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make kobuki/kobuki_bumper2pc/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
+.PHONY : sensor_msgs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named sensor_msgs_generate_messages_lisp
+
+# Build rule for target.
+sensor_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_lisp
+.PHONY : sensor_msgs_generate_messages_lisp
+
+# fast build rule for target.
+sensor_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f kobuki/kobuki_bumper2pc/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make kobuki/kobuki_bumper2pc/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
+.PHONY : sensor_msgs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named sensor_msgs_generate_messages_py
+
+# Build rule for target.
+sensor_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_py
+.PHONY : sensor_msgs_generate_messages_py
+
+# fast build rule for target.
+sensor_msgs_generate_messages_py/fast:
+	$(MAKE) -f kobuki/kobuki_bumper2pc/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make kobuki/kobuki_bumper2pc/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
+.PHONY : sensor_msgs_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named actionlib_generate_messages_cpp
+
+# Build rule for target.
+actionlib_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 actionlib_generate_messages_cpp
+.PHONY : actionlib_generate_messages_cpp
+
+# fast build rule for target.
+actionlib_generate_messages_cpp/fast:
+	$(MAKE) -f kobuki/kobuki_auto_docking/CMakeFiles/actionlib_generate_messages_cpp.dir/build.make kobuki/kobuki_auto_docking/CMakeFiles/actionlib_generate_messages_cpp.dir/build
+.PHONY : actionlib_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named actionlib_generate_messages_lisp
+
+# Build rule for target.
+actionlib_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 actionlib_generate_messages_lisp
+.PHONY : actionlib_generate_messages_lisp
+
+# fast build rule for target.
+actionlib_generate_messages_lisp/fast:
+	$(MAKE) -f kobuki/kobuki_auto_docking/CMakeFiles/actionlib_generate_messages_lisp.dir/build.make kobuki/kobuki_auto_docking/CMakeFiles/actionlib_generate_messages_lisp.dir/build
+.PHONY : actionlib_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named actionlib_generate_messages_py
+
+# Build rule for target.
+actionlib_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 actionlib_generate_messages_py
+.PHONY : actionlib_generate_messages_py
+
+# fast build rule for target.
+actionlib_generate_messages_py/fast:
+	$(MAKE) -f kobuki/kobuki_auto_docking/CMakeFiles/actionlib_generate_messages_py.dir/build.make kobuki/kobuki_auto_docking/CMakeFiles/actionlib_generate_messages_py.dir/build
+.PHONY : actionlib_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named kobuki_auto_docking_nodelet
+
+# Build rule for target.
+kobuki_auto_docking_nodelet: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 kobuki_auto_docking_nodelet
+.PHONY : kobuki_auto_docking_nodelet
+
+# fast build rule for target.
+kobuki_auto_docking_nodelet/fast:
+	$(MAKE) -f kobuki/kobuki_auto_docking/CMakeFiles/kobuki_auto_docking_nodelet.dir/build.make kobuki/kobuki_auto_docking/CMakeFiles/kobuki_auto_docking_nodelet.dir/build
+.PHONY : kobuki_auto_docking_nodelet/fast
+
+#=============================================================================
+# Target rules for targets named kobuki_auto_docking_ros
+
+# Build rule for target.
+kobuki_auto_docking_ros: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 kobuki_auto_docking_ros
+.PHONY : kobuki_auto_docking_ros
+
+# fast build rule for target.
+kobuki_auto_docking_ros/fast:
+	$(MAKE) -f kobuki/kobuki_auto_docking/CMakeFiles/kobuki_auto_docking_ros.dir/build.make kobuki/kobuki_auto_docking/CMakeFiles/kobuki_auto_docking_ros.dir/build
+.PHONY : kobuki_auto_docking_ros/fast
 
 #=============================================================================
 # Target rules for targets named driver_base_generate_messages_cpp
@@ -618,45 +904,6 @@ gazebo_ros_kobuki/fast:
 .PHONY : gazebo_ros_kobuki/fast
 
 #=============================================================================
-# Target rules for targets named geometry_msgs_generate_messages_cpp
-
-# Build rule for target.
-geometry_msgs_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_cpp
-.PHONY : geometry_msgs_generate_messages_cpp
-
-# fast build rule for target.
-geometry_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
-.PHONY : geometry_msgs_generate_messages_cpp/fast
-
-#=============================================================================
-# Target rules for targets named geometry_msgs_generate_messages_lisp
-
-# Build rule for target.
-geometry_msgs_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_lisp
-.PHONY : geometry_msgs_generate_messages_lisp
-
-# fast build rule for target.
-geometry_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
-.PHONY : geometry_msgs_generate_messages_lisp/fast
-
-#=============================================================================
-# Target rules for targets named geometry_msgs_generate_messages_py
-
-# Build rule for target.
-geometry_msgs_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 geometry_msgs_generate_messages_py
-.PHONY : geometry_msgs_generate_messages_py
-
-# fast build rule for target.
-geometry_msgs_generate_messages_py/fast:
-	$(MAKE) -f kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
-.PHONY : geometry_msgs_generate_messages_py/fast
-
-#=============================================================================
 # Target rules for targets named nav_msgs_generate_messages_cpp
 
 # Build rule for target.
@@ -694,201 +941,6 @@ nav_msgs_generate_messages_py: cmake_check_build_system
 nav_msgs_generate_messages_py/fast:
 	$(MAKE) -f kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_py.dir/build.make kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_py.dir/build
 .PHONY : nav_msgs_generate_messages_py/fast
-
-#=============================================================================
-# Target rules for targets named nodelet_generate_messages_cpp
-
-# Build rule for target.
-nodelet_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 nodelet_generate_messages_cpp
-.PHONY : nodelet_generate_messages_cpp
-
-# fast build rule for target.
-nodelet_generate_messages_cpp/fast:
-	$(MAKE) -f kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/nodelet_generate_messages_cpp.dir/build.make kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/nodelet_generate_messages_cpp.dir/build
-.PHONY : nodelet_generate_messages_cpp/fast
-
-#=============================================================================
-# Target rules for targets named nodelet_generate_messages_lisp
-
-# Build rule for target.
-nodelet_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 nodelet_generate_messages_lisp
-.PHONY : nodelet_generate_messages_lisp
-
-# fast build rule for target.
-nodelet_generate_messages_lisp/fast:
-	$(MAKE) -f kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/nodelet_generate_messages_lisp.dir/build.make kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/nodelet_generate_messages_lisp.dir/build
-.PHONY : nodelet_generate_messages_lisp/fast
-
-#=============================================================================
-# Target rules for targets named nodelet_generate_messages_py
-
-# Build rule for target.
-nodelet_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 nodelet_generate_messages_py
-.PHONY : nodelet_generate_messages_py
-
-# fast build rule for target.
-nodelet_generate_messages_py/fast:
-	$(MAKE) -f kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/nodelet_generate_messages_py.dir/build.make kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/nodelet_generate_messages_py.dir/build
-.PHONY : nodelet_generate_messages_py/fast
-
-#=============================================================================
-# Target rules for targets named roscpp_generate_messages_cpp
-
-# Build rule for target.
-roscpp_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_cpp
-.PHONY : roscpp_generate_messages_cpp
-
-# fast build rule for target.
-roscpp_generate_messages_cpp/fast:
-	$(MAKE) -f kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/roscpp_generate_messages_cpp.dir/build
-.PHONY : roscpp_generate_messages_cpp/fast
-
-#=============================================================================
-# Target rules for targets named roscpp_generate_messages_lisp
-
-# Build rule for target.
-roscpp_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_lisp
-.PHONY : roscpp_generate_messages_lisp
-
-# fast build rule for target.
-roscpp_generate_messages_lisp/fast:
-	$(MAKE) -f kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/roscpp_generate_messages_lisp.dir/build
-.PHONY : roscpp_generate_messages_lisp/fast
-
-#=============================================================================
-# Target rules for targets named roscpp_generate_messages_py
-
-# Build rule for target.
-roscpp_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 roscpp_generate_messages_py
-.PHONY : roscpp_generate_messages_py
-
-# fast build rule for target.
-roscpp_generate_messages_py/fast:
-	$(MAKE) -f kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/roscpp_generate_messages_py.dir/build.make kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/roscpp_generate_messages_py.dir/build
-.PHONY : roscpp_generate_messages_py/fast
-
-#=============================================================================
-# Target rules for targets named rosgraph_msgs_generate_messages_cpp
-
-# Build rule for target.
-rosgraph_msgs_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_cpp
-.PHONY : rosgraph_msgs_generate_messages_cpp
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_cpp/fast
-
-#=============================================================================
-# Target rules for targets named rosgraph_msgs_generate_messages_lisp
-
-# Build rule for target.
-rosgraph_msgs_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_lisp
-.PHONY : rosgraph_msgs_generate_messages_lisp
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_lisp/fast
-
-#=============================================================================
-# Target rules for targets named rosgraph_msgs_generate_messages_py
-
-# Build rule for target.
-rosgraph_msgs_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_py
-.PHONY : rosgraph_msgs_generate_messages_py
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_py/fast:
-	$(MAKE) -f kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
-.PHONY : rosgraph_msgs_generate_messages_py/fast
-
-#=============================================================================
-# Target rules for targets named sensor_msgs_generate_messages_cpp
-
-# Build rule for target.
-sensor_msgs_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_cpp
-.PHONY : sensor_msgs_generate_messages_cpp
-
-# fast build rule for target.
-sensor_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
-.PHONY : sensor_msgs_generate_messages_cpp/fast
-
-#=============================================================================
-# Target rules for targets named sensor_msgs_generate_messages_lisp
-
-# Build rule for target.
-sensor_msgs_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_lisp
-.PHONY : sensor_msgs_generate_messages_lisp
-
-# fast build rule for target.
-sensor_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
-.PHONY : sensor_msgs_generate_messages_lisp/fast
-
-#=============================================================================
-# Target rules for targets named sensor_msgs_generate_messages_py
-
-# Build rule for target.
-sensor_msgs_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_py
-.PHONY : sensor_msgs_generate_messages_py
-
-# fast build rule for target.
-sensor_msgs_generate_messages_py/fast:
-	$(MAKE) -f kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
-.PHONY : sensor_msgs_generate_messages_py/fast
-
-#=============================================================================
-# Target rules for targets named std_srvs_generate_messages_cpp
-
-# Build rule for target.
-std_srvs_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 std_srvs_generate_messages_cpp
-.PHONY : std_srvs_generate_messages_cpp
-
-# fast build rule for target.
-std_srvs_generate_messages_cpp/fast:
-	$(MAKE) -f kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/std_srvs_generate_messages_cpp.dir/build.make kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/std_srvs_generate_messages_cpp.dir/build
-.PHONY : std_srvs_generate_messages_cpp/fast
-
-#=============================================================================
-# Target rules for targets named std_srvs_generate_messages_lisp
-
-# Build rule for target.
-std_srvs_generate_messages_lisp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 std_srvs_generate_messages_lisp
-.PHONY : std_srvs_generate_messages_lisp
-
-# fast build rule for target.
-std_srvs_generate_messages_lisp/fast:
-	$(MAKE) -f kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/std_srvs_generate_messages_lisp.dir/build.make kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/std_srvs_generate_messages_lisp.dir/build
-.PHONY : std_srvs_generate_messages_lisp/fast
-
-#=============================================================================
-# Target rules for targets named std_srvs_generate_messages_py
-
-# Build rule for target.
-std_srvs_generate_messages_py: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 std_srvs_generate_messages_py
-.PHONY : std_srvs_generate_messages_py
-
-# fast build rule for target.
-std_srvs_generate_messages_py/fast:
-	$(MAKE) -f kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/std_srvs_generate_messages_py.dir/build.make kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/std_srvs_generate_messages_py.dir/build
-.PHONY : std_srvs_generate_messages_py/fast
 
 #=============================================================================
 # Target rules for targets named tf2_msgs_generate_messages_cpp
@@ -1008,6 +1060,110 @@ trajectory_msgs_generate_messages_py/fast:
 .PHONY : trajectory_msgs_generate_messages_py/fast
 
 #=============================================================================
+# Target rules for targets named bump_blink_controller_nodelet
+
+# Build rule for target.
+bump_blink_controller_nodelet: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 bump_blink_controller_nodelet
+.PHONY : bump_blink_controller_nodelet
+
+# fast build rule for target.
+bump_blink_controller_nodelet/fast:
+	$(MAKE) -f kobuki/kobuki_controller_tutorial/CMakeFiles/bump_blink_controller_nodelet.dir/build.make kobuki/kobuki_controller_tutorial/CMakeFiles/bump_blink_controller_nodelet.dir/build
+.PHONY : bump_blink_controller_nodelet/fast
+
+#=============================================================================
+# Target rules for targets named kobuki_random_walker_nodelet
+
+# Build rule for target.
+kobuki_random_walker_nodelet: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 kobuki_random_walker_nodelet
+.PHONY : kobuki_random_walker_nodelet
+
+# fast build rule for target.
+kobuki_random_walker_nodelet/fast:
+	$(MAKE) -f kobuki/kobuki_random_walker/CMakeFiles/kobuki_random_walker_nodelet.dir/build.make kobuki/kobuki_random_walker/CMakeFiles/kobuki_random_walker_nodelet.dir/build
+.PHONY : kobuki_random_walker_nodelet/fast
+
+#=============================================================================
+# Target rules for targets named kobuki_safety_controller_nodelet
+
+# Build rule for target.
+kobuki_safety_controller_nodelet: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 kobuki_safety_controller_nodelet
+.PHONY : kobuki_safety_controller_nodelet
+
+# fast build rule for target.
+kobuki_safety_controller_nodelet/fast:
+	$(MAKE) -f kobuki/kobuki_safety_controller/CMakeFiles/kobuki_safety_controller_nodelet.dir/build.make kobuki/kobuki_safety_controller/CMakeFiles/kobuki_safety_controller_nodelet.dir/build
+.PHONY : kobuki_safety_controller_nodelet/fast
+
+#=============================================================================
+# Target rules for targets named diagnostic_msgs_generate_messages_cpp
+
+# Build rule for target.
+diagnostic_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 diagnostic_msgs_generate_messages_cpp
+.PHONY : diagnostic_msgs_generate_messages_cpp
+
+# fast build rule for target.
+diagnostic_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f kobuki/kobuki_node/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/build.make kobuki/kobuki_node/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/build
+.PHONY : diagnostic_msgs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named diagnostic_msgs_generate_messages_lisp
+
+# Build rule for target.
+diagnostic_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 diagnostic_msgs_generate_messages_lisp
+.PHONY : diagnostic_msgs_generate_messages_lisp
+
+# fast build rule for target.
+diagnostic_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f kobuki/kobuki_node/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/build.make kobuki/kobuki_node/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/build
+.PHONY : diagnostic_msgs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named diagnostic_msgs_generate_messages_py
+
+# Build rule for target.
+diagnostic_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 diagnostic_msgs_generate_messages_py
+.PHONY : diagnostic_msgs_generate_messages_py
+
+# fast build rule for target.
+diagnostic_msgs_generate_messages_py/fast:
+	$(MAKE) -f kobuki/kobuki_node/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/build.make kobuki/kobuki_node/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/build
+.PHONY : diagnostic_msgs_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named kobuki_ros
+
+# Build rule for target.
+kobuki_ros: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 kobuki_ros
+.PHONY : kobuki_ros
+
+# fast build rule for target.
+kobuki_ros/fast:
+	$(MAKE) -f kobuki/kobuki_node/src/library/CMakeFiles/kobuki_ros.dir/build.make kobuki/kobuki_node/src/library/CMakeFiles/kobuki_ros.dir/build
+.PHONY : kobuki_ros/fast
+
+#=============================================================================
+# Target rules for targets named kobuki_nodelet
+
+# Build rule for target.
+kobuki_nodelet: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 kobuki_nodelet
+.PHONY : kobuki_nodelet
+
+# fast build rule for target.
+kobuki_nodelet/fast:
+	$(MAKE) -f kobuki/kobuki_node/src/nodelet/CMakeFiles/kobuki_nodelet.dir/build.make kobuki/kobuki_node/src/nodelet/CMakeFiles/kobuki_nodelet.dir/build
+.PHONY : kobuki_nodelet/fast
+
+#=============================================================================
 # Target rules for targets named kobuki_qtestsuite
 
 # Build rule for target.
@@ -1057,18 +1213,40 @@ help:
 	@echo "... actionlib_msgs_generate_messages_cpp"
 	@echo "... actionlib_msgs_generate_messages_lisp"
 	@echo "... actionlib_msgs_generate_messages_py"
+	@echo "... geometry_msgs_generate_messages_cpp"
+	@echo "... geometry_msgs_generate_messages_lisp"
+	@echo "... geometry_msgs_generate_messages_py"
 	@echo "... kobuki_msgs_generate_messages_cpp"
 	@echo "... kobuki_msgs_generate_messages_lisp"
 	@echo "... kobuki_msgs_generate_messages_py"
+	@echo "... roscpp_generate_messages_cpp"
+	@echo "... roscpp_generate_messages_lisp"
+	@echo "... roscpp_generate_messages_py"
+	@echo "... rosgraph_msgs_generate_messages_cpp"
+	@echo "... rosgraph_msgs_generate_messages_lisp"
+	@echo "... rosgraph_msgs_generate_messages_py"
 	@echo "... std_msgs_generate_messages_cpp"
 	@echo "... std_msgs_generate_messages_lisp"
 	@echo "... std_msgs_generate_messages_py"
-	@echo "... actionlib_generate_messages_cpp"
-	@echo "... actionlib_generate_messages_lisp"
-	@echo "... actionlib_generate_messages_py"
+	@echo "... std_srvs_generate_messages_cpp"
+	@echo "... std_srvs_generate_messages_lisp"
+	@echo "... std_srvs_generate_messages_py"
+	@echo "... keyop"
 	@echo "... bond_generate_messages_cpp"
 	@echo "... bond_generate_messages_lisp"
 	@echo "... bond_generate_messages_py"
+	@echo "... kobuki_bumper2pc_nodelet"
+	@echo "... nodelet_generate_messages_cpp"
+	@echo "... nodelet_generate_messages_lisp"
+	@echo "... nodelet_generate_messages_py"
+	@echo "... sensor_msgs_generate_messages_cpp"
+	@echo "... sensor_msgs_generate_messages_lisp"
+	@echo "... sensor_msgs_generate_messages_py"
+	@echo "... actionlib_generate_messages_cpp"
+	@echo "... actionlib_generate_messages_lisp"
+	@echo "... actionlib_generate_messages_py"
+	@echo "... kobuki_auto_docking_nodelet"
+	@echo "... kobuki_auto_docking_ros"
 	@echo "... driver_base_generate_messages_cpp"
 	@echo "... driver_base_generate_messages_lisp"
 	@echo "... driver_base_generate_messages_py"
@@ -1082,27 +1260,9 @@ help:
 	@echo "... gazebo_plugins_gencfg"
 	@echo "... gazebo_ros_gencfg"
 	@echo "... gazebo_ros_kobuki"
-	@echo "... geometry_msgs_generate_messages_cpp"
-	@echo "... geometry_msgs_generate_messages_lisp"
-	@echo "... geometry_msgs_generate_messages_py"
 	@echo "... nav_msgs_generate_messages_cpp"
 	@echo "... nav_msgs_generate_messages_lisp"
 	@echo "... nav_msgs_generate_messages_py"
-	@echo "... nodelet_generate_messages_cpp"
-	@echo "... nodelet_generate_messages_lisp"
-	@echo "... nodelet_generate_messages_py"
-	@echo "... roscpp_generate_messages_cpp"
-	@echo "... roscpp_generate_messages_lisp"
-	@echo "... roscpp_generate_messages_py"
-	@echo "... rosgraph_msgs_generate_messages_cpp"
-	@echo "... rosgraph_msgs_generate_messages_lisp"
-	@echo "... rosgraph_msgs_generate_messages_py"
-	@echo "... sensor_msgs_generate_messages_cpp"
-	@echo "... sensor_msgs_generate_messages_lisp"
-	@echo "... sensor_msgs_generate_messages_py"
-	@echo "... std_srvs_generate_messages_cpp"
-	@echo "... std_srvs_generate_messages_lisp"
-	@echo "... std_srvs_generate_messages_py"
 	@echo "... tf2_msgs_generate_messages_cpp"
 	@echo "... tf2_msgs_generate_messages_lisp"
 	@echo "... tf2_msgs_generate_messages_py"
@@ -1112,6 +1272,14 @@ help:
 	@echo "... trajectory_msgs_generate_messages_cpp"
 	@echo "... trajectory_msgs_generate_messages_lisp"
 	@echo "... trajectory_msgs_generate_messages_py"
+	@echo "... bump_blink_controller_nodelet"
+	@echo "... kobuki_random_walker_nodelet"
+	@echo "... kobuki_safety_controller_nodelet"
+	@echo "... diagnostic_msgs_generate_messages_cpp"
+	@echo "... diagnostic_msgs_generate_messages_lisp"
+	@echo "... diagnostic_msgs_generate_messages_py"
+	@echo "... kobuki_ros"
+	@echo "... kobuki_nodelet"
 	@echo "... kobuki_qtestsuite"
 	@echo "... rqt_py_common_generate_messages_py"
 .PHONY : help

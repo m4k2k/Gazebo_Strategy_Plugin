@@ -150,90 +150,6 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/actionlib_generate_messages_cpp.dir/rule:
-	cd /home/ubu/Gazebo_Strategy_Plugin/turtle/kobiplug_overlay/build && $(MAKE) -f CMakeFiles/Makefile2 kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
-.PHONY : kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-actionlib_generate_messages_cpp: kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
-.PHONY : actionlib_generate_messages_cpp
-
-# fast build rule for target.
-actionlib_generate_messages_cpp/fast:
-	cd /home/ubu/Gazebo_Strategy_Plugin/turtle/kobiplug_overlay/build && $(MAKE) -f kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/actionlib_generate_messages_cpp.dir/build.make kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/actionlib_generate_messages_cpp.dir/build
-.PHONY : actionlib_generate_messages_cpp/fast
-
-# Convenience name for target.
-kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/actionlib_generate_messages_lisp.dir/rule:
-	cd /home/ubu/Gazebo_Strategy_Plugin/turtle/kobiplug_overlay/build && $(MAKE) -f CMakeFiles/Makefile2 kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/actionlib_generate_messages_lisp.dir/rule
-.PHONY : kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/actionlib_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-actionlib_generate_messages_lisp: kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/actionlib_generate_messages_lisp.dir/rule
-.PHONY : actionlib_generate_messages_lisp
-
-# fast build rule for target.
-actionlib_generate_messages_lisp/fast:
-	cd /home/ubu/Gazebo_Strategy_Plugin/turtle/kobiplug_overlay/build && $(MAKE) -f kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/actionlib_generate_messages_lisp.dir/build.make kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/actionlib_generate_messages_lisp.dir/build
-.PHONY : actionlib_generate_messages_lisp/fast
-
-# Convenience name for target.
-kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/actionlib_generate_messages_py.dir/rule:
-	cd /home/ubu/Gazebo_Strategy_Plugin/turtle/kobiplug_overlay/build && $(MAKE) -f CMakeFiles/Makefile2 kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/actionlib_generate_messages_py.dir/rule
-.PHONY : kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/actionlib_generate_messages_py.dir/rule
-
-# Convenience name for target.
-actionlib_generate_messages_py: kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/actionlib_generate_messages_py.dir/rule
-.PHONY : actionlib_generate_messages_py
-
-# fast build rule for target.
-actionlib_generate_messages_py/fast:
-	cd /home/ubu/Gazebo_Strategy_Plugin/turtle/kobiplug_overlay/build && $(MAKE) -f kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/actionlib_generate_messages_py.dir/build.make kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/actionlib_generate_messages_py.dir/build
-.PHONY : actionlib_generate_messages_py/fast
-
-# Convenience name for target.
-kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/bond_generate_messages_cpp.dir/rule:
-	cd /home/ubu/Gazebo_Strategy_Plugin/turtle/kobiplug_overlay/build && $(MAKE) -f CMakeFiles/Makefile2 kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/bond_generate_messages_cpp.dir/rule
-.PHONY : kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/bond_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-bond_generate_messages_cpp: kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/bond_generate_messages_cpp.dir/rule
-.PHONY : bond_generate_messages_cpp
-
-# fast build rule for target.
-bond_generate_messages_cpp/fast:
-	cd /home/ubu/Gazebo_Strategy_Plugin/turtle/kobiplug_overlay/build && $(MAKE) -f kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/bond_generate_messages_cpp.dir/build.make kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/bond_generate_messages_cpp.dir/build
-.PHONY : bond_generate_messages_cpp/fast
-
-# Convenience name for target.
-kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/bond_generate_messages_lisp.dir/rule:
-	cd /home/ubu/Gazebo_Strategy_Plugin/turtle/kobiplug_overlay/build && $(MAKE) -f CMakeFiles/Makefile2 kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/bond_generate_messages_lisp.dir/rule
-.PHONY : kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/bond_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-bond_generate_messages_lisp: kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/bond_generate_messages_lisp.dir/rule
-.PHONY : bond_generate_messages_lisp
-
-# fast build rule for target.
-bond_generate_messages_lisp/fast:
-	cd /home/ubu/Gazebo_Strategy_Plugin/turtle/kobiplug_overlay/build && $(MAKE) -f kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/bond_generate_messages_lisp.dir/build.make kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/bond_generate_messages_lisp.dir/build
-.PHONY : bond_generate_messages_lisp/fast
-
-# Convenience name for target.
-kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/bond_generate_messages_py.dir/rule:
-	cd /home/ubu/Gazebo_Strategy_Plugin/turtle/kobiplug_overlay/build && $(MAKE) -f CMakeFiles/Makefile2 kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/bond_generate_messages_py.dir/rule
-.PHONY : kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/bond_generate_messages_py.dir/rule
-
-# Convenience name for target.
-bond_generate_messages_py: kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/bond_generate_messages_py.dir/rule
-.PHONY : bond_generate_messages_py
-
-# fast build rule for target.
-bond_generate_messages_py/fast:
-	cd /home/ubu/Gazebo_Strategy_Plugin/turtle/kobiplug_overlay/build && $(MAKE) -f kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/bond_generate_messages_py.dir/build.make kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/bond_generate_messages_py.dir/build
-.PHONY : bond_generate_messages_py/fast
-
-# Convenience name for target.
 kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/driver_base_generate_messages_cpp.dir/rule:
 	cd /home/ubu/Gazebo_Strategy_Plugin/turtle/kobiplug_overlay/build && $(MAKE) -f CMakeFiles/Makefile2 kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/driver_base_generate_messages_cpp.dir/rule
 .PHONY : kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/driver_base_generate_messages_cpp.dir/rule
@@ -416,48 +332,6 @@ gazebo_ros_kobuki/fast:
 .PHONY : gazebo_ros_kobuki/fast
 
 # Convenience name for target.
-kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule:
-	cd /home/ubu/Gazebo_Strategy_Plugin/turtle/kobiplug_overlay/build && $(MAKE) -f CMakeFiles/Makefile2 kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
-.PHONY : kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_cpp: kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
-.PHONY : geometry_msgs_generate_messages_cpp
-
-# fast build rule for target.
-geometry_msgs_generate_messages_cpp/fast:
-	cd /home/ubu/Gazebo_Strategy_Plugin/turtle/kobiplug_overlay/build && $(MAKE) -f kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
-.PHONY : geometry_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule:
-	cd /home/ubu/Gazebo_Strategy_Plugin/turtle/kobiplug_overlay/build && $(MAKE) -f CMakeFiles/Makefile2 kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
-.PHONY : kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_lisp: kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
-.PHONY : geometry_msgs_generate_messages_lisp
-
-# fast build rule for target.
-geometry_msgs_generate_messages_lisp/fast:
-	cd /home/ubu/Gazebo_Strategy_Plugin/turtle/kobiplug_overlay/build && $(MAKE) -f kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
-.PHONY : geometry_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule:
-	cd /home/ubu/Gazebo_Strategy_Plugin/turtle/kobiplug_overlay/build && $(MAKE) -f CMakeFiles/Makefile2 kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
-.PHONY : kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_py: kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
-.PHONY : geometry_msgs_generate_messages_py
-
-# fast build rule for target.
-geometry_msgs_generate_messages_py/fast:
-	cd /home/ubu/Gazebo_Strategy_Plugin/turtle/kobiplug_overlay/build && $(MAKE) -f kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
-.PHONY : geometry_msgs_generate_messages_py/fast
-
-# Convenience name for target.
 kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule:
 	cd /home/ubu/Gazebo_Strategy_Plugin/turtle/kobiplug_overlay/build && $(MAKE) -f CMakeFiles/Makefile2 kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
 .PHONY : kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
@@ -498,216 +372,6 @@ nav_msgs_generate_messages_py: kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/n
 nav_msgs_generate_messages_py/fast:
 	cd /home/ubu/Gazebo_Strategy_Plugin/turtle/kobiplug_overlay/build && $(MAKE) -f kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_py.dir/build.make kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_py.dir/build
 .PHONY : nav_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/nodelet_generate_messages_cpp.dir/rule:
-	cd /home/ubu/Gazebo_Strategy_Plugin/turtle/kobiplug_overlay/build && $(MAKE) -f CMakeFiles/Makefile2 kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/nodelet_generate_messages_cpp.dir/rule
-.PHONY : kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/nodelet_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-nodelet_generate_messages_cpp: kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/nodelet_generate_messages_cpp.dir/rule
-.PHONY : nodelet_generate_messages_cpp
-
-# fast build rule for target.
-nodelet_generate_messages_cpp/fast:
-	cd /home/ubu/Gazebo_Strategy_Plugin/turtle/kobiplug_overlay/build && $(MAKE) -f kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/nodelet_generate_messages_cpp.dir/build.make kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/nodelet_generate_messages_cpp.dir/build
-.PHONY : nodelet_generate_messages_cpp/fast
-
-# Convenience name for target.
-kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/nodelet_generate_messages_lisp.dir/rule:
-	cd /home/ubu/Gazebo_Strategy_Plugin/turtle/kobiplug_overlay/build && $(MAKE) -f CMakeFiles/Makefile2 kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/nodelet_generate_messages_lisp.dir/rule
-.PHONY : kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/nodelet_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-nodelet_generate_messages_lisp: kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/nodelet_generate_messages_lisp.dir/rule
-.PHONY : nodelet_generate_messages_lisp
-
-# fast build rule for target.
-nodelet_generate_messages_lisp/fast:
-	cd /home/ubu/Gazebo_Strategy_Plugin/turtle/kobiplug_overlay/build && $(MAKE) -f kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/nodelet_generate_messages_lisp.dir/build.make kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/nodelet_generate_messages_lisp.dir/build
-.PHONY : nodelet_generate_messages_lisp/fast
-
-# Convenience name for target.
-kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/nodelet_generate_messages_py.dir/rule:
-	cd /home/ubu/Gazebo_Strategy_Plugin/turtle/kobiplug_overlay/build && $(MAKE) -f CMakeFiles/Makefile2 kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/nodelet_generate_messages_py.dir/rule
-.PHONY : kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/nodelet_generate_messages_py.dir/rule
-
-# Convenience name for target.
-nodelet_generate_messages_py: kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/nodelet_generate_messages_py.dir/rule
-.PHONY : nodelet_generate_messages_py
-
-# fast build rule for target.
-nodelet_generate_messages_py/fast:
-	cd /home/ubu/Gazebo_Strategy_Plugin/turtle/kobiplug_overlay/build && $(MAKE) -f kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/nodelet_generate_messages_py.dir/build.make kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/nodelet_generate_messages_py.dir/build
-.PHONY : nodelet_generate_messages_py/fast
-
-# Convenience name for target.
-kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/roscpp_generate_messages_cpp.dir/rule:
-	cd /home/ubu/Gazebo_Strategy_Plugin/turtle/kobiplug_overlay/build && $(MAKE) -f CMakeFiles/Makefile2 kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-.PHONY : kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_cpp: kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-.PHONY : roscpp_generate_messages_cpp
-
-# fast build rule for target.
-roscpp_generate_messages_cpp/fast:
-	cd /home/ubu/Gazebo_Strategy_Plugin/turtle/kobiplug_overlay/build && $(MAKE) -f kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/roscpp_generate_messages_cpp.dir/build
-.PHONY : roscpp_generate_messages_cpp/fast
-
-# Convenience name for target.
-kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/roscpp_generate_messages_lisp.dir/rule:
-	cd /home/ubu/Gazebo_Strategy_Plugin/turtle/kobiplug_overlay/build && $(MAKE) -f CMakeFiles/Makefile2 kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-.PHONY : kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_lisp: kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-.PHONY : roscpp_generate_messages_lisp
-
-# fast build rule for target.
-roscpp_generate_messages_lisp/fast:
-	cd /home/ubu/Gazebo_Strategy_Plugin/turtle/kobiplug_overlay/build && $(MAKE) -f kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/roscpp_generate_messages_lisp.dir/build
-.PHONY : roscpp_generate_messages_lisp/fast
-
-# Convenience name for target.
-kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/roscpp_generate_messages_py.dir/rule:
-	cd /home/ubu/Gazebo_Strategy_Plugin/turtle/kobiplug_overlay/build && $(MAKE) -f CMakeFiles/Makefile2 kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/roscpp_generate_messages_py.dir/rule
-.PHONY : kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/roscpp_generate_messages_py.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_py: kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/roscpp_generate_messages_py.dir/rule
-.PHONY : roscpp_generate_messages_py
-
-# fast build rule for target.
-roscpp_generate_messages_py/fast:
-	cd /home/ubu/Gazebo_Strategy_Plugin/turtle/kobiplug_overlay/build && $(MAKE) -f kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/roscpp_generate_messages_py.dir/build.make kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/roscpp_generate_messages_py.dir/build
-.PHONY : roscpp_generate_messages_py/fast
-
-# Convenience name for target.
-kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule:
-	cd /home/ubu/Gazebo_Strategy_Plugin/turtle/kobiplug_overlay/build && $(MAKE) -f CMakeFiles/Makefile2 kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-.PHONY : kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_cpp: kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-.PHONY : rosgraph_msgs_generate_messages_cpp
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_cpp/fast:
-	cd /home/ubu/Gazebo_Strategy_Plugin/turtle/kobiplug_overlay/build && $(MAKE) -f kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule:
-	cd /home/ubu/Gazebo_Strategy_Plugin/turtle/kobiplug_overlay/build && $(MAKE) -f CMakeFiles/Makefile2 kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
-.PHONY : kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_lisp: kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
-.PHONY : rosgraph_msgs_generate_messages_lisp
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_lisp/fast:
-	cd /home/ubu/Gazebo_Strategy_Plugin/turtle/kobiplug_overlay/build && $(MAKE) -f kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule:
-	cd /home/ubu/Gazebo_Strategy_Plugin/turtle/kobiplug_overlay/build && $(MAKE) -f CMakeFiles/Makefile2 kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-.PHONY : kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_py: kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-.PHONY : rosgraph_msgs_generate_messages_py
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_py/fast:
-	cd /home/ubu/Gazebo_Strategy_Plugin/turtle/kobiplug_overlay/build && $(MAKE) -f kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
-.PHONY : rosgraph_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule:
-	cd /home/ubu/Gazebo_Strategy_Plugin/turtle/kobiplug_overlay/build && $(MAKE) -f CMakeFiles/Makefile2 kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
-.PHONY : kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-sensor_msgs_generate_messages_cpp: kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
-.PHONY : sensor_msgs_generate_messages_cpp
-
-# fast build rule for target.
-sensor_msgs_generate_messages_cpp/fast:
-	cd /home/ubu/Gazebo_Strategy_Plugin/turtle/kobiplug_overlay/build && $(MAKE) -f kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
-.PHONY : sensor_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule:
-	cd /home/ubu/Gazebo_Strategy_Plugin/turtle/kobiplug_overlay/build && $(MAKE) -f CMakeFiles/Makefile2 kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
-.PHONY : kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-sensor_msgs_generate_messages_lisp: kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
-.PHONY : sensor_msgs_generate_messages_lisp
-
-# fast build rule for target.
-sensor_msgs_generate_messages_lisp/fast:
-	cd /home/ubu/Gazebo_Strategy_Plugin/turtle/kobiplug_overlay/build && $(MAKE) -f kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
-.PHONY : sensor_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule:
-	cd /home/ubu/Gazebo_Strategy_Plugin/turtle/kobiplug_overlay/build && $(MAKE) -f CMakeFiles/Makefile2 kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
-.PHONY : kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-sensor_msgs_generate_messages_py: kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
-.PHONY : sensor_msgs_generate_messages_py
-
-# fast build rule for target.
-sensor_msgs_generate_messages_py/fast:
-	cd /home/ubu/Gazebo_Strategy_Plugin/turtle/kobiplug_overlay/build && $(MAKE) -f kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
-.PHONY : sensor_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule:
-	cd /home/ubu/Gazebo_Strategy_Plugin/turtle/kobiplug_overlay/build && $(MAKE) -f CMakeFiles/Makefile2 kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule
-.PHONY : kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-std_srvs_generate_messages_cpp: kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule
-.PHONY : std_srvs_generate_messages_cpp
-
-# fast build rule for target.
-std_srvs_generate_messages_cpp/fast:
-	cd /home/ubu/Gazebo_Strategy_Plugin/turtle/kobiplug_overlay/build && $(MAKE) -f kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/std_srvs_generate_messages_cpp.dir/build.make kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/std_srvs_generate_messages_cpp.dir/build
-.PHONY : std_srvs_generate_messages_cpp/fast
-
-# Convenience name for target.
-kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule:
-	cd /home/ubu/Gazebo_Strategy_Plugin/turtle/kobiplug_overlay/build && $(MAKE) -f CMakeFiles/Makefile2 kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule
-.PHONY : kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-std_srvs_generate_messages_lisp: kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule
-.PHONY : std_srvs_generate_messages_lisp
-
-# fast build rule for target.
-std_srvs_generate_messages_lisp/fast:
-	cd /home/ubu/Gazebo_Strategy_Plugin/turtle/kobiplug_overlay/build && $(MAKE) -f kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/std_srvs_generate_messages_lisp.dir/build.make kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/std_srvs_generate_messages_lisp.dir/build
-.PHONY : std_srvs_generate_messages_lisp/fast
-
-# Convenience name for target.
-kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/std_srvs_generate_messages_py.dir/rule:
-	cd /home/ubu/Gazebo_Strategy_Plugin/turtle/kobiplug_overlay/build && $(MAKE) -f CMakeFiles/Makefile2 kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/std_srvs_generate_messages_py.dir/rule
-.PHONY : kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/std_srvs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-std_srvs_generate_messages_py: kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/std_srvs_generate_messages_py.dir/rule
-.PHONY : std_srvs_generate_messages_py
-
-# fast build rule for target.
-std_srvs_generate_messages_py/fast:
-	cd /home/ubu/Gazebo_Strategy_Plugin/turtle/kobiplug_overlay/build && $(MAKE) -f kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/std_srvs_generate_messages_py.dir/build.make kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/std_srvs_generate_messages_py.dir/build
-.PHONY : std_srvs_generate_messages_py/fast
 
 # Convenience name for target.
 kobuki_desktop/kobuki_gazebo_plugins/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule:
@@ -913,12 +577,6 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... actionlib_generate_messages_cpp"
-	@echo "... actionlib_generate_messages_lisp"
-	@echo "... actionlib_generate_messages_py"
-	@echo "... bond_generate_messages_cpp"
-	@echo "... bond_generate_messages_lisp"
-	@echo "... bond_generate_messages_py"
 	@echo "... driver_base_generate_messages_cpp"
 	@echo "... driver_base_generate_messages_lisp"
 	@echo "... driver_base_generate_messages_py"
@@ -933,9 +591,6 @@ help:
 	@echo "... gazebo_plugins_gencfg"
 	@echo "... gazebo_ros_gencfg"
 	@echo "... gazebo_ros_kobuki"
-	@echo "... geometry_msgs_generate_messages_cpp"
-	@echo "... geometry_msgs_generate_messages_lisp"
-	@echo "... geometry_msgs_generate_messages_py"
 	@echo "... install"
 	@echo "... install/local"
 	@echo "... install/strip"
@@ -943,22 +598,7 @@ help:
 	@echo "... nav_msgs_generate_messages_cpp"
 	@echo "... nav_msgs_generate_messages_lisp"
 	@echo "... nav_msgs_generate_messages_py"
-	@echo "... nodelet_generate_messages_cpp"
-	@echo "... nodelet_generate_messages_lisp"
-	@echo "... nodelet_generate_messages_py"
 	@echo "... rebuild_cache"
-	@echo "... roscpp_generate_messages_cpp"
-	@echo "... roscpp_generate_messages_lisp"
-	@echo "... roscpp_generate_messages_py"
-	@echo "... rosgraph_msgs_generate_messages_cpp"
-	@echo "... rosgraph_msgs_generate_messages_lisp"
-	@echo "... rosgraph_msgs_generate_messages_py"
-	@echo "... sensor_msgs_generate_messages_cpp"
-	@echo "... sensor_msgs_generate_messages_lisp"
-	@echo "... sensor_msgs_generate_messages_py"
-	@echo "... std_srvs_generate_messages_cpp"
-	@echo "... std_srvs_generate_messages_lisp"
-	@echo "... std_srvs_generate_messages_py"
 	@echo "... test"
 	@echo "... tf2_msgs_generate_messages_cpp"
 	@echo "... tf2_msgs_generate_messages_lisp"
