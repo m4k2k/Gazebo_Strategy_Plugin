@@ -18,11 +18,8 @@ SET(CMAKE_TARGET_LINKED_INFO_FILES
 SET(CMAKE_C_TARGET_INCLUDE_PATH
   "/home/ubu/Gazebo_Strategy_Plugin/turtle/kobiplug_overlay/src/kobuki_desktop/kobuki_gazebo_plugins/include"
   "/opt/ros/indigo/include"
-  "/usr/include/gazebo-5.3"
-  "/usr/include/sdformat-2.3"
-  "/usr/include/OGRE"
-  "/usr/include/OGRE/Terrain"
-  "/usr/include/OGRE/Paging"
+  "/usr/include/gazebo-2.2"
+  "/usr/include/sdformat-1.4"
   )
 SET(CMAKE_CXX_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})
 SET(CMAKE_Fortran_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})

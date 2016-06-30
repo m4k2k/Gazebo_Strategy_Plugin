@@ -112,6 +112,7 @@ gazebo_move_EXTERNAL_OBJECTS =
 /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: gazebo_move/CMakeFiles/gazebo_move.dir/src/gazebo_move.cc.o
 /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: gazebo_move/CMakeFiles/gazebo_move.dir/build.make
 /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /usr/lib/x86_64-linux-gnu/libgazebo.so
+/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /usr/lib/x86_64-linux-gnu/libgazebo_ccd.so
 /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /usr/lib/x86_64-linux-gnu/libgazebo_common.so
 /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /usr/lib/x86_64-linux-gnu/libgazebo_gimpact.so
 /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /usr/lib/x86_64-linux-gnu/libgazebo_gui.so
@@ -130,15 +131,10 @@ gazebo_move_EXTERNAL_OBJECTS =
 /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /usr/lib/x86_64-linux-gnu/libgazebo_skyx.so
 /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /usr/lib/x86_64-linux-gnu/libgazebo_transport.so
 /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /usr/lib/x86_64-linux-gnu/libgazebo_util.so
-/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /usr/lib/x86_64-linux-gnu/libgazebo_ccd.so
 /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /usr/lib/x86_64-linux-gnu/libgazebo_player.so
-/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /usr/lib/x86_64-linux-gnu/libgazebo_physics_bullet.so
 /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /usr/lib/x86_64-linux-gnu/libgazebo_rendering_deferred.so
 /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /usr/lib/x86_64-linux-gnu/libprotobuf.so
 /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /usr/lib/x86_64-linux-gnu/libsdformat.so
-/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /usr/lib/x86_64-linux-gnu/libOgreMain.so
-/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /usr/lib/x86_64-linux-gnu/libOgreTerrain.so
-/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /usr/lib/x86_64-linux-gnu/libOgrePaging.so
 /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /usr/lib/x86_64-linux-gnu/libQtGui.so
 /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /usr/lib/x86_64-linux-gnu/libQtCore.so
 /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /usr/lib/x86_64-linux-gnu/libprotobuf.so
@@ -170,9 +166,6 @@ gazebo_move_EXTERNAL_OBJECTS =
 /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /usr/lib/x86_64-linux-gnu/libpthread.so
 /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so
 /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /usr/lib/x86_64-linux-gnu/libsdformat.so
-/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /usr/lib/x86_64-linux-gnu/libOgreMain.so
-/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /usr/lib/x86_64-linux-gnu/libOgreTerrain.so
-/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /usr/lib/x86_64-linux-gnu/libOgrePaging.so
 /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /usr/lib/x86_64-linux-gnu/libQtGui.so
 /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /usr/lib/x86_64-linux-gnu/libQtCore.so
 /home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib/libgazebo_move.so: /opt/ros/indigo/lib/libgazebo_ros_api_plugin.so

@@ -345,7 +345,7 @@ driver_base_DIR:PATH=/opt/ros/indigo/share/driver_base/cmake
 dynamic_reconfigure_DIR:PATH=/opt/ros/indigo/share/dynamic_reconfigure/cmake
 
 //The directory containing a CMake configuration file for gazebo.
-gazebo_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/gazebo
+gazebo_DIR:PATH=/usr/share/gazebo/cmake
 
 //The directory containing a CMake configuration file for gazebo_msgs.
 gazebo_msgs_DIR:PATH=/opt/ros/indigo/share/gazebo_msgs/cmake
@@ -697,7 +697,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=10
+CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=2
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

@@ -251,11 +251,23 @@ NOSETESTS:FILEPATH=/usr/bin/nosetests-2.7
 //x
 OGRE_CONFIG_INCLUDE_DIR:PATH=/usr/include/OGRE
 
+//The directory containing a CMake configuration file for OGRE.
+OGRE_DIR:PATH=OGRE_DIR-NOTFOUND
+
+//Alternative include directory
+OGRE_INCLUDEDIR:PATH=/
+
 //x
 OGRE_INCLUDE_DIR:PATH=/usr/include/OGRE
 
+//Alternative library directory
+OGRE_LIBRARYDIR:PATH=/
+
 //x
 OGRE_LIBRARY_DBG:FILEPATH=/usr/lib/x86_64-linux-gnu/libOgreMain.so
+
+//Path to a library.
+OGRE_LIBRARY_DIR:FILEPATH=/usr/lib/x86_64-linux-gnu/libOgreMain.so
 
 //x
 OGRE_LIBRARY_FWK:STRING=NOTFOUND
@@ -446,6 +458,18 @@ OGRE_Terrain_LIBRARY_FWK:STRING=NOTFOUND
 //x
 OGRE_Terrain_LIBRARY_REL:FILEPATH=/usr/lib/x86_64-linux-gnu/libOgreTerrain.so
 
+//x
+OIS_INCLUDE_DIR:PATH=OIS_INCLUDE_DIR-NOTFOUND
+
+//x
+OIS_LIBRARY_DBG:FILEPATH=OIS_LIBRARY_DBG-NOTFOUND
+
+//x
+OIS_LIBRARY_FWK:STRING=NOTFOUND
+
+//x
+OIS_LIBRARY_REL:FILEPATH=OIS_LIBRARY_REL-NOTFOUND
+
 //pkg-config executable
 PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config
 
@@ -489,19 +513,19 @@ Project_SOURCE_DIR:STATIC=/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/s
 QT_ARTHURPLUGIN_PLUGIN_DEBUG:FILEPATH=QT_ARTHURPLUGIN_PLUGIN_DEBUG-NOTFOUND
 
 //Path to a library.
-QT_ARTHURPLUGIN_PLUGIN_RELEASE:FILEPATH=QT_ARTHURPLUGIN_PLUGIN_RELEASE-NOTFOUND
+QT_ARTHURPLUGIN_PLUGIN_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/qt4/plugins/designer/libarthurplugin.so
 
 //Path to a library.
 QT_CONTAINEREXTENSION_PLUGIN_DEBUG:FILEPATH=QT_CONTAINEREXTENSION_PLUGIN_DEBUG-NOTFOUND
 
 //Path to a library.
-QT_CONTAINEREXTENSION_PLUGIN_RELEASE:FILEPATH=QT_CONTAINEREXTENSION_PLUGIN_RELEASE-NOTFOUND
+QT_CONTAINEREXTENSION_PLUGIN_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/qt4/plugins/designer/libcontainerextension.so
 
 //Path to a library.
 QT_CUSTOMWIDGETPLUGIN_PLUGIN_DEBUG:FILEPATH=QT_CUSTOMWIDGETPLUGIN_PLUGIN_DEBUG-NOTFOUND
 
 //Path to a library.
-QT_CUSTOMWIDGETPLUGIN_PLUGIN_RELEASE:FILEPATH=QT_CUSTOMWIDGETPLUGIN_PLUGIN_RELEASE-NOTFOUND
+QT_CUSTOMWIDGETPLUGIN_PLUGIN_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/qt4/plugins/designer/libcustomwidgetplugin.so
 
 //Path to a program.
 QT_DBUSCPP2XML_EXECUTABLE:FILEPATH=/usr/lib/x86_64-linux-gnu/qt4/bin/qdbuscpp2xml
@@ -510,13 +534,13 @@ QT_DBUSCPP2XML_EXECUTABLE:FILEPATH=/usr/lib/x86_64-linux-gnu/qt4/bin/qdbuscpp2xm
 QT_DBUSXML2CPP_EXECUTABLE:FILEPATH=/usr/lib/x86_64-linux-gnu/qt4/bin/qdbusxml2cpp
 
 //Path to a program.
-QT_DESIGNER_EXECUTABLE:FILEPATH=QT_DESIGNER_EXECUTABLE-NOTFOUND
+QT_DESIGNER_EXECUTABLE:FILEPATH=/usr/lib/x86_64-linux-gnu/qt4/bin/designer
 
 //The location of the Qt docs
 QT_DOC_DIR:PATH=/usr/share/qt4/doc
 
 //Path to a program.
-QT_LINGUIST_EXECUTABLE:FILEPATH=QT_LINGUIST_EXECUTABLE-NOTFOUND
+QT_LINGUIST_EXECUTABLE:FILEPATH=/usr/lib/x86_64-linux-gnu/qt4/bin/linguist
 
 //Path to a program.
 QT_LRELEASE_EXECUTABLE:FILEPATH=/usr/lib/x86_64-linux-gnu/qt4/bin/lrelease
@@ -534,19 +558,19 @@ QT_MOC_EXECUTABLE:FILEPATH=/usr/lib/x86_64-linux-gnu/qt4/bin/moc
 QT_PHONONWIDGETS_PLUGIN_DEBUG:FILEPATH=QT_PHONONWIDGETS_PLUGIN_DEBUG-NOTFOUND
 
 //Path to a library.
-QT_PHONONWIDGETS_PLUGIN_RELEASE:FILEPATH=QT_PHONONWIDGETS_PLUGIN_RELEASE-NOTFOUND
+QT_PHONONWIDGETS_PLUGIN_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/qt4/plugins/designer/libphononwidgets.so
 
 //Path to a file.
-QT_PHONON_INCLUDE_DIR:PATH=QT_PHONON_INCLUDE_DIR-NOTFOUND
+QT_PHONON_INCLUDE_DIR:PATH=/usr/include/qt4/phonon
 
 //The Qt PHONON library
-QT_PHONON_LIBRARY:STRING=
+QT_PHONON_LIBRARY:STRING=/usr/lib/x86_64-linux-gnu/libphonon.so
 
 //Path to a library.
 QT_PHONON_LIBRARY_DEBUG:FILEPATH=QT_PHONON_LIBRARY_DEBUG-NOTFOUND
 
 //Path to a library.
-QT_PHONON_LIBRARY_RELEASE:FILEPATH=QT_PHONON_LIBRARY_RELEASE-NOTFOUND
+QT_PHONON_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libphonon.so
 
 //The location of the Qt plugins
 QT_PLUGINS_DIR:PATH=/usr/lib/x86_64-linux-gnu/qt4/plugins
@@ -558,7 +582,7 @@ QT_QCNCODECS_PLUGIN_DEBUG:FILEPATH=QT_QCNCODECS_PLUGIN_DEBUG-NOTFOUND
 QT_QCNCODECS_PLUGIN_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/qt4/plugins/codecs/libqcncodecs.so
 
 //Path to a program.
-QT_QCOLLECTIONGENERATOR_EXECUTABLE:FILEPATH=QT_QCOLLECTIONGENERATOR_EXECUTABLE-NOTFOUND
+QT_QCOLLECTIONGENERATOR_EXECUTABLE:FILEPATH=/usr/lib/x86_64-linux-gnu/qt4/bin/qcollectiongenerator
 
 //Path to a library.
 QT_QCOREWLANBEARER_PLUGIN_DEBUG:FILEPATH=QT_QCOREWLANBEARER_PLUGIN_DEBUG-NOTFOUND
@@ -669,7 +693,7 @@ QT_QSQLITE_PLUGIN_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/qt4/plugins/sqldriv
 QT_QSQLMYSQL_PLUGIN_DEBUG:FILEPATH=QT_QSQLMYSQL_PLUGIN_DEBUG-NOTFOUND
 
 //Path to a library.
-QT_QSQLMYSQL_PLUGIN_RELEASE:FILEPATH=QT_QSQLMYSQL_PLUGIN_RELEASE-NOTFOUND
+QT_QSQLMYSQL_PLUGIN_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/qt4/plugins/sqldrivers/libqsqlmysql.so
 
 //Path to a library.
 QT_QSQLOCI_PLUGIN_DEBUG:FILEPATH=QT_QSQLOCI_PLUGIN_DEBUG-NOTFOUND
@@ -681,19 +705,19 @@ QT_QSQLOCI_PLUGIN_RELEASE:FILEPATH=QT_QSQLOCI_PLUGIN_RELEASE-NOTFOUND
 QT_QSQLODBC_PLUGIN_DEBUG:FILEPATH=QT_QSQLODBC_PLUGIN_DEBUG-NOTFOUND
 
 //Path to a library.
-QT_QSQLODBC_PLUGIN_RELEASE:FILEPATH=QT_QSQLODBC_PLUGIN_RELEASE-NOTFOUND
+QT_QSQLODBC_PLUGIN_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/qt4/plugins/sqldrivers/libqsqlodbc.so
 
 //Path to a library.
 QT_QSQLPSQL_PLUGIN_DEBUG:FILEPATH=QT_QSQLPSQL_PLUGIN_DEBUG-NOTFOUND
 
 //Path to a library.
-QT_QSQLPSQL_PLUGIN_RELEASE:FILEPATH=QT_QSQLPSQL_PLUGIN_RELEASE-NOTFOUND
+QT_QSQLPSQL_PLUGIN_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/qt4/plugins/sqldrivers/libqsqlpsql.so
 
 //Path to a library.
 QT_QSQLTDS_PLUGIN_DEBUG:FILEPATH=QT_QSQLTDS_PLUGIN_DEBUG-NOTFOUND
 
 //Path to a library.
-QT_QSQLTDS_PLUGIN_RELEASE:FILEPATH=QT_QSQLTDS_PLUGIN_RELEASE-NOTFOUND
+QT_QSQLTDS_PLUGIN_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/qt4/plugins/sqldrivers/libqsqltds.so
 
 //Path to a library.
 QT_QSVGICON_PLUGIN_DEBUG:FILEPATH=QT_QSVGICON_PLUGIN_DEBUG-NOTFOUND
@@ -1065,7 +1089,7 @@ QT_RCC_EXECUTABLE:FILEPATH=/usr/lib/x86_64-linux-gnu/qt4/bin/rcc
 QT_TASKMENUEXTENSION_PLUGIN_DEBUG:FILEPATH=QT_TASKMENUEXTENSION_PLUGIN_DEBUG-NOTFOUND
 
 //Path to a library.
-QT_TASKMENUEXTENSION_PLUGIN_RELEASE:FILEPATH=QT_TASKMENUEXTENSION_PLUGIN_RELEASE-NOTFOUND
+QT_TASKMENUEXTENSION_PLUGIN_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/qt4/plugins/designer/libtaskmenuextension.so
 
 //The location of the Qt translations
 QT_TRANSLATIONS_DIR:PATH=/usr/share/qt4/translations
@@ -1080,7 +1104,7 @@ QT_UIC_EXECUTABLE:FILEPATH=/usr/lib/x86_64-linux-gnu/qt4/bin/uic
 QT_WORLDTIMECLOCKPLUGIN_PLUGIN_DEBUG:FILEPATH=QT_WORLDTIMECLOCKPLUGIN_PLUGIN_DEBUG-NOTFOUND
 
 //Path to a library.
-QT_WORLDTIMECLOCKPLUGIN_PLUGIN_RELEASE:FILEPATH=QT_WORLDTIMECLOCKPLUGIN_PLUGIN_RELEASE-NOTFOUND
+QT_WORLDTIMECLOCKPLUGIN_PLUGIN_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/qt4/plugins/designer/libworldtimeclockplugin.so
 
 //Path to a library.
 RT_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/librt.so
@@ -1119,16 +1143,25 @@ cpp_common_DIR:PATH=/opt/ros/indigo/share/cpp_common/cmake
 dynamic_reconfigure_DIR:PATH=/opt/ros/indigo/share/dynamic_reconfigure/cmake
 
 //The directory containing a CMake configuration file for gazebo.
-gazebo_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/gazebo
+gazebo_DIR:PATH=/usr/share/gazebo/cmake
 
 //Value Computed by CMake
 gazebo_move_BINARY_DIR:STATIC=/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/build/gazebo_move
 
 //Dependencies for the target
-gazebo_move_LIB_DEPENDS:STATIC=general;gazebo_transport;general;gazebo_physics;general;gazebo_sensors;general;gazebo_rendering;general;gazebo_gui;general;gazebo_msgs;general;gazebo_math;general;gazebo_common;general;gazebo;general;boost_thread;general;boost_signals;general;boost_system;general;boost_filesystem;general;boost_program_options;general;boost_regex;general;boost_iostreams;general;boost_date_time;general;sdformat;general;protobuf;general;pthread;general;tbb;general;/usr/lib/x86_64-linux-gnu/libgazebo.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_common.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_gimpact.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_gui.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_gui_building.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_gui_viewers.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_math.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_msgs.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_ode.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_opcode.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_opende_ou.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_physics.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_physics_ode.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_rendering.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_selection_buffer.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_sensors.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_skyx.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_transport.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_util.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_ccd.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_player.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_physics_bullet.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_rendering_deferred.so;optimized;/usr/lib/x86_64-linux-gnu/libprotobuf.so;debug;/usr/lib/x86_64-linux-gnu/libprotobuf.so;general;-lpthread;general;/usr/lib/x86_64-linux-gnu/libsdformat.so;optimized;/usr/lib/x86_64-linux-gnu/libOgreMain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreMain.so;optimized;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so;optimized;/usr/lib/x86_64-linux-gnu/libOgrePaging.so;debug;/usr/lib/x86_64-linux-gnu/libOgrePaging.so;general;/usr/lib/x86_64-linux-gnu/libQtGui.so;general;/usr/lib/x86_64-linux-gnu/libQtCore.so;optimized;/usr/lib/x86_64-linux-gnu/libprotobuf.so;debug;/usr/lib/x86_64-linux-gnu/libprotobuf.so;general;-lpthread;general;/opt/ros/indigo/lib/libgazebo_ros_api_plugin.so;general;/opt/ros/indigo/lib/libgazebo_ros_paths_plugin.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml.so;general;/opt/ros/indigo/lib/libroslib.so;general;/opt/ros/indigo/lib/libtf.so;general;/opt/ros/indigo/lib/libtf2_ros.so;general;/opt/ros/indigo/lib/libactionlib.so;general;/opt/ros/indigo/lib/libmessage_filters.so;general;/opt/ros/indigo/lib/libtf2.so;general;/opt/ros/indigo/lib/libdynamic_reconfigure_config_init_mutex.so;general;/opt/ros/indigo/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_signals.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/opt/ros/indigo/lib/librosconsole.so;general;/opt/ros/indigo/lib/librosconsole_log4cxx.so;general;/opt/ros/indigo/lib/librosconsole_backend_interface.so;general;/usr/lib/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/indigo/lib/libroscpp_serialization.so;general;/opt/ros/indigo/lib/librostime.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/opt/ros/indigo/lib/libxmlrpcpp.so;general;/opt/ros/indigo/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so;
+gazebo_move_LIB_DEPENDS:STATIC=general;gazebo_transport;general;gazebo_physics;general;gazebo_sensors;general;gazebo_rendering;general;gazebo_gui;general;gazebo_msgs;general;gazebo_math;general;gazebo_common;general;gazebo;general;boost_thread;general;boost_signals;general;boost_system;general;boost_filesystem;general;boost_program_options;general;boost_regex;general;boost_iostreams;general;boost_date_time;general;sdformat;general;protobuf;general;pthread;general;tbb;general;/usr/lib/x86_64-linux-gnu/libgazebo.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_ccd.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_common.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_gimpact.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_gui.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_gui_building.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_gui_viewers.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_math.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_msgs.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_ode.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_opcode.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_opende_ou.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_physics.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_physics_ode.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_rendering.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_selection_buffer.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_sensors.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_skyx.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_transport.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_util.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_player.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_rendering_deferred.so;optimized;/usr/lib/x86_64-linux-gnu/libprotobuf.so;debug;/usr/lib/x86_64-linux-gnu/libprotobuf.so;general;-lpthread;general;/usr/lib/x86_64-linux-gnu/libsdformat.so;general;/usr/lib/x86_64-linux-gnu/libQtGui.so;general;/usr/lib/x86_64-linux-gnu/libQtCore.so;optimized;/usr/lib/x86_64-linux-gnu/libprotobuf.so;debug;/usr/lib/x86_64-linux-gnu/libprotobuf.so;general;-lpthread;general;/opt/ros/indigo/lib/libgazebo_ros_api_plugin.so;general;/opt/ros/indigo/lib/libgazebo_ros_paths_plugin.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml.so;general;/opt/ros/indigo/lib/libroslib.so;general;/opt/ros/indigo/lib/libtf.so;general;/opt/ros/indigo/lib/libtf2_ros.so;general;/opt/ros/indigo/lib/libactionlib.so;general;/opt/ros/indigo/lib/libmessage_filters.so;general;/opt/ros/indigo/lib/libtf2.so;general;/opt/ros/indigo/lib/libdynamic_reconfigure_config_init_mutex.so;general;/opt/ros/indigo/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_signals.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/opt/ros/indigo/lib/librosconsole.so;general;/opt/ros/indigo/lib/librosconsole_log4cxx.so;general;/opt/ros/indigo/lib/librosconsole_backend_interface.so;general;/usr/lib/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/indigo/lib/libroscpp_serialization.so;general;/opt/ros/indigo/lib/librostime.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/opt/ros/indigo/lib/libxmlrpcpp.so;general;/opt/ros/indigo/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so;
 
 //Value Computed by CMake
 gazebo_move_SOURCE_DIR:STATIC=/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/src/gazebo_move
+
+//Value Computed by CMake
+gazebo_move_v2_BINARY_DIR:STATIC=/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/build/gazebo_move_v2
+
+//Dependencies for the target
+gazebo_move_v2_LIB_DEPENDS:STATIC=general;gazebo_transport;general;gazebo_physics;general;gazebo_sensors;general;gazebo_rendering;general;gazebo_gui;general;gazebo_msgs;general;gazebo_math;general;gazebo_common;general;gazebo;general;boost_thread;general;boost_signals;general;boost_system;general;boost_filesystem;general;boost_program_options;general;boost_regex;general;boost_iostreams;general;boost_date_time;general;sdformat;general;protobuf;general;pthread;general;tbb;general;/usr/lib/x86_64-linux-gnu/libgazebo.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_ccd.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_common.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_gimpact.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_gui.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_gui_building.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_gui_viewers.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_math.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_msgs.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_ode.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_opcode.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_opende_ou.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_physics.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_physics_ode.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_rendering.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_selection_buffer.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_sensors.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_skyx.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_transport.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_util.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_player.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_rendering_deferred.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;optimized;/usr/lib/x86_64-linux-gnu/libprotobuf.so;debug;/usr/lib/x86_64-linux-gnu/libprotobuf.so;general;-lpthread;general;/usr/lib/x86_64-linux-gnu/libsdformat.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/usr/lib/x86_64-linux-gnu/libQtGui.so;general;/usr/lib/x86_64-linux-gnu/libQtCore.so;optimized;/usr/lib/x86_64-linux-gnu/libprotobuf.so;debug;/usr/lib/x86_64-linux-gnu/libprotobuf.so;general;-lpthread;general;/opt/ros/indigo/lib/libgazebo_ros_api_plugin.so;general;/opt/ros/indigo/lib/libgazebo_ros_paths_plugin.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml.so;general;/opt/ros/indigo/lib/libroslib.so;general;/opt/ros/indigo/lib/libtf.so;general;/opt/ros/indigo/lib/libtf2_ros.so;general;/opt/ros/indigo/lib/libactionlib.so;general;/opt/ros/indigo/lib/libmessage_filters.so;general;/opt/ros/indigo/lib/libtf2.so;general;/opt/ros/indigo/lib/libdynamic_reconfigure_config_init_mutex.so;general;/opt/ros/indigo/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_signals.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/opt/ros/indigo/lib/librosconsole.so;general;/opt/ros/indigo/lib/librosconsole_log4cxx.so;general;/opt/ros/indigo/lib/librosconsole_backend_interface.so;general;/usr/lib/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/indigo/lib/libroscpp_serialization.so;general;/opt/ros/indigo/lib/librostime.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/opt/ros/indigo/lib/libxmlrpcpp.so;general;/opt/ros/indigo/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so;
+
+//Value Computed by CMake
+gazebo_move_v2_SOURCE_DIR:STATIC=/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/src/gazebo_move_v2
 
 //The directory containing a CMake configuration file for gazebo_msgs.
 gazebo_msgs_DIR:PATH=/opt/ros/indigo/share/gazebo_msgs/cmake
@@ -1150,6 +1183,9 @@ gazebo_ros_DIR:PATH=/opt/ros/indigo/share/gazebo_ros/cmake
 
 //The directory containing a CMake configuration file for gencpp.
 gencpp_DIR:PATH=/opt/ros/indigo/share/gencpp/cmake
+
+//The directory containing a CMake configuration file for geneus.
+geneus_DIR:PATH=/opt/ros/indigo/share/geneus/cmake
 
 //The directory containing a CMake configuration file for genlisp.
 genlisp_DIR:PATH=/opt/ros/indigo/share/genlisp/cmake
@@ -1482,8 +1518,12 @@ GTEST_MAIN_LIBRARY-ADVANCED:INTERNAL=1
 GTEST_MAIN_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: OGRE_CONFIG_INCLUDE_DIR
 OGRE_CONFIG_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OGRE_INCLUDEDIR
+OGRE_INCLUDEDIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: OGRE_INCLUDE_DIR
 OGRE_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OGRE_LIBRARYDIR
+OGRE_LIBRARYDIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: OGRE_LIBRARY_DBG
 OGRE_LIBRARY_DBG-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: OGRE_LIBRARY_FWK
@@ -1648,6 +1688,32 @@ OGRE_Terrain_LIBRARY_DBG-ADVANCED:INTERNAL=1
 OGRE_Terrain_LIBRARY_FWK-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: OGRE_Terrain_LIBRARY_REL
 OGRE_Terrain_LIBRARY_REL-ADVANCED:INTERNAL=1
+OIS_PKGC_CFLAGS:INTERNAL=
+OIS_PKGC_CFLAGS_I:INTERNAL=
+OIS_PKGC_CFLAGS_OTHER:INTERNAL=
+OIS_PKGC_FOUND:INTERNAL=
+OIS_PKGC_INCLUDEDIR:INTERNAL=
+OIS_PKGC_LIBDIR:INTERNAL=
+OIS_PKGC_LIBS:INTERNAL=
+OIS_PKGC_LIBS_L:INTERNAL=
+OIS_PKGC_LIBS_OTHER:INTERNAL=
+OIS_PKGC_LIBS_PATHS:INTERNAL=
+OIS_PKGC_OIS_INCLUDEDIR:INTERNAL=
+OIS_PKGC_OIS_LIBDIR:INTERNAL=
+OIS_PKGC_OIS_PREFIX:INTERNAL=
+OIS_PKGC_OIS_VERSION:INTERNAL=
+OIS_PKGC_PREFIX:INTERNAL=
+OIS_PKGC_STATIC_CFLAGS:INTERNAL=
+OIS_PKGC_STATIC_CFLAGS_I:INTERNAL=
+OIS_PKGC_STATIC_CFLAGS_OTHER:INTERNAL=
+OIS_PKGC_STATIC_LIBDIR:INTERNAL=
+OIS_PKGC_STATIC_LIBS:INTERNAL=
+OIS_PKGC_STATIC_LIBS_L:INTERNAL=
+OIS_PKGC_STATIC_LIBS_OTHER:INTERNAL=
+OIS_PKGC_STATIC_LIBS_PATHS:INTERNAL=
+OIS_PKGC_VERSION:INTERNAL=
+//x
+OIS_PREFIX_PATH_INT_CHECK:INTERNAL=/iOSDependencies;/iOSDependencies;/Dependencies;/Dependencies
 //ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
 PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: PROTOBUF_INCLUDE_DIR
@@ -2092,4 +2158,5 @@ _Boost_LIBRARY_DIR_LAST:INTERNAL=/usr/lib/x86_64-linux-gnu
 _Boost_USE_MULTITHREADED_LAST:INTERNAL=TRUE
 __pkg_config_checked_GAZEBO:INTERNAL=1
 __pkg_config_checked_OGRE_PKGC:INTERNAL=1
+__pkg_config_checked_OIS_PKGC:INTERNAL=1
 

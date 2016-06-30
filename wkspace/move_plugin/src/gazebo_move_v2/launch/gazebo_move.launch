@@ -1,0 +1,7 @@
+<launch>
+
+  <include file="$(find turtlebot_gazebo)/launch/turtlebot_world.launch">
+	<arg name="gui" value="$(arg gui) " />
+  </include>
+
+</launch>
