@@ -8,7 +8,13 @@ project(gazebo_move_v2)
 include (FindPkgConfig)
 if (PKG_CONFIG_FOUND)
   pkg_check_modules(GAZEBO gazebo)
+  pkg_check_modules(OGRE OGRE)
+else()
+  message(SEND_ERROR "can't find pkgconfig")
 endif()
+
+# /usr/lib/x86_64-linux-gnu/pkgconfig/
+
 
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
@@ -28,13 +34,13 @@ if(UNIX)
 endif(UNIX)
 
 ## System dependencies are found with CMake's conventions
-include(FindBoost)
-find_package(Boost ${MIN_BOOST_VERSION} REQUIRED system filesystem regex)
-#find_package(Boost REQUIRED)
+#include(FindBoost)
+#find_package(Boost ${MIN_BOOST_VERSION} REQUIRED system filesystem regex)
+find_package(Boost REQUIRED)
 find_package(Qt4 REQUIRED)
 find_package(Protobuf REQUIRED)
 find_package(gazebo REQUIRED)
-#find_package(OGRE REQUIRED)
+find_package(OGRE REQUIRED)
 #find_package(OIS REQUIRED)
 
 
@@ -51,9 +57,19 @@ if(NOT PROTOBUF_FOUND)
     message(SEND_ERROR "Failed to find PROTOBUF.")
 endif()
 
-#if(NOT OGRE_FOUND)
-#    message(SEND_ERROR "Failed to find OGRE.")
-#endif()
+if(NOT OGRE_FOUND)
+    message(SEND_ERROR "Failed to find OGRE.")
+endif()
+
+
+
+
+
+
+message(WARNING "ogre_incl: ${OGRE_INCLUDE_DIRS}")
+message(WARNING "ogre_lib: ${OGRE_LIBRARIES}")
+message(WARNING "ogre_lib_dirs: ${OGRE_LIBRARY_DIRS}")
+
 
 #if(NOT OIS_FOUND)
 #    message(SEND_ERROR "Failed to find OIS.")
@@ -178,8 +194,16 @@ set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${GAZEBO_CXX_FLAGS}")
 #include_directories(
 #  ${catkin_INCLUDE_DIRS}
 #)
-#${OGRE_LIBRARIES} ${OIS_LIBRARIES}
-include_directories(${Boost_INCLUDE_DIR} ${catkin_INCLUDE_DIRS} ${OGRE_LIBRARIES} ${GAZEBO_INCLUDE_DIRS})
+
+
+include_directories(
+    ${Boost_INCLUDE_DIR}
+    ${catkin_INCLUDE_DIRS}
+    ${OGRE_INCLUDE_DIRS}
+    #/usr/include/OGRE/Terrain #workaround for OgreTerrainPaging.h:33:35: fatal error: OgrePagedWorldSection.h: No such file or directory
+    /usr/include/OGRE/Paging #workaround for OgreTerrainPaging.h:33:35: fatal error: OgrePagedWorldSection.h: No such file or directory
+    #${OGRE_Overlay_INCLUDE_DIRS}
+    ${GAZEBO_INCLUDE_DIRS})
 
 ## Declare a C++ library
 # add_library(gazebo_plug
@@ -206,13 +230,18 @@ include_directories(${Boost_INCLUDE_DIR} ${catkin_INCLUDE_DIRS} ${OGRE_LIBRARIES
 
 # target_link_libraries(${PROJECT_NAME} ${catkin_LIBRARIES} ${GAZEBO_LIBRARIES})
 
-link_directories(${GAZEBO_LIBRARY_DIRS})
+link_directories(
+    ${GAZEBO_LIBRARY_DIRS}
+    ${OGRE_LIBRARY_DIRS})
 
 
 add_library(${PROJECT_NAME} SHARED ${headers_MOC}
   src/${PROJECT_NAME}.cc)
 
-target_link_libraries(${PROJECT_NAME} ${GAZEBO_LIBRARIES}
+target_link_libraries(${PROJECT_NAME}
+    ${GAZEBO_LIBRARIES}
+    ${OGRE_LIBRARIES}
+    #${OGRE_Overlay_LIBRARIES}
     ${QT_LIBRARIES}
     ${PROTOBUF_LIBRARIES}
     ${catkin_LIBRARIES})

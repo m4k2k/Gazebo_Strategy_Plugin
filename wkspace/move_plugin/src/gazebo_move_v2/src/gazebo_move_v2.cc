@@ -18,51 +18,37 @@
 // Include Rand.hh first due to compilation error on osx (boost #5010)
 // https://svn.boost.org/trac/boost/ticket/5010
 #include <gazebo/math/Rand.hh>
-//#include <gazebo/gui/GuiIface.hh>
+
+#include <ros/ros.h>
 #include <gazebo/rendering/rendering.hh>
 #include <gazebo/gazebo.hh>
-
 #include <gazebo/transport/transport.hh>
 #include <gazebo/msgs/msgs.hh>
 #include <gazebo/math/gzmath.hh>
-// #include <gazebo/common/plugin.hh>
-
-#include <ros/ros.h>
-#include <geometry_msgs/Twist.h>
-#include <iostream>
-
-#include <stdlib.h>
-//#include <qt4/Qt/qmessagebox.h>
-
-//#include <QtCore>
-
-
-//#include <qt
-//#include <QtWidgets/QMessageBox>
-
-//#include <QMessageBox>
-
-//#include <gazebo/math/Rand.hh>
+#include <gazebo/gui/gui.hh>
 #include <gazebo/gui/GuiIface.hh>
-//#include <gazebo/rendering/rendering.hh>
-//#include <gazebo/gazebo.hh>
 #include <gazebo/gui/MouseEventHandler.hh>
 #include <gazebo/common/MouseEvent.hh>
+
+#include <geometry_msgs/Twist.h>
+#include <iostream>
+#include <stdlib.h>
+//#include <qt4/Qt/qmessagebox.h>
+//#include <QtCore>
+//#include <qt
+//#include <QtWidgets/QMessageBox>
+//#include <QMessageBox>
+
 #include <boost/thread/mutex.hpp>
 #include <boost/thread/thread.hpp>
-
 //#include <boost/thread.hpp>
-
 #include <sstream>
-// #include <gazebo/msgs/msgs.hh>
-// #include <gazebo/gazebo.hh>
-
 
 
 //GAZEBO_QT_HEADERS_H_
 
 //#include <QtGui>
-#include <gazebo/gui/gui.hh>
+
 
 //using namespace gazebo; // instead of namespace gazebo { ... }
 

@@ -27,9 +27,7 @@
 #endif
 */
 //#include <boost/thread.hpp>
-
-//#include <ros/ros.h>
-
+//#include <gazebo/common/MouseEvent.hh>
 //using namespace gazebo;
 //namespace gazebo
 //{
@@ -59,7 +57,7 @@ private:
     void Init();
 
 private:
-    std::vector<event::ConnectionPtr> connections;
+    std::vector<gazebo::event::ConnectionPtr> connections;
 
 
 //    class communication
