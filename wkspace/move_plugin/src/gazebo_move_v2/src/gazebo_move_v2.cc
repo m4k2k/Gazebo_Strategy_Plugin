@@ -139,14 +139,11 @@ void GazeboMove::CheckROS()
         if (!ros::isInitialized())
         {
             ROS_INFO("ROS is not initialized, trying to initialize it..");
-
+/*
             int argc = 0;
-
             char** argv = NULL;
-
-            ros::init(argc, argv, "gazebo", ros::init_options::NoSigintHandler |
-
-                      ros::init_options::AnonymousName);
+            ros::init(argc, argv, "gazebo", ros::init_options::NoSigintHandler | ros::init_options::AnonymousName);
+*/
 
         }
         else
@@ -183,7 +180,7 @@ void GazeboMove::Load(int _argc, char** _argv)
 */
 
 
-    //ros::init(_argc, _argv, "pub_joint_command_test");
+
 
     //QMessageBox::information(NULL, "msgbox 2", "Hi!");
 //ros::Duration
@@ -215,7 +212,7 @@ void GazeboMove::sleepLoud(unsigned int _sleepTime)
 int GazeboMove::main(int argc, char** argv)
 {
 
-    //ros::init(argc, argv, "pub_joint_command_test");
+
 
     std::cout << std::endl << " main is loaded Oo" << std::endl;
 
