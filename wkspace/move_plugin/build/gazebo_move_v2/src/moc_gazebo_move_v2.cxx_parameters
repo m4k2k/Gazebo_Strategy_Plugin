@@ -1,6 +1,0 @@
--DROS_BUILD_SHARED_LIBS=1
--DROS_PACKAGE_NAME="gazebo_move_v2"
--DROSCONSOLE_BACKEND_LOG4CXX
--o
-/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/build/gazebo_move_v2/src/moc_gazebo_move_v2.cxx
-/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/src/gazebo_move_v2/src/gazebo_move_v2.hh
