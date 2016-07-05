@@ -33,31 +33,51 @@
 //{
 class GazeboMove : public gazebo::SystemPlugin
 {
-
     // Q_OBJECT
 
+    typedef actionlib::SimpleActionClient<move_base_msgs::MoveBaseAction> MoveBaseClient;
+
+public:
     /// \brief Constructor
     /// \param[in] _parent Parent widget
-public:
     GazeboMove();
-
     /// \brief Destructor
-public:
     virtual ~GazeboMove();
-
-public:
     boost::thread * t1;
+    void Load(int _argc = 0, char **_argv = NULL) ; //redeclaring it, to be aware of it
+    int main(int argc, char** argv);
 
 private:
     void OnButton_btnSpawnSphere();
-    void OnButton_btnMoveRobot();
+    void MoveRobotThreaded();
     void OnButton_btnTest();
-    void CheckROS();
-
+    bool CheckROS();
     void Init();
-
-private:
+    static void MoveRobot(); //const;
+    void MoveRobotNav(gazebo::math::Vector3 _target);
+    static void sleepLoud(unsigned int _sleepTime);
+    /// All the event connections.
     std::vector<gazebo::event::ConnectionPtr> connections;
+
+    boost::mutex mutexMouseClicked;
+    gazebo::math::Vector2i mouseClicked;
+    bool isMouseClicked;
+    bool OnMousePress(const gazebo::common::MouseEvent& _event);
+    void Update();
+
+    /// Pointer the user camera.
+    gazebo::rendering::UserCameraPtr userCam;
+
+
+    //void doneCb(const actionlib::SimpleClientGoalState& state, const FibonacciResultConstPtr& result);
+    void doneCb(const actionlib::SimpleClientGoalState& state);
+    void goalCallback(const actionlib::SimpleClientGoalState& state,
+                      const move_base_msgs::MoveBaseResult::ConstPtr& result);
+    void feebackCallback(const move_base_msgs::MoveBaseFeedback::ConstPtr& feedback);
+
+
+
+
 
 
 //    class communication
@@ -97,13 +117,8 @@ private:
     private:
         transport::PublisherPtr factoryPub;
     */
-private:
-    static void MoveRobot(); //const;
-    void sleepLoud(unsigned int _sleepTime);
-//
-public:
-    void Load(int _argc = 0, char **_argv = NULL) ; //redeclaring it, to be aware of it
-    int main(int argc, char** argv);
+
+
 
 };
 //}

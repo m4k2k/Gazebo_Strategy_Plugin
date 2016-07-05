@@ -37,7 +37,7 @@
   <group if="$(arg gui)">
 <!-- BEGIN EDIT ML -->
 <!-- ORIGINAL:    <node name="gazebo_gui" pkg="gazebo_ros" type="gzclient" respawn="false" output="screen"/> -->
-    <node name="gazebo_gui" pkg="gazebo_ros" type="gzclient" respawn="false" output="screen" args="-g libgazebo_move_v2.so"/>
+    <node name="gazebo_gui" pkg="gazebo_ros" type="gzclient" respawn="false" args="-g libgazebo_move_v2.so" output="screen"/> <!-- args="-g libgazebo_move_v2.so" -->
 <!-- END EDIT ML -->
   </group>
 
