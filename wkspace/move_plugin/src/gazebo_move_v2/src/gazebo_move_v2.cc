@@ -102,10 +102,12 @@ bool GazeboMove::CheckROS()
 /// \brief Destructor
 GazeboMove::~GazeboMove()
 {
+    delete ac;
     this->connections.clear();
     if (this->userCam)
         this->userCam->EnableSaveFrame(false);
     this->userCam.reset();
+
 }
 
 ///////////////////////////////////////////////
@@ -165,40 +167,17 @@ void GazeboMove::Init()
     std::cout << std::endl << "init" << std::endl;
     while(!CheckROS())
         sleepLoud(5);
+
+    ac = new MoveBaseClient("move_base", true);
+
+    while(!ac->waitForServer(ros::Duration(5.0))) ROS_INFO("Waiting for the move_base action server to come up");
 }
 
 void GazeboMove::sleepLoud(unsigned int _sleepTime)
 {
     std::cout << std::endl << "sleeping " << _sleepTime << " seconds" << std::endl;
-    for(int i=0; i<_sleepTime; i++)
-    {
-        gazebo::common::Time::Sleep(1);
-        //sleep(1);
-    }
+    for(int i=0; i<_sleepTime; i++) gazebo::common::Time::Sleep(1);
 }
-
-int GazeboMove::main(int argc, char** argv)
-{
-    std::cout << std::endl << " main is loaded Oo" << std::endl;
-}
-
-/////////////////////////////////////////////////
-void GazeboMove::MoveRobotThreaded()
-{
-
-//std::thread t1(task1, "Hello");
-    if(t1 != NULL && t1->joinable())
-    {
-        t1->join();
-        t1->interrupt();
-        //delete t1;
-    }
-
-    //t1 = new boost::thread(&MoveRobotNav);
-
-    // GazeboMove::MoveRobot();
-}
-
 
 void GazeboMove::MoveRobotNav(gazebo::math::Vector3 _target)
 {
@@ -206,61 +185,78 @@ void GazeboMove::MoveRobotNav(gazebo::math::Vector3 _target)
 
     //tell the action client that we want to spin a thread by default
 
-    MoveBaseClient ac("move_base", true);
-    //wait for the action server to come up
-    while(!ac.waitForServer(ros::Duration(5.0)))
-    {
-        ROS_INFO("Waiting for the move_base action server to come up");
-    }
-
-    move_base_msgs::MoveBaseGoal goal;
-
-    //we'll send a goal to the robot to move 1 meter forward
-    //goal.target_pose.header.frame_id = "base_link";
-    goal.target_pose.header.frame_id = "/map";
-    goal.target_pose.header.stamp = ros::Time::now();
-
-    //goal.target_pose.pose.position.x = 1.0;
-    goal.target_pose.pose.position.x = _target.x;
-    goal.target_pose.pose.position.y = _target.y;
-    goal.target_pose.pose.position.z = _target.z;
-    //goal.target_pose.pose.position.x = 1.0;
-    goal.target_pose.pose.orientation.w = 1.0;
-
-    ROS_INFO("Sending goal");
-
-
-    // Need boost::bind to pass in the 'this' pointer_safety
-    //ac.sendGoal(goal, boost::bind(&GazeboMove::doneCb, this, _1, _2), Client::SimpleActiveCallback(), Client::SimpleFeedbackCallback());
-    ac.sendGoal(goal, boost::bind(&GazeboMove::doneCb, this, _1), MoveBaseClient::SimpleActiveCallback(), MoveBaseClient::SimpleFeedbackCallback());
-/*
-    ac.sendGoal(goal,
-
-                 boost::bind(&GazeboMove::goalCallback, this, _1, _2),
-                 MoveBaseClient::SimpleActiveCallback(),
-                 boost::bind(&GazeboMove::feebackCallback, this, _1));
-
-                 ac.sendGoal(goal,boost::bind(&Pose_Goal::doneCb, this, _1, _2), Client::SimpleActiveCallback(),Client::SimpleFeedbackCallback());
-
-void Pose_Goal::feedbackCb(const move_base_msgs::MoveBaseFeedbackConstPtr &feedback){
-    ROS_INFO("[X]:%f [Y]:%f [W]: %f",feedback->base_position.pose.position.x,feedback->base_position.pose.position.y,feedback->base_position.pose.orientation.w);
-
-
-
-    ac.sendGoal(goal);
-    ac.waitForResult();
-
-    if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED)
-        ROS_INFO("Hooray, the base moved 1 meter forward");
-    else
-        ROS_INFO("The base failed to move forward 1 meter for some reason");
+    /*
+        //wait for the action server to come up
+        while(!ac.waitForServer(ros::Duration(5.0)))
+        {
+            ROS_INFO("Waiting for the move_base action server to come up");
+        }
     */
+
+    if(ac->isServerConnected())
+    {
+        move_base_msgs::MoveBaseGoal goal;
+
+        //we'll send a goal to the robot to move 1 meter forward
+        //goal.target_pose.header.frame_id = "base_link";
+        goal.target_pose.header.frame_id = "/map";
+        goal.target_pose.header.stamp = ros::Time::now();
+
+        //goal.target_pose.pose.position.x = 1.0;
+        goal.target_pose.pose.position.x = _target.x;
+        goal.target_pose.pose.position.y = _target.y;
+        goal.target_pose.pose.position.z = _target.z;
+        //goal.target_pose.pose.position.x = 1.0;
+        goal.target_pose.pose.orientation.w = 1.0;
+
+        ROS_INFO("Sending goal");
+
+
+        // Need boost::bind to pass in the 'this' pointer_safety
+        //ac.sendGoal(goal, boost::bind(&GazeboMove::doneCb, this, _1, _2), Client::SimpleActiveCallback(), Client::SimpleFeedbackCallback());
+        /*  ac.sendGoal(goal, boost::bind(&GazeboMove::doneCb, this, _1), MoveBaseClient::SimpleActiveCallback(), MoveBaseClient::SimpleFeedbackCallback());
+        */
+
+        /*
+
+        */
+        ac->sendGoal(goal,
+                     boost::bind(&GazeboMove::goalCallback, this, _1, _2),
+                     MoveBaseClient::SimpleActiveCallback(),
+                     boost::bind(&GazeboMove::feedbackCb, this, _1));
+
+
+        /*
+        ac.sendGoal(goal,
+                   boost::bind(&GazeboMove::doneCb, this, _1),
+                   MoveBaseClient::SimpleActiveCallback(),
+                   boost::bind(&GazeboMove::feedbackCb, this, _1));
+
+                   ac.sendGoal(goal);
+                   ac.waitForResult();
+
+                   if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED)
+                       ROS_INFO("Hooray, the base moved 1 meter forward");
+                   else
+                       ROS_INFO("The base failed to move forward 1 meter for some reason");
+                   */
+
+
+    }
+    else
+    {
+        ROS_INFO("##ERROR##");
+        ROS_INFO("ac server not ready??");
+    }
 }
 
-/*
-*/
-void GazeboMove::goalCallback(const actionlib::SimpleClientGoalState& state,
-                                const move_base_msgs::MoveBaseResult::ConstPtr& result)
+void GazeboMove::feedbackCb(const move_base_msgs::MoveBaseFeedback::ConstPtr& feedback)
+{
+    ROS_INFO("Feedback3");
+    ROS_INFO("[X]:%f [Y]:%f [W]: %f",feedback->base_position.pose.position.x,feedback->base_position.pose.position.y,feedback->base_position.pose.orientation.w);
+}
+
+void GazeboMove::goalCallback(const actionlib::SimpleClientGoalState& state, const move_base_msgs::MoveBaseResult::ConstPtr& result)
 {
     if(state == actionlib::SimpleClientGoalState::SUCCEEDED)
         ROS_INFO("Goal reached!!");
@@ -269,23 +265,21 @@ void GazeboMove::goalCallback(const actionlib::SimpleClientGoalState& state,
 }
 
 
-
+/*
 void GazeboMove::feebackCallback(const move_base_msgs::MoveBaseFeedback::ConstPtr& feedback)
 {
-ROS_INFO("Callback received 2");
-
-
+    ROS_INFO("Callback received 2");
 }
 
 
 void GazeboMove::doneCb(const actionlib::SimpleClientGoalState& state)
 {
-ROS_INFO("Callback received");
+    ROS_INFO("Callback received");
     ROS_INFO("Finished in state [%s]", state.toString().c_str());
     //ROS_INFO("Answer: %i", result->sequence.back());
     //ros::shutdown();
 }
-
+*/
 
 void GazeboMove::MoveRobot()// const
 {
@@ -347,8 +341,31 @@ void GazeboMove::MoveRobot()// const
         }
 
     }
-
 }
+
+
+int GazeboMove::main(int argc, char** argv)
+{
+    std::cout << std::endl << " main is loaded Oo" << std::endl;
+}
+
+/////////////////////////////////////////////////
+void GazeboMove::MoveRobotThreaded()
+{
+
+//std::thread t1(task1, "Hello");
+    if(t1 != NULL && t1->joinable())
+    {
+        t1->join();
+        t1->interrupt();
+        //delete t1;
+    }
+
+    //t1 = new boost::thread(&MoveRobotNav);
+
+    // GazeboMove::MoveRobot();
+}
+
 
 GZ_REGISTER_SYSTEM_PLUGIN(GazeboMove)
 
