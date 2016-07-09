@@ -1,8 +1,0 @@
-prefix=/home/ubu/Gazebo_Strategy_Plugin/turtle/kobiplug_overlay/devel
-
-Name: kobuki_random_walker
-Description: Description of kobuki_random_walker
-Version: 0.7.0
-Cflags: -I/home/ubu/Gazebo_Strategy_Plugin/turtle/kobiplug_overlay/src/kobuki/kobuki_random_walker/include
-Libs: -L/home/ubu/Gazebo_Strategy_Plugin/turtle/kobiplug_overlay/devel/lib -lkobuki_random_walker_nodelet
-Requires: ecl_threads geometry_msgs kobuki_msgs nodelet pluginlib roscpp std_msgs yocs_controllers

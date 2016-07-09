@@ -136,7 +136,7 @@ export GAZEBO_PLUGIN_PATH=~/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib
 #source ~/Gazebo_Strategy_Plugin/turtle/kobiplug_overlay/devel/setup.bash
 
 # import the workspace (with cppfiles / gazebo plugin) - overlays kobiplug workspace (which overlaying turtlebot)
-source ~/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/setup.bash
+source ~/Gazebo_Strategy_Plugin/move_plugin/devel/setup.bash
 
 # setup pkg_config
 export PKG_CONFIG_PATH=/usr/share/pkgconfig:$PKG_CONFIG_PATH
@@ -144,4 +144,4 @@ export PKG_CONFIG_PATH=/usr/lib/pkgconfig:$PKG_CONFIG_PATH
 export PKG_CONFIG_PATH=/usr/lib/x86_64-linux-gnu/pkgconfig:$PKG_CONFIG_PATH
 
 # goto default folder
-cd ~/Gazebo_Strategy_Plugin/wkspace/move_plugin
+cd ~/Gazebo_Strategy_Plugin/move_plugin

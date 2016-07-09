@@ -1,2 +1,0 @@
-set(pr2_gazebo_plugins_MESSAGE_FILES "/home/ubu/Gazebo_Strategy_Plugin/turtle/overlayws/src/pr2_simulator/pr2_gazebo_plugins/msg/PlugCommand.msg;/home/ubu/Gazebo_Strategy_Plugin/turtle/overlayws/src/pr2_simulator/pr2_gazebo_plugins/msg/ModelJointsState.msg")
-set(pr2_gazebo_plugins_SERVICE_FILES "/home/ubu/Gazebo_Strategy_Plugin/turtle/overlayws/src/pr2_simulator/pr2_gazebo_plugins/srv/SetModelsJointsStates.srv")

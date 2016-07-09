@@ -1,8 +1,0 @@
-prefix=/home/ubu/Gazebo_Strategy_Plugin/turtle/overlayws/install
-
-Name: pr2_gazebo_plugins
-Description: Description of pr2_gazebo_plugins
-Version: 2.0.7
-Cflags: -I/home/ubu/Gazebo_Strategy_Plugin/turtle/overlayws/install/include
-Libs: -L/home/ubu/Gazebo_Strategy_Plugin/turtle/overlayws/install/lib -lgazebo_ros_controller_manager -lgazebo_ros_power_monitor
-Requires: message_runtime message_generation roscpp rospy angles std_msgs nav_msgs sensor_msgs pr2_msgs geometry_msgs diagnostic_msgs gazebo_msgs urdf tf driver_base image_transport

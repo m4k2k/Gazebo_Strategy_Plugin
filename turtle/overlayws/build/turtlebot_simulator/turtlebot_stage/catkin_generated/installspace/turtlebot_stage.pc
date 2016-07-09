@@ -1,8 +1,0 @@
-prefix=/home/ubu/Gazebo_Strategy_Plugin/turtle/overlayws/install
-
-Name: turtlebot_stage
-Description: Description of turtlebot_stage
-Version: 2.2.2
-Cflags: 
-Libs: -L/home/ubu/Gazebo_Strategy_Plugin/turtle/overlayws/install/lib 
-Requires: 

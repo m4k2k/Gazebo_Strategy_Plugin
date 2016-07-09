@@ -1,8 +1,0 @@
-prefix=/home/ubu/Gazebo_Strategy_Plugin/turtle/kobiplug_overlay/devel
-
-Name: kobuki_controller_tutorial
-Description: Description of kobuki_controller_tutorial
-Version: 0.7.0
-Cflags: -I/home/ubu/Gazebo_Strategy_Plugin/turtle/kobiplug_overlay/src/kobuki/kobuki_controller_tutorial/include
-Libs: -L/home/ubu/Gazebo_Strategy_Plugin/turtle/kobiplug_overlay/devel/lib -lbump_blink_controller_nodelet
-Requires: roscpp nodelet pluginlib std_msgs kobuki_msgs yocs_controllers

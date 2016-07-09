@@ -1,8 +1,0 @@
-prefix=/home/ubu/Gazebo_Strategy_Plugin/turtle/kobiplug_overlay/install
-
-Name: kobuki_qtestsuite
-Description: Description of kobuki_qtestsuite
-Version: 0.4.2
-Cflags: 
-Libs: -L/home/ubu/Gazebo_Strategy_Plugin/turtle/kobiplug_overlay/install/lib 
-Requires: 

@@ -1,8 +1,0 @@
-prefix=/home/ubu/Gazebo_Strategy_Plugin/turtle/overlayws/install
-
-Name: pr2_gazebo
-Description: Description of pr2_gazebo
-Version: 2.0.7
-Cflags: 
-Libs: -L/home/ubu/Gazebo_Strategy_Plugin/turtle/overlayws/install/lib 
-Requires: 
