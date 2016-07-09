@@ -1,8 +1,0 @@
-prefix=/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel
-
-Name: gazebo_plug
-Description: Description of gazebo_plug
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/ubu/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib 
-Requires: roscpp gazebo_ros
