@@ -74,10 +74,7 @@
 /// \brief Constructor
 GazeboMove::GazeboMove()
 {
-    //std::cout << std::endl << "We are online!" << std::endl;
-//    ros::NodeHandle b;
-//
-//    nod =  &b;
+
 }
 
 bool GazeboMove::CheckROS()
@@ -91,7 +88,7 @@ bool GazeboMove::CheckROS()
     }
     else
     {
-        std::cout << std::endl << "ROS is initialized.." << std::endl;
+        ROS_INFO("ROS is initialized..");
         return true;
     }
     return false;
@@ -104,10 +101,7 @@ GazeboMove::~GazeboMove()
 {
     delete ac;
     this->connections.clear();
-    if (this->userCam)
-        this->userCam->EnableSaveFrame(false);
-    this->userCam.reset();
-
+    gazebo::gui::MouseEventHandler::Instance()->RemovePressFilter("glwidget"); // removes the mouse click subscription
 }
 
 ///////////////////////////////////////////////
@@ -119,43 +113,46 @@ void GazeboMove::Load(int _argc, char** _argv)
 {
     std::cout << std::endl << "Loading Gazebo Plugin " << PLUGIN_NAME << "version " << PLUGIN_VERSION << std::endl;
     this->connections.push_back(gazebo::event::Events::ConnectPreRender(boost::bind(&GazeboMove::Update, this)));
-    gazebo::gui::MouseEventHandler::Instance()->AddPressFilter("glwidget", boost::bind(&GazeboMove::OnMousePress, this, _1));
+    gazebo::gui::MouseEventHandler::Instance()->AddPressFilter("glwidget", boost::bind(&GazeboMove::OnMouseButtonPress, this, _1)); // we filter all button release events
     //QMessageBox::information(NULL, "msgbox 2", "Hi!");
-//ros::Duration
 }
 
-bool GazeboMove::OnMousePress(const gazebo::common::MouseEvent& _event)
+bool GazeboMove::OnMouseButtonPress(const gazebo::common::MouseEvent& _event) //fetches both left and right click
 {
-    boost::mutex::scoped_lock lock(mutexMouseClicked);
-    mouseClicked = _event.pos;
-    isMouseClicked = true;
-    std::cout << "Clicked at " << mouseClicked << " of screen " << std::endl;
+    if((_event.button == gazebo::common::MouseEvent::LEFT) && _event.control) //only if the left mouse button and Control are both pressed
+    {
+        boost::mutex::scoped_lock lock(sendNavGoalMutex); //using scooped lok rather than manual lock/unlock (fail save)
+
+        mouseClickpos2D = _event.pos;
+
+        sendNavGoal = true;
+    }
+    return true;
 }
 
 /////////////////////////////////////////////
 /// \brief Called every PreRender event. See the Load function.
 void GazeboMove::Update()
 {
-    if (!this->userCam)
-    {
-        // Get a pointer to the active user camera
-        this->userCam = gazebo::gui::get_active_camera();
-    }
-    // Get scene pointer
-    gazebo::rendering::ScenePtr scene = gazebo::rendering::get_scene();
+    boost::mutex::scoped_lock lock(sendNavGoalMutex);
 
-    // Wait until the scene is initialized.
-    if (!scene || !scene->GetInitialized())
-        return;
-
-    if(isMouseClicked && this->userCam)
+    if(sendNavGoal)
     {
-        boost::mutex::scoped_lock lock(mutexMouseClicked);
-        gazebo::math::Vector3 position_clicked;
-        scene->GetFirstContact(this->userCam, mouseClicked, position_clicked);
-        std::cout<< "Clicked at " << position_clicked << " of world\n" << std::endl;
-        isMouseClicked = false;
-        MoveRobotNav(position_clicked);
+        if (!this->userCam)
+            this->userCam = gazebo::gui::get_active_camera(); // Get a pointer to the active user camera
+
+        gazebo::rendering::ScenePtr scene = gazebo::rendering::get_scene(); // Get scene pointer
+
+        if (!scene || !scene->GetInitialized()) // Wait until the scene is initialized.
+            return;
+
+        gazebo::math::Vector3 mouseClickpos3D;
+
+        scene->GetFirstContact(this->userCam, mouseClickpos2D, mouseClickpos3D);
+
+        sendNavGoal = false;
+
+        MoveRobotNav(mouseClickpos3D);
     }
 }
 
@@ -168,7 +165,7 @@ void GazeboMove::Init()
     while(!CheckROS())
         sleepLoud(5);
 
-    ac = new MoveBaseClient("move_base", true);
+    ac = new MoveBaseClient("move_base", true); //tell the client to use spin threads
 
     while(!ac->waitForServer(ros::Duration(5.0))) ROS_INFO("Waiting for the move_base action server to come up");
 }
@@ -176,72 +173,35 @@ void GazeboMove::Init()
 void GazeboMove::sleepLoud(unsigned int _sleepTime)
 {
     std::cout << std::endl << "sleeping " << _sleepTime << " seconds" << std::endl;
-    for(int i=0; i<_sleepTime; i++) gazebo::common::Time::Sleep(1);
+    for(unsigned int i=0; i<_sleepTime; i++) gazebo::common::Time::Sleep(1);
 }
-
-void GazeboMove::MoveRobotNav(gazebo::math::Vector3 _target)
+//void GazeboMove::MoveRobotNav(geometry_msgs::Point& _target)
+void GazeboMove::MoveRobotNav(gazebo::math::Vector3& _target)
 {
-    //ros::init(argc, argv, "simple_navigation_goals");
-
     //tell the action client that we want to spin a thread by default
-
-    /*
-        //wait for the action server to come up
-        while(!ac.waitForServer(ros::Duration(5.0)))
-        {
-            ROS_INFO("Waiting for the move_base action server to come up");
-        }
-    */
 
     if(ac->isServerConnected())
     {
         move_base_msgs::MoveBaseGoal goal;
 
-        //we'll send a goal to the robot to move 1 meter forward
         //goal.target_pose.header.frame_id = "base_link";
         goal.target_pose.header.frame_id = "/map";
         goal.target_pose.header.stamp = ros::Time::now();
 
-        //goal.target_pose.pose.position.x = 1.0;
         goal.target_pose.pose.position.x = _target.x;
         goal.target_pose.pose.position.y = _target.y;
         goal.target_pose.pose.position.z = _target.z;
-        //goal.target_pose.pose.position.x = 1.0;
+
         goal.target_pose.pose.orientation.w = 1.0;
 
-        ROS_INFO("Sending goal");
-
+        ROS_INFO("Sending goal [X]:%f [Y]:%f [W]:%f", goal.target_pose.pose.position.x, goal.target_pose.pose.position.y, goal.target_pose.pose.orientation.w);
 
         // Need boost::bind to pass in the 'this' pointer_safety
-        //ac.sendGoal(goal, boost::bind(&GazeboMove::doneCb, this, _1, _2), Client::SimpleActiveCallback(), Client::SimpleFeedbackCallback());
-        /*  ac.sendGoal(goal, boost::bind(&GazeboMove::doneCb, this, _1), MoveBaseClient::SimpleActiveCallback(), MoveBaseClient::SimpleFeedbackCallback());
-        */
-
-        /*
-
-        */
+        //ac.sendGoal(goal, boost::bind(&GazeboMove::doneCb, this, _1, _2), MoveBaseClient::SimpleActiveCallback(), MoveBaseClient::SimpleFeedbackCallback());
         ac->sendGoal(goal,
                      boost::bind(&GazeboMove::goalCallback, this, _1, _2),
                      MoveBaseClient::SimpleActiveCallback(),
                      boost::bind(&GazeboMove::feedbackCb, this, _1));
-
-
-        /*
-        ac.sendGoal(goal,
-                   boost::bind(&GazeboMove::doneCb, this, _1),
-                   MoveBaseClient::SimpleActiveCallback(),
-                   boost::bind(&GazeboMove::feedbackCb, this, _1));
-
-                   ac.sendGoal(goal);
-                   ac.waitForResult();
-
-                   if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED)
-                       ROS_INFO("Hooray, the base moved 1 meter forward");
-                   else
-                       ROS_INFO("The base failed to move forward 1 meter for some reason");
-                   */
-
-
     }
     else
     {
@@ -250,126 +210,20 @@ void GazeboMove::MoveRobotNav(gazebo::math::Vector3 _target)
     }
 }
 
-void GazeboMove::feedbackCb(const move_base_msgs::MoveBaseFeedback::ConstPtr& feedback)
+void GazeboMove::feedbackCb(const move_base_msgs::MoveBaseFeedback::ConstPtr& _feedback)
 {
-    ROS_INFO("Feedback3");
-    ROS_INFO("[X]:%f [Y]:%f [W]: %f",feedback->base_position.pose.position.x,feedback->base_position.pose.position.y,feedback->base_position.pose.orientation.w);
+    ROS_INFO("currently at [X]:%f [Y]:%f [W]:%f",_feedback->base_position.pose.position.x,_feedback->base_position.pose.position.y,_feedback->base_position.pose.orientation.w);
 }
 
-void GazeboMove::goalCallback(const actionlib::SimpleClientGoalState& state, const move_base_msgs::MoveBaseResult::ConstPtr& result)
+void GazeboMove::goalCallback(const actionlib::SimpleClientGoalState& _state, const move_base_msgs::MoveBaseResult::ConstPtr& _result)
 {
-    if(state == actionlib::SimpleClientGoalState::SUCCEEDED)
+    if(_state == actionlib::SimpleClientGoalState::SUCCEEDED)
         ROS_INFO("Goal reached!!");
     else
         ROS_INFO("Goal failed!!");
 }
 
-
-/*
-void GazeboMove::feebackCallback(const move_base_msgs::MoveBaseFeedback::ConstPtr& feedback)
-{
-    ROS_INFO("Callback received 2");
-}
-
-
-void GazeboMove::doneCb(const actionlib::SimpleClientGoalState& state)
-{
-    ROS_INFO("Callback received");
-    ROS_INFO("Finished in state [%s]", state.toString().c_str());
-    //ROS_INFO("Answer: %i", result->sequence.back());
-    //ros::shutdown();
-}
-*/
-
-void GazeboMove::MoveRobot()// const
-{
-
-    // Make sure the ROS node for Gazebo has already been initialized
-    if (!ros::isInitialized())
-    {
-        ROS_FATAL_STREAM("A ROS node for Gazebo has not been initialized and I was unable to initialize manually, unable to load plugin. "
-                         << "Load the Gazebo system plugin 'libgazebo_ros_api_plugin.so' in the gazebo_ros package)");
-        //return;
-    }
-    else
-    {
-        //GazeboMove::com
-
-        ros::NodeHandle nod;
-
-        ros::Publisher pub;
-
-        pub = nod.advertise<geometry_msgs::Twist>("cmd_vel_mux/input/teleop", 100);
-
-        //pub = this->nod.advertise<geometry_msgs::Twist>("cmd_vel_mux/input/teleop", 100);
-
-        ros::Rate rate(100);
-        srand(time(0));
-        //ros::Subscriber sub = n.subscribe("my_cmd_vel", 10, velCallback);
-        int cnt(0);
-        int velmsgs(50);
-//
-        std::cout << "Sending " << velmsgs <<" vel msgs" << std::endl;
-
-        while (ros::ok())
-        {
-
-//            ros::Duration(5.0).sleep();
-            cnt++;
-            //ROS_INFO("Sending vel msg %i",cnt);
-            geometry_msgs::Twist new_vel;
-            //new_vel.linear.x = 100.0;//(4*double(rand())/double(RAND_MAX)-2)*100.0;
-            //new_vel.linear.y = 0;
-            //new_vel.linear.z = (6*double(rand())/double(RAND_MAX)-3)*10.0;
-            new_vel.angular.x = 0;
-            new_vel.angular.y = 0;
-            new_vel.angular.z = 0;
-            new_vel.linear.x = 1.0;
-            new_vel.linear.y = 0;
-            new_vel.linear.z = 0;
-
-//        new_vel.angular.x = 0;
-//        new_vel.angular.y = 0;
-//        new_vel.angular.z = 1.0;
-
-            pub.publish(new_vel);
-            ros::spinOnce();
-            rate.sleep();
-            //sleepLoud(5);
-            if(cnt>=velmsgs) break;
-            //break;
-        }
-
-    }
-}
-
-
-int GazeboMove::main(int argc, char** argv)
-{
-    std::cout << std::endl << " main is loaded Oo" << std::endl;
-}
-
-/////////////////////////////////////////////////
-void GazeboMove::MoveRobotThreaded()
-{
-
-//std::thread t1(task1, "Hello");
-    if(t1 != NULL && t1->joinable())
-    {
-        t1->join();
-        t1->interrupt();
-        //delete t1;
-    }
-
-    //t1 = new boost::thread(&MoveRobotNav);
-
-    // GazeboMove::MoveRobot();
-}
-
-
 GZ_REGISTER_SYSTEM_PLUGIN(GazeboMove)
-
-
 
 /*
 
