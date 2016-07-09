@@ -1,2 +1,5 @@
 *.*~
-/wkspace/move_plugin/build/*
+/move_plugin/build/*
+/move_plugin/devel/*.*
+/move_plugin/devel/lib/pkgconfig/*
+/move_plugin/devel/share/*
