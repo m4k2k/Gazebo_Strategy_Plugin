@@ -1,8 +1,0 @@
-prefix=/home/ubu/Gazebo_Strategy_Plugin/turtle/overlayws/devel
-
-Name: turtlebot_stdr
-Description: Description of turtlebot_stdr
-Version: 2.2.2
-Cflags: 
-Libs: -L/home/ubu/Gazebo_Strategy_Plugin/turtle/overlayws/devel/lib 
-Requires: 
