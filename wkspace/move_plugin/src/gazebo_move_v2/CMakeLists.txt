@@ -61,14 +61,9 @@ if(NOT OGRE_FOUND)
     message(SEND_ERROR "Failed to find OGRE.")
 endif()
 
-
-
-
-
-
-message(WARNING "ogre_incl: ${OGRE_INCLUDE_DIRS}")
-message(WARNING "ogre_lib: ${OGRE_LIBRARIES}")
-message(WARNING "ogre_lib_dirs: ${OGRE_LIBRARY_DIRS}")
+#message(WARNING "ogre_incl: ${OGRE_INCLUDE_DIRS}")
+#message(WARNING "ogre_lib: ${OGRE_LIBRARIES}")
+#message(WARNING "ogre_lib_dirs: ${OGRE_LIBRARY_DIRS}")
 
 
 #if(NOT OIS_FOUND)
@@ -76,8 +71,11 @@ message(WARNING "ogre_lib_dirs: ${OGRE_LIBRARY_DIRS}")
 #endif()
 
 include (${QT_USE_FILE})
-add_definitions(${QT_DEFINITIONS})
+#add_definitions(${QT_DEFINITIONS})
 
+set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${GAZEBO_CXX_FLAGS} ${QT_DEFINITIONS} -Wall")
+message(WARNING "the compiler flags are:")
+message(WARNING "${CMAKE_CXX_FLAGS}")
 #include(FindBoost)
 #find_package(Boost ${MIN_BOOST_VERSION} REQUIRED system filesystem regex)
 
@@ -180,7 +178,6 @@ catkin_package(
     gazebo_ros
 )
 
-set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${GAZEBO_CXX_FLAGS}")
 
 #QT4_WRAP_CPP(headers_MOC src/${PROJECT_NAME}.hh)
 
