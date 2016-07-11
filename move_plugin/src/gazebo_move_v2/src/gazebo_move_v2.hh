@@ -18,24 +18,21 @@ public:
     GazeboMove();
     /// \brief Destructor
     virtual ~GazeboMove();
-
     void Load(int _argc = 0, char **_argv = NULL) ; //redeclaring it, to be aware of it
 
 private:
 
     MoveBaseClient* ac;
-     /// All the event connections.
+    /// All the event connections.
     std::vector<gazebo::event::ConnectionPtr> connections;
 
     /// Pointer the user camera.
     gazebo::rendering::UserCameraPtr userCam;
 
-    boost::mutex sendNavGoalMutex;
-    gazebo::math::Vector2i mouseClickpos2D;
     bool sendNavGoal;
 
-        void Init();
-    void Update();
+    void Init();
+    void Update(); // only declared to be aware of
 
 
     bool CheckROS();

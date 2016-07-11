@@ -121,11 +121,19 @@ bool GazeboMove::OnMouseButtonPress(const gazebo::common::MouseEvent& _event) //
 {
     if((_event.button == gazebo::common::MouseEvent::LEFT) && _event.control) //only if the left mouse button and Control are both pressed
     {
-        boost::mutex::scoped_lock lock(sendNavGoalMutex); //using scooped lok rather than manual lock/unlock (fail save)
+        if (!this->userCam)
+            this->userCam = gazebo::gui::get_active_camera(); // Get a pointer to the active user camera
 
-        mouseClickpos2D = _event.pos;
+        gazebo::rendering::ScenePtr scene = gazebo::rendering::get_scene(); // Get scene pointer
 
-        sendNavGoal = true;
+        if (!scene || !scene->GetInitialized()) // Wait until the scene is initialized.
+            return true;
+
+        gazebo::math::Vector3 mouseClickpos3D;
+
+        scene->GetFirstContact(this->userCam,  _event.pos, mouseClickpos3D);
+
+        MoveRobotNav(mouseClickpos3D);
     }
     return true;
 }
@@ -134,26 +142,7 @@ bool GazeboMove::OnMouseButtonPress(const gazebo::common::MouseEvent& _event) //
 /// \brief Called every PreRender event. See the Load function.
 void GazeboMove::Update()
 {
-    boost::mutex::scoped_lock lock(sendNavGoalMutex);
 
-    if(sendNavGoal)
-    {
-        if (!this->userCam)
-            this->userCam = gazebo::gui::get_active_camera(); // Get a pointer to the active user camera
-
-        gazebo::rendering::ScenePtr scene = gazebo::rendering::get_scene(); // Get scene pointer
-
-        if (!scene || !scene->GetInitialized()) // Wait until the scene is initialized.
-            return;
-
-        gazebo::math::Vector3 mouseClickpos3D;
-
-        scene->GetFirstContact(this->userCam, mouseClickpos2D, mouseClickpos3D);
-
-        sendNavGoal = false;
-
-        MoveRobotNav(mouseClickpos3D);
-    }
 }
 
 /////////////////////////////////////////////
