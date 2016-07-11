@@ -151,8 +151,8 @@ void GazeboMove::Update()
 void GazeboMove::Init()
 {
     std::cout << std::endl << "init" << std::endl;
-    while(!CheckROS())
-        sleepLoud(5);
+    while(CheckROS())
+        break;//sleepLoud(5);
 
     ac = new MoveBaseClient("move_base", true); //tell the client to use spin threads
 
