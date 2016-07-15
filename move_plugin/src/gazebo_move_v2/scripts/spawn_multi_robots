@@ -1,0 +1,84 @@
+#!/usr/bin/env python
+
+import subprocess, warnings, os, sys
+
+def usage():
+
+    print '''Commands:
+
+    -nof_turtle <number> - optinal: number of turtlebots that shall be spawned. Has to be a positive number!
+
+                                     If left empty, the default is 1.
+
+    '''
+
+    sys.exit(1)
+
+class SpawnMultiModels():
+
+    def __init__(self):
+
+        self.nof_turtle              = 1
+
+
+    def parseUserInputs(self):
+
+        for i in range(0,len(sys.argv)):
+
+          if sys.argv[i] == '-h' or sys.argv[i] == '--help' or sys.argv[i] == '-help':
+
+            usage()
+
+            sys.exit(1)
+
+          if sys.argv[i] == '-nof_turtle':
+
+            if len(sys.argv) > i+1:
+
+                tmp = int(float(sys.argv[i+1]))
+
+                if tmp >= 1:
+
+                    self.nof_turtle = tmp
+
+                else:
+
+                    err_nof_wrong = "Number of robots can't be smaller than 1! Aborting.."
+
+                    print err_nof_wrong
+
+                    warnings.warn(err_nof_wrong, SyntaxWarning)
+
+                    sys.exit(1)
+
+    def callSpawnScript(self):
+
+        print "running the spawn script"
+
+        import time
+
+        time.sleep(1)
+
+        for i in range (0,self.nof_turtle):
+
+            print 'spawn turtle no' + str(i)
+
+            subprocess.call(['roslaunch','gazebo_move_v2','generic_turtle.launch','turtle_id:=' + str(i),'x:=' + str(i),'y:=' + str(i-1)])
+
+            time.sleep(1)
+
+if __name__ == "__main__":
+
+    if len(sys.argv) < 2:
+
+        print usage()
+
+    else:
+
+        print("spawn_multi_robots script started") # make this a print incase roscore has not been started
+
+        smr = SpawnMultiModels()
+
+        smr.parseUserInputs()
+
+        smr.callSpawnScript()
