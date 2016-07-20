@@ -1,37 +1,43 @@
 #!/usr/bin/env python
 
-import subprocess, warnings, os, sys
+import warnings, os, sys
+import multiprocessing, subprocess
+import time, random
 
-def usage():
 
-    print '''Commands:
+#from sys import executable
+#from subprocess import Popen, CREATE_NEW_CONSOLE
 
-    -nof_turtle <number> - optinal: number of turtlebots that shall be spawned. Has to be a positive number!
+usage =  '''
+#########################################################################
 
-                                     If left empty, the default is 1.
+Spawn Multi Robots Script
 
+Commands:
+
+    -nof_turtle <number>   optinal parameter: number of turtlebots that
+                           shall be spawned. Has to be a positive number!
+                           If left empty, the default is 1.
+
+
+#########################################################################
     '''
 
-    sys.exit(1)
+#class SpawnMultiModels():
 
-class SpawnMultiModels():
+nof_turtle              = 1
 
-    def __init__(self):
+def parseUserInputs():
 
-        self.nof_turtle              = 1
+    for i in range(0,len(sys.argv)):
 
+        if sys.argv[i] == '-h' or sys.argv[i] == '--help' or sys.argv[i] == '-help':
 
-    def parseUserInputs(self):
-
-        for i in range(0,len(sys.argv)):
-
-          if sys.argv[i] == '-h' or sys.argv[i] == '--help' or sys.argv[i] == '-help':
-
-            usage()
+            print usage
 
             sys.exit(1)
 
-          if sys.argv[i] == '-nof_turtle':
+        if sys.argv[i] == '-nof_turtle':
 
             if len(sys.argv) > i+1:
 
@@ -39,46 +45,88 @@ class SpawnMultiModels():
 
                 if tmp >= 1:
 
-                    self.nof_turtle = tmp
+                    global nof_turtle
+
+                    nof_turtle = tmp
 
                 else:
 
                     err_nof_wrong = "Number of robots can't be smaller than 1! Aborting.."
 
-                    print err_nof_wrong
+                    print(err_nof_wrong)
 
                     warnings.warn(err_nof_wrong, SyntaxWarning)
 
                     sys.exit(1)
 
-    def callSpawnScript(self):
+def callSpawnScript(_nof_turtle):
 
-        print "running the spawn script"
+    print("running the spawn script")
 
-        import time
 
-        time.sleep(1)
+    time.sleep(2)
 
-        for i in range (0,self.nof_turtle):
+    for i in range (1,_nof_turtle+1):
 
-            print 'spawn turtle no' + str(i)
+        print("spawn turtle no " + str(i))
 
-            subprocess.call(['roslaunch','gazebo_move_v2','generic_turtle.launch','turtle_id:=' + str(i),'x:=' + str(i),'y:=' + str(i-1)])
+        string_ary_to_call = ['roslaunch','gazebo_move_v2','generic_turtle.launch','turtle_id:=' + str(i),'x:=' + str(i),'y:=' + str(i-1)]
 
-            time.sleep(1)
+        subprocess.call(string_ary_to_call)
+
+        time.sleep(2)
+
+def callSpawnScriptMultiProc(_nof_turtle):
+
+    print("running the multi proc spawn script " + str(_nof_turtle))
+
+
+    time.sleep(5)
+
+    #count = multiprocessing.cpu_count()
+
+    count = _nof_turtle #as many join processes as turtles!
+
+    print("pool count " + str(count))
+
+    pool = multiprocessing.Pool(processes=count)
+
+    for i in range (1,_nof_turtle+1):
+
+        print("spawn turtle no " + str(i))
+
+        string_ary_to_call = "roslaunch gazebo_move_v2 generic_turtle.launch turtle_id:=%s x:=%s y:=%s" % (i,i-1,i-1.5)
+
+        time.sleep(3)
+
+        pool.apply_async(dowork,args=(string_ary_to_call,))
+
+    pool.close()
+
+    pool.join()
+
+
+def dowork(cmd):
+
+    print("doing some heavy work in parallel..")
+
+    time.sleep(random.uniform(0, 2)) # sleep between 1-2 sec
+
+    return subprocess.call(cmd, shell=True)
+
 
 if __name__ == "__main__":
 
     if len(sys.argv) < 2:
 
-        print usage()
+        print usage
 
     else:
 
         print("spawn_multi_robots script started") # make this a print incase roscore has not been started
 
-        smr = SpawnMultiModels()
+        parseUserInputs()
 
-        smr.parseUserInputs()
+        #smr.callSpawnScript()
 
-        smr.callSpawnScript()
+        callSpawnScriptMultiProc(nof_turtle)
