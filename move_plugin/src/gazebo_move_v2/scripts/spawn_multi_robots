@@ -15,9 +15,14 @@ Spawn Multi Robots Script
 
 Commands:
 
-    -nof_turtle <number>   optinal parameter: number of turtlebots that
-                           shall be spawned. Has to be a positive number!
-                           If left empty, the default is 1.
+    -nof_turtle <number>    optinal parameter: number of turtlebots that
+                            shall be spawned. Has to be a positive number!
+                            If left empty, the default is 1.
+
+
+    -nav <boolean>          optional parameter: boolean if the navigation
+                            shall be enabled or disabled
+                            If left empty, the default is true
 
 
 #########################################################################
@@ -26,6 +31,7 @@ Commands:
 #class SpawnMultiModels():
 
 nof_turtle              = 1
+nav = "true"
 
 def parseUserInputs():
 
@@ -59,33 +65,33 @@ def parseUserInputs():
 
                     sys.exit(1)
 
-def callSpawnScript(_nof_turtle):
+        if sys.argv[i] == '-nav':
 
-    print("running the spawn script")
+            if len(sys.argv) > i+1:
 
+                global nav
 
-    time.sleep(2)
+                nav = str(sys.argv[i+1])
 
-    for i in range (1,_nof_turtle+1):
+            else:
 
-        print("spawn turtle no " + str(i))
+                    err_nof_wrong = "Please specify a boolean (true/false) for the navigation! Aborting.."
 
-        string_ary_to_call = ['roslaunch','gazebo_move_v2','generic_turtle.launch','turtle_id:=' + str(i),'x:=' + str(i),'y:=' + str(i-1)]
+                    print(err_nof_wrong)
 
-        subprocess.call(string_ary_to_call)
+                    warnings.warn(err_nof_wrong, SyntaxWarning)
 
-        time.sleep(2)
+                    sys.exit(1)
 
-def callSpawnScriptMultiProc(_nof_turtle):
+def callSpawnScriptMultiProc(_nof_turtle, _nav):
 
     print("running the multi proc spawn script " + str(_nof_turtle))
-
 
     time.sleep(5)
 
     #count = multiprocessing.cpu_count()
 
-    count = _nof_turtle #as many join processes as turtles!
+    count = _nof_turtle # as many processes as turtles!
 
     print("pool count " + str(count))
 
@@ -95,7 +101,7 @@ def callSpawnScriptMultiProc(_nof_turtle):
 
         print("spawn turtle no " + str(i))
 
-        string_ary_to_call = "roslaunch gazebo_move_v2 generic_turtle.launch turtle_id:=%s x:=%s y:=%s" % (i,i-1,i-1.5)
+        string_ary_to_call = "roslaunch gazebo_move_v2 generic_turtle.launch turtle_id:=%s x:=%s y:=%s nav:=%s" % (i,i-1,i-1.5,_nav)
 
         time.sleep(3)
 
@@ -110,9 +116,11 @@ def dowork(cmd):
 
     print("doing some heavy work in parallel..")
 
-    time.sleep(random.uniform(0, 2)) # sleep between 1-2 sec
+    time.sleep(random.uniform(0, 2)) # sleep between 1-2 sec to dristribute the robot joining
 
-    return subprocess.call(cmd, shell=True)
+    #return subprocess.call(cmd, shell=True)
+    return subprocess.check_call(cmd, shell=True)
+
 
 
 if __name__ == "__main__":
@@ -127,6 +135,4 @@ if __name__ == "__main__":
 
         parseUserInputs()
 
-        #smr.callSpawnScript()
-
-        callSpawnScriptMultiProc(nof_turtle)
+        callSpawnScriptMultiProc(nof_turtle,nav)
