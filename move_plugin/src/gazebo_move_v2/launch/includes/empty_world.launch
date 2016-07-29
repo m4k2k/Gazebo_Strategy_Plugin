@@ -1,5 +1,13 @@
 <launch>
 
+<!--
+the empty_world is 99% the same as the empty_world of the turtlebot_gazebo package in turtlebot_simulation
+only gzclient_args are added (to the gazebo_gui node)
+
+example:
+<arg name="gzclient_args" value="-g libgazebo_move_v2.so" />
+-->
+
   <!-- these are the arguments you can pass this launch file, for example paused:=true -->
   <arg name="paused" default="false"/>
   <arg name="use_sim_time" default="true"/>
@@ -10,7 +18,7 @@
   <arg name="physics" default="ode"/>
   <arg name="verbose" default="false"/>
   <arg name="world_name" default="worlds/empty.world"/> <!-- Note: the world_name is with respect to GAZEBO_RESOURCE_PATH environmental variable -->
-  <arg name="gzclient_args" default="" /> <!-- example '-g myplugin.so' added by ML -->
+  <arg name="gzclient_args" default="" />
 
   <!-- set use_sim_time flag -->
   <group if="$(arg use_sim_time)">

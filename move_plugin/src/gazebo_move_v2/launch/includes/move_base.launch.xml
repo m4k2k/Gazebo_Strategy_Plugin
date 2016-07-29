@@ -8,6 +8,13 @@
   <include file="$(find turtlebot_navigation)/launch/includes/safety_controller.launch.xml"/>
 -->
 
+<!--
+formally this was part of the navigation package, since the veolicty_smoother and safety_controller needed fixings (see below)
+it was required to move the include path's to prevent overwriting by turtlebot updates.
+except the "new part" the move_base.launch is original
+the veloctiy_smoother and the safety_controller are the 99% the same, just small topic adjustments (removing the slashes)
+-->
+
 <!-- new part -->
 
     <node pkg="nodelet" type="nodelet" name="navigation_velocity_smoother" args="load yocs_velocity_smoother/VelocitySmootherNodelet mobile_base_nodelet_manager">
