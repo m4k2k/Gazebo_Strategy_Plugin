@@ -84,7 +84,6 @@ bool GazeboMove::CheckROS()
     return false;
 }
 
-
 /////////////////////////////////////////////
 /// \brief Destructor
 GazeboMove::~GazeboMove()
@@ -96,8 +95,6 @@ GazeboMove::~GazeboMove()
     }
     VecGoalClients.clear();
 
-//delete rc1.actionclient;
-//delete ac2;
     this->connections.clear();
     gazebo::gui::MouseEventHandler::Instance()->RemovePressFilter("glwidget"); // removes the mouse click subscription
 }
@@ -112,7 +109,6 @@ void GazeboMove::Load(int _argc, char** _argv)
     std::cout << std::endl << "Loading Gazebo Plugin " << PLUGIN_NAME << " version " << PLUGIN_VERSION << std::endl;
     this->connections.push_back(gazebo::event::Events::ConnectPreRender(boost::bind(&GazeboMove::Update, this)));
     gazebo::gui::MouseEventHandler::Instance()->AddPressFilter("glwidget", boost::bind(&GazeboMove::OnMouseButtonPress, this, _1)); // we filter all button release events
-    //QMessageBox::information(NULL, "msgbox 2", "Hi!");
 }
 
 bool GazeboMove::OnMouseButtonPress(const gazebo::common::MouseEvent& _event) //fetches both left and right click
@@ -177,7 +173,7 @@ bool GazeboMove::OnMouseButtonPress(const gazebo::common::MouseEvent& _event) //
 
 GazeboMove::V_RobotGoalClient::iterator  GazeboMove::V_RobotGoalClient_GetIt(const std::string& _robotname, GazeboMove::V_RobotGoalClient& _cVec)
 {
-    //int index(0); // was used but changed to an iterator since a vector is better not used with indexes, better with iterators
+
     for (GazeboMove::V_RobotGoalClient::iterator it = _cVec.begin() ; it != _cVec.end(); it++)
     {
         const GazeboMove::RobotGoalClient& rc = *it;
@@ -270,7 +266,7 @@ void GazeboMove::Init()
 {
     std::cout << std::endl << "init" << std::endl;
     while(CheckROS())
-        break;//sleepLoud(5);
+        break;
 
 }
 
@@ -279,7 +275,7 @@ void GazeboMove::sleepLoud(unsigned int _sleepTime)
     std::cout << std::endl << "sleeping " << _sleepTime << " seconds" << std::endl;
     for(unsigned int i=0; i<_sleepTime; i++) gazebo::common::Time::Sleep(1);
 }
-//void GazeboMove::MoveRobotNav(geometry_msgs::Point& _target)
+
 void GazeboMove::MoveRobotNav(gazebo::math::Vector3& _target, MoveBaseClient* _ac)
 {
     //tell the action client that we want to spin a thread by default
@@ -300,7 +296,6 @@ void GazeboMove::MoveRobotNav(gazebo::math::Vector3& _target, MoveBaseClient* _a
         ROS_INFO("Sending goal [X]:%f [Y]:%f [W]:%f", goal.target_pose.pose.position.x, goal.target_pose.pose.position.y, goal.target_pose.pose.orientation.w);
 
         // Need boost::bind to pass in the 'this' pointer_safety
-        //ac.sendGoal(goal, boost::bind(&GazeboMove::doneCb, this, _1, _2), MoveBaseClient::SimpleActiveCallback(), MoveBaseClient::SimpleFeedbackCallback());
         _ac->sendGoal(goal,
                       boost::bind(&GazeboMove::goalCallback, this, _1, _2),
                       MoveBaseClient::SimpleActiveCallback(),

@@ -4,10 +4,6 @@ import warnings, os, sys
 import multiprocessing, subprocess
 import time, random
 
-
-#from sys import executable
-#from subprocess import Popen, CREATE_NEW_CONSOLE
-
 usage =  '''
 #########################################################################
 
@@ -27,8 +23,6 @@ Commands:
 
 #########################################################################
     '''
-
-#class SpawnMultiModels():
 
 nof_turtle              = 1
 nav = "true"
@@ -83,15 +77,14 @@ def parseUserInputs():
 
                     sys.exit(1)
 
+
 def callSpawnScriptMultiProc(_nof_turtle, _nav):
 
     print("running the multi proc spawn script " + str(_nof_turtle))
 
     time.sleep(5)
 
-    #count = multiprocessing.cpu_count()
-
-    count = _nof_turtle # as many processes as turtles!
+    count = _nof_turtle # as many processes as turtles spawning!
 
     print("pool count " + str(count))
 
@@ -101,11 +94,11 @@ def callSpawnScriptMultiProc(_nof_turtle, _nav):
 
         print("spawn turtle no " + str(i))
 
-        string_ary_to_call = "roslaunch gazebo_move_v2 generic_turtle.launch turtle_id:=%s x:=%s y:=%s nav:=%s" % (i,i-1,i-1.5,_nav)
+        string_to_call = "roslaunch gazebo_move_v2 generic_turtle.launch turtle_id:=%s x:=%s y:=%s nav:=%s" % (i,i-1,i-1.5,_nav)
 
         time.sleep(3)
 
-        pool.apply_async(dowork,args=(string_ary_to_call,))
+        pool.apply_async(dowork,args=(string_to_call,))
 
     pool.close()
 
@@ -116,13 +109,11 @@ def dowork(cmd):
 
     print("doing some heavy work in parallel..")
 
-    time.sleep(random.uniform(0, 2)) # sleep between 1-2 sec to dristribute the robot joining
+    time.sleep(random.uniform(0, 2)) # sleep between 0.0 - 2.0 sec to dristribute the robot joining
 
-    #return subprocess.call(cmd, shell=True)
     return subprocess.check_call(cmd, shell=True)
 
-
-
+	
 if __name__ == "__main__":
 
     if len(sys.argv) < 2:
