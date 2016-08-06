@@ -1,0 +1,67 @@
+<!--
+
+M.P.S.L., 2016
+
+Gazebo Startegy Plugin
+github.com/m4k2k
+
+Main launch file for dynamically launching multiple turtlebots
+
+-->
+
+<launch>
+
+	<!-- arguments -->
+	
+    <arg name="nof_turtle" default="1" doc="number of turtlebots in simulation"/>
+    <arg name="nav" default="true" doc="enable / disable navigation of the robots"/>
+	<arg name="world_file"  default="$(env TURTLEBOT_GAZEBO_WORLD_FILE)" doc="world file for gazebo"/>
+	<arg name="map_file" default="$(env TURTLEBOT_GAZEBO_MAP_FILE)" doc="the map for navigation"/>
+
+    
+    <!-- world -->
+
+	<!-- loads the physical world for the simulation -->
+    <include file="$(find gazebo_move_v2)/launch/includes/empty_world.launch">
+        <arg name="use_sim_time" value="true"/>
+        <arg name="debug" value="false"/>
+        <arg name="gui" value="true" />
+        <arg name="world_name" value="$(arg world_file)"/>
+        <arg name="gzclient_args" value="-g libgazebo_move_v2.so" if="$(arg nav)" />
+    </include>
+
+
+    <!-- map server-->
+
+	<!-- holds a map of the physical world for robot navigation -->
+    <group if="$(arg nav)">
+        <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" output="screen">
+            <param name="frame_id" value="/map" />
+        </node>
+    </group>
+
+
+    <!-- model spawner -->
+
+	<!-- uses a python node to spawn multiple robots -->
+    <node name="spawn_multi_robots" pkg="gazebo_move_v2" type="spawn_multi_robots.py" args="-nof_turtle $(arg nof_turtle) -nav $(arg nav)" output="screen"/>
+
+	
+	<!-- manual model spawning -->
+	<!--
+	<include file="$(find gazebo_move_v2)/launch/generic_turtle.launch">
+		<arg name="turtle_id" value="1"/>
+		<arg name="x" value="0"/>
+		<arg name="y" value="0" />
+	</include>
+
+	<include file="$(find gazebo_move_v2)/launch/generic_turtle.launch">
+		<arg name="turtle_id" value="2"/>
+		<arg name="x" value="1"/>
+		<arg name="y" value="0" />
+	</include>
+	-->
+
+</launch>
+
+

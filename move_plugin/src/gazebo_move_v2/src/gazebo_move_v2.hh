@@ -12,35 +12,59 @@ class GazeboMove : public gazebo::SystemPlugin
 
     typedef actionlib::SimpleActionClient<move_base_msgs::MoveBaseAction> MoveBaseClient;
 
+    struct RobotGoalClient
+    {
+        RobotGoalClient() {}
+        RobotGoalClient(const std::string& _name, MoveBaseClient* _actionclient): name(_name) , actionclient(_actionclient) {}
+        std::string name;                   ///< Name of the robot
+        MoveBaseClient* actionclient;       ///< Pointer to the actionclient
+    };
+
+    typedef std::vector<RobotGoalClient> V_RobotGoalClient;
+
+
 public:
     /// \brief Constructor
     /// \param[in] _parent Parent widget
     GazeboMove();
     /// \brief Destructor
     virtual ~GazeboMove();
-
     void Load(int _argc = 0, char **_argv = NULL) ; //redeclaring it, to be aware of it
 
 private:
 
-    MoveBaseClient* ac;
-     /// All the event connections.
+    V_RobotGoalClient VecGoalClients;
+
+    /// All the event connections.
     std::vector<gazebo::event::ConnectionPtr> connections;
 
     /// Pointer the user camera.
     gazebo::rendering::UserCameraPtr userCam;
 
-    boost::mutex sendNavGoalMutex;
-    gazebo::math::Vector2i mouseClickpos2D;
+    GazeboMove::V_RobotGoalClient::iterator V_RobotGoalClient_GetIt(const std::string& _robotname, GazeboMove::V_RobotGoalClient& _cVec);
+
     bool sendNavGoal;
 
-        void Init();
-    void Update();
+    bool isNavEnabled(std::string _robotNamespace);
+
+    std::string getNameSpaceOfTopic(const std::string& _topicFQDN);
+
+    void PrintNavEnabledRobots();
+
+    static bool HasNoMoveBaseActionGoal(const ros::master::TopicInfo& _info);
+
+
+    void Init();
+    void Update(); // only declared to be aware of
 
 
     bool CheckROS();
 
-    void MoveRobotNav(gazebo::math::Vector3& _target);
+    void MoveRobotNav(gazebo::math::Vector3& _target, GazeboMove::MoveBaseClient* _ac);
+
+
+
+
 
     void goalCallback(const actionlib::SimpleClientGoalState& _state,
                       const move_base_msgs::MoveBaseResult::ConstPtr& _result);
@@ -50,10 +74,6 @@ private:
     static void sleepLoud(unsigned int _sleepTime);
 
     bool OnMouseButtonPress(const gazebo::common::MouseEvent& _event);
-
-
-
-
 
 
 

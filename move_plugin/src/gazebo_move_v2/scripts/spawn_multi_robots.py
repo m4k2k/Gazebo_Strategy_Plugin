@@ -1,0 +1,129 @@
+#!/usr/bin/env python
+
+import warnings, os, sys
+import multiprocessing, subprocess
+import time, random
+
+usage =  '''
+#########################################################################
+
+Spawn Multi Robots Script
+
+Commands:
+
+    -nof_turtle <number>    optinal parameter: number of turtlebots that
+                            shall be spawned. Has to be a positive number!
+                            If left empty, the default is 1.
+
+
+    -nav <boolean>          optional parameter: boolean if the navigation
+                            shall be enabled or disabled
+                            If left empty, the default is true
+
+
+#########################################################################
+    '''
+
+nof_turtle              = 1
+nav = "true"
+
+def parseUserInputs():
+
+    for i in range(0,len(sys.argv)):
+
+        if sys.argv[i] == '-h' or sys.argv[i] == '--help' or sys.argv[i] == '-help':
+
+            print usage
+
+            sys.exit(1)
+
+        if sys.argv[i] == '-nof_turtle':
+
+            if len(sys.argv) > i+1:
+
+                tmp = int(float(sys.argv[i+1]))
+
+                if tmp >= 1:
+
+                    global nof_turtle
+
+                    nof_turtle = tmp
+
+                else:
+
+                    err_nof_wrong = "Number of robots can't be smaller than 1! Aborting.."
+
+                    print(err_nof_wrong)
+
+                    warnings.warn(err_nof_wrong, SyntaxWarning)
+
+                    sys.exit(1)
+
+        if sys.argv[i] == '-nav':
+
+            if len(sys.argv) > i+1:
+
+                global nav
+
+                nav = str(sys.argv[i+1])
+
+            else:
+
+                    err_nof_wrong = "Please specify a boolean (true/false) for the navigation! Aborting.."
+
+                    print(err_nof_wrong)
+
+                    warnings.warn(err_nof_wrong, SyntaxWarning)
+
+                    sys.exit(1)
+
+
+def callSpawnScriptMultiProc(_nof_turtle, _nav):
+
+    print("running the multi proc spawn script " + str(_nof_turtle))
+
+    time.sleep(5)
+
+    count = _nof_turtle # as many processes as turtles spawning!
+
+    print("pool count " + str(count))
+
+    pool = multiprocessing.Pool(processes=count)
+
+    for i in range (1,_nof_turtle+1):
+
+        print("spawn turtle no " + str(i))
+
+        string_to_call = "roslaunch gazebo_move_v2 generic_turtle.launch turtle_id:=%s x:=%s y:=%s nav:=%s" % (i,i-1,i-1.5,_nav)
+
+        time.sleep(3)
+
+        pool.apply_async(dowork,args=(string_to_call,))
+
+    pool.close()
+
+    pool.join()
+
+
+def dowork(cmd):
+
+    print("doing some heavy work in parallel..")
+
+    time.sleep(random.uniform(0, 2)) # sleep between 0.0 - 2.0 sec to dristribute the robot joining
+
+    return subprocess.check_call(cmd, shell=True)
+
+	
+if __name__ == "__main__":
+
+    if len(sys.argv) < 2:
+
+        print usage
+
+    else:
+
+        print("spawn_multi_robots script started") # make this a print incase roscore has not been started
+
+        parseUserInputs()
+
+        callSpawnScriptMultiProc(nof_turtle,nav)

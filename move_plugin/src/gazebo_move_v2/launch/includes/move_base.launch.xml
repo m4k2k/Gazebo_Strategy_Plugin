@@ -1,0 +1,66 @@
+<!--
+    ROS navigation stack with velocity smoother and safety (reactive) controller
+-->
+<launch>
+
+<!-- old:
+  <include file="$(find turtlebot_navigation)/launch/includes/velocity_smoother.launch.xml"/>
+  <include file="$(find turtlebot_navigation)/launch/includes/safety_controller.launch.xml"/>
+-->
+
+<!--
+formally this was part of the navigation package, since the veolicty_smoother and safety_controller needed fixings (see below)
+it was required to move the include path's to prevent overwriting by turtlebot updates.
+except the "new part" the move_base.launch is original
+the veloctiy_smoother and the safety_controller are the 99% the same, just small topic adjustments (removing the slashes)
+-->
+
+<!-- new part -->
+
+    <node name="navigation_velocity_smoother" pkg="nodelet" type="nodelet" args="load yocs_velocity_smoother/VelocitySmootherNodelet mobile_base_nodelet_manager">
+        <rosparam file="$(find turtlebot_bringup)/param/defaults/smoother.yaml" command="load"/>
+        <remap from="navigation_velocity_smoother/smooth_cmd_vel" to="cmd_vel_mux/input/navi"/>
+        <remap from="navigation_velocity_smoother/odometry" to="odom"/>
+        <remap from="navigation_velocity_smoother/robot_cmd_vel" to="mobile_base/commands/velocity"/>
+    </node>
+
+    <node name="kobuki_safety_controller" pkg="nodelet" type="nodelet" args="load kobuki_safety_controller/SafetyControllerNodelet mobile_base_nodelet_manager">
+        <remap from="kobuki_safety_controller/cmd_vel" to="cmd_vel_mux/input/safety_controller"/>
+        <remap from="kobuki_safety_controller/events/bumper" to="mobile_base/events/bumper"/>
+        <remap from="kobuki_safety_controller/events/cliff" to="mobile_base/events/cliff"/>
+        <remap from="kobuki_safety_controller/events/wheel_drop" to="mobile_base/events/wheel_drop"/>
+    </node>
+
+<!-- end of new part -->
+
+  <arg name="odom_frame_id"   default="odom"/>
+  <arg name="base_frame_id"   default="base_footprint"/>
+  <arg name="global_frame_id" default="map"/>
+  <arg name="odom_topic" default="odom" />
+  <arg name="laser_topic" default="scan" />
+  <arg name="custom_param_file" default="$(find turtlebot_navigation)/param/dummy.yaml"/>
+
+  <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
+    <rosparam file="$(find turtlebot_navigation)/param/costmap_common_params.yaml" command="load" ns="global_costmap" />
+    <rosparam file="$(find turtlebot_navigation)/param/costmap_common_params.yaml" command="load" ns="local_costmap" />
+    <rosparam file="$(find turtlebot_navigation)/param/local_costmap_params.yaml" command="load" />
+    <rosparam file="$(find turtlebot_navigation)/param/global_costmap_params.yaml" command="load" />
+    <rosparam file="$(find turtlebot_navigation)/param/dwa_local_planner_params.yaml" command="load" />
+    <rosparam file="$(find turtlebot_navigation)/param/move_base_params.yaml" command="load" />
+    <rosparam file="$(find turtlebot_navigation)/param/global_planner_params.yaml" command="load" />
+    <rosparam file="$(find turtlebot_navigation)/param/navfn_global_planner_params.yaml" command="load" />
+    <!-- external params file that could be loaded into the move_base namespace -->
+    <rosparam file="$(arg custom_param_file)" command="load" />
+
+    <!-- reset frame_id parameters using user input data -->
+    <param name="global_costmap/global_frame" value="$(arg global_frame_id)"/>
+    <param name="global_costmap/robot_base_frame" value="$(arg base_frame_id)"/>
+    <param name="local_costmap/global_frame" value="$(arg odom_frame_id)"/>
+    <param name="local_costmap/robot_base_frame" value="$(arg base_frame_id)"/>
+    <param name="DWAPlannerROS/global_frame_id" value="$(arg odom_frame_id)"/>
+
+    <remap from="cmd_vel" to="navigation_velocity_smoother/raw_cmd_vel"/>
+    <remap from="odom" to="$(arg odom_topic)"/>
+    <remap from="scan" to="$(arg laser_topic)"/>
+  </node>
+</launch>

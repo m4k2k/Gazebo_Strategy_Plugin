@@ -1,0 +1,85 @@
+<!--
+
+M.P.S.L., 2016
+
+Gazebo Startegy Plugin
+github.com/m4k2k
+
+abstracted TurtleBot launch file
+
+-->
+
+<launch>
+
+    <arg name="turtle_id" default="0"/>
+    <arg name="x" default="1"/>
+    <arg name="y" default="0"/>
+	<arg name="nav" default="true"/>
+
+    <arg name="battery"   value="$(optenv TURTLEBOT_BATTERY /proc/acpi/battery/BAT0)"/>
+    <arg name="base"      value="$(optenv TURTLEBOT_BASE kobuki)"/>
+    <arg name="stacks"    value="$(optenv TURTLEBOT_STACKS hexagons)"/>
+    <arg name="3d_sensor" value="$(optenv TURTLEBOT_3D_SENSOR kinect)"/>
+    <arg name="urdf_file" value="$(find xacro)/xacro.py '$(find turtlebot_description)/robots/$(arg base)_$(arg stacks)_$(arg 3d_sensor).urdf.xacro'" />
+
+    <param name="robot_description" command="$(arg urdf_file)"/>
+
+	
+    <group ns="robot$(arg turtle_id)">
+
+        <remap from="map" to ="/map" />
+
+        <arg name="tf_prefix" value="robot$(arg turtle_id)_tf" />
+        <param name="tf_prefix" value="$(arg tf_prefix)" />
+
+        <!-- spawn the turtle -->
+        <node name="spawn_turtlebot_model" pkg="gazebo_ros" type="spawn_model" args="-x $(arg x) -y $(arg y) -unpause -urdf -param /robot_description -model robot$(arg turtle_id)" output="screen"/>
+
+        <!-- Velocity muxer -->
+        <node name="mobile_base_nodelet_manager" pkg="nodelet" type="nodelet" args="manager" output="screen"/>
+
+        <node name="cmd_vel_mux" pkg="nodelet" type="nodelet" args="load yocs_cmd_vel_mux/CmdVelMuxNodelet mobile_base_nodelet_manager" output="screen">
+            <param name="yaml_cfg_file" value="$(find turtlebot_bringup)/param/mux.yaml" />
+            <remap from="cmd_vel_mux/output" to="mobile_base/commands/velocity"/>
+        </node>
+
+        <!-- Bumper/cliff to pointcloud (not working, as it needs sensors/core messages) -->
+        <include file="$(find turtlebot_bringup)/launch/includes/kobuki/bumper2pc.launch.xml"/>
+
+		<!-- state publisher -->
+        <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" output="screen">
+            <param name="publish_frequency" type="double" value="30.0" />
+        </node>
+
+        <!-- laser scanner -->
+        <node name="laserscan_nodelet_manager" pkg="nodelet" type="nodelet" args="manager" output="screen"/>
+
+        <node name="depthimage_to_laserscan" pkg="nodelet" type="nodelet" args="load depthimage_to_laserscan/DepthImageToLaserScanNodelet laserscan_nodelet_manager" output="screen">
+            <param name="scan_height" value="10"/>
+            <param name="output_frame_id" value="$(arg tf_prefix)/camera_depth_frame"/>
+            <remap from="image" to="camera/depth/image_raw"/>
+        </node>
+
+        <group if="$(arg nav)">
+
+            <!-- Localization -->
+            <include file="$(find turtlebot_navigation)/launch/includes/amcl.launch.xml">
+                <arg name="initial_pose_x" value="$(arg x)"/>
+                <arg name="initial_pose_y" value="$(arg y)"/>
+                <arg name="initial_pose_a" value="0.0"/>
+                <arg name="use_map_topic" value="true" />
+                <arg name="global_frame_id" value="/map"/>
+                <arg name="odom_frame_id" value="$(arg tf_prefix)/odom"/>
+                <arg name="base_frame_id" value="$(arg tf_prefix)/base_footprint"/>
+            </include>
+
+            <!-- Move base -->
+            <include file="$(find gazebo_move_v2)/launch/includes/move_base.launch.xml">
+                <arg name="global_frame_id" value="/map"/>
+            </include>
+
+        </group>
+
+    </group>
+
+</launch>
