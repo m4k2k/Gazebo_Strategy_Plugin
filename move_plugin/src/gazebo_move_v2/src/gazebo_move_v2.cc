@@ -8,52 +8,15 @@
 #include <gazebo/math/Rand.hh>
 
 #include <ros/ros.h>
+#include <geometry_msgs/Twist.h>
+#include <move_base_msgs/MoveBaseAction.h>
+#include <actionlib/client/simple_action_client.h>
 
 #include <gazebo/rendering/rendering.hh>
-//#include <gazebo/gazebo.hh> //rem
 #include <gazebo/transport/transport.hh>
 #include <gazebo/msgs/msgs.hh>
-//#include <gazebo/math/gzmath.hh>
 #include <gazebo/gui/gui.hh>
-//#include <gazebo/gui/GuiIface.hh>
-//#include <gazebo/gui/MouseEventHandler.hh>
-//#include <gazebo/common/MouseEvent.hh>
 #include <gazebo/common/common.hh>
-
-#include <geometry_msgs/Twist.h>
-
-#include <move_base_msgs/MoveBaseAction.h>
-
-#include <actionlib/client/simple_action_client.h>
-//#include <actionlib/client/terminal_state.h>
-//#include <actionlib/client/simple_client_goal_state.h>
-
-//#include <sstream>
-//#include <iostream>
-//#include <stdlib.h>
-
-//#include <algorithm>
-
-//#include <qt4/Qt/qmessagebox.h>
-//#include <QtCore>
-//#include <QtWidgets/QMessageBox>
-//#include <QMessageBox>
-
-//#include <boost/thread/mutex.hpp>
-//#include <boost/thread/thread.hpp>
-//#include <boost/thread.hpp>
-
-
-
-//GAZEBO_QT_HEADERS_H_
-
-//#include <QtGui>
-
-
-//using namespace gazebo; // instead of namespace gazebo { ... }
-
-// Register this plugin with the simulator
-//GZ_REGISTER_SYSTEM_PLUGIN(GazeboMove)
 
 #include "gazebo_move_v2.hh"
 
@@ -67,36 +30,19 @@ GazeboMove::GazeboMove()
 
 }
 
-bool GazeboMove::CheckROS()
-{
-    if(!ros::master::check() && !ros::isInitialized())
-    {
-        ROS_INFO("ROS is not initialized, trying to initialize it..");
-        int argc = 0;
-        char** argv = NULL;
-        ros::init(argc, argv, "gazebo", ros::init_options::NoSigintHandler | ros::init_options::AnonymousName);
-    }
-    else
-    {
-        ROS_INFO("ROS is initialized..");
-        return true;
-    }
-    return false;
-}
-
 /////////////////////////////////////////////
 /// \brief Destructor
 GazeboMove::~GazeboMove()
 {
+
     for (GazeboMove::V_RobotGoalClient::iterator it = VecGoalClients.begin() ; it != VecGoalClients.end(); it++)
     {
         const GazeboMove::RobotGoalClient& rc = *it;
         delete rc.actionclient;
     }
     VecGoalClients.clear();
-
-    this->connections.clear();
     gazebo::gui::MouseEventHandler::Instance()->RemovePressFilter("glwidget"); // removes the mouse click subscription
+
 }
 
 ///////////////////////////////////////////////
@@ -107,7 +53,7 @@ GazeboMove::~GazeboMove()
 void GazeboMove::Load(int _argc, char** _argv)
 {
     std::cout << std::endl << "Loading Gazebo Plugin " << PLUGIN_NAME << " version " << PLUGIN_VERSION << std::endl;
-    this->connections.push_back(gazebo::event::Events::ConnectPreRender(boost::bind(&GazeboMove::Update, this)));
+
     gazebo::gui::MouseEventHandler::Instance()->AddPressFilter("glwidget", boost::bind(&GazeboMove::OnMouseButtonPress, this, _1)); // we filter all button release events
 }
 
@@ -171,6 +117,30 @@ bool GazeboMove::OnMouseButtonPress(const gazebo::common::MouseEvent& _event) //
     return true;
 }
 
+bool GazeboMove::CheckROS()
+{
+    if(!ros::master::check() && !ros::isInitialized())
+    {
+        ROS_INFO("ROS is not initialized, trying to initialize it..");
+        int argc = 0;
+        char** argv = NULL;
+        ros::init(argc, argv, "gazebo", ros::init_options::NoSigintHandler | ros::init_options::AnonymousName);
+    }
+    else
+    {
+        ROS_INFO("ROS is initialized..");
+        return true;
+    }
+    return false;
+}
+
+void GazeboMove::DebugMBox(const std::string& _message)
+{
+    QMessageBox msgBox;
+    msgBox.setText(QString::fromStdString(_message));
+    msgBox.exec();
+}
+
 GazeboMove::V_RobotGoalClient::iterator  GazeboMove::V_RobotGoalClient_GetIt(const std::string& _robotname, GazeboMove::V_RobotGoalClient& _cVec)
 {
 
@@ -231,14 +201,6 @@ bool GazeboMove::isNavEnabled(std::string _robotNamespace)
     return false;
 }
 
-
-/////////////////////////////////////////////
-/// \brief Called every PreRender event. See the Load function.
-void GazeboMove::Update()
-{
-
-}
-
 void GazeboMove::PrintNavEnabledRobots()
 {
     ros::master::V_TopicInfo master_topics;
@@ -259,15 +221,16 @@ void GazeboMove::PrintNavEnabledRobots()
     std::cout << std::endl;
 }
 
+
 /////////////////////////////////////////////
 // \brief called once after Load
 // \brief loaded after other plugins run through Load and Constructor
+// \brief loaded after Gazebo is loaded completly
 void GazeboMove::Init()
 {
     std::cout << std::endl << "init" << std::endl;
     while(CheckROS())
         break;
-
 }
 
 void GazeboMove::sleepLoud(unsigned int _sleepTime)
@@ -323,115 +286,4 @@ void GazeboMove::goalCallback(const actionlib::SimpleClientGoalState& _state, co
 
 GZ_REGISTER_SYSTEM_PLUGIN(GazeboMove)
 
-/*
-
-void GazeboMove::Constr()
-{
-    this->counter = 0;
-
-    // Set the frame background and foreground colors
-    this->setStyleSheet(
-        "QFrame { background-color : rgba(100, 100, 100, 255); color : white; }");
-
-    // Create the main layout
-    QHBoxLayout *mainLayout = new QHBoxLayout;
-
-    // Create the frame to hold all the widgets
-    QFrame *mainFrame = new QFrame();
-
-    // Create the layout that sits inside the frame
-    QVBoxLayout *frameLayout = new QVBoxLayout();
-
-    // Create a push button, and connect it to the OnButton function
-    QPushButton *btnSpawnSphere = new QPushButton(tr("Spawn Object"));
-    connect(btnSpawnSphere, SIGNAL(clicked()), this, SLOT(OnButton_btnSpawnSphere()));
-
-    QPushButton *btnMoveRobot = new QPushButton(tr("Move Robot"));
-    connect(btnMoveRobot, SIGNAL(clicked()), this, SLOT(OnButton_btnMoveRobot()));
-
-    QPushButton *btnTest = new QPushButton(tr("Test"));
-    connect(btnTest, SIGNAL(clicked()), this, SLOT(OnButton_btnTest()));
-
-
-    // Add the button to the frame's layout
-    frameLayout->addWidget(btnSpawnSphere);
-    frameLayout->addWidget(btnMoveRobot);
-    frameLayout->addWidget(btnTest);
-
-    // Add frameLayout to the frame
-    mainFrame->setLayout(frameLayout);
-
-    // Add the frame to the main layout
-    mainLayout->addWidget(mainFrame);
-
-    // Remove margins to reduce space
-    frameLayout->setContentsMargins(0, 0, 0, 0);
-    mainLayout->setContentsMargins(0, 0, 0, 0);
-
-    this->setLayout(mainLayout);
-
-    // Position and resize this widget
-    this->move(10, 10);
-    //this->resize(120, 30);
-    this->resize(160, 130);
-
-    // Create a node for transportation
-    this->node = transport::NodePtr(new transport::Node());
-    this->node->Init();
-    this->factoryPub = this->node->Advertise<msgs::Factory>("~/factory");
-    }
-*/
-
-
-
-/*
-/////////////////////////////////////////////////
-void GazeboMove::OnButton_btnTest()
-{
-    QMessageBox msgBox;
-    msgBox.setText("msgbox 1");
-    msgBox.exec();
-
-    QMessageBox::information(NULL, "msgbox 2", "Hi!");
-
-
-}
-*/
-
-/*
-/////////////////////////////////////////////////
-void GazeboMove::OnButton_btnSpawnSphere()
-{
-    std::ostringstream newModelStr;
-    newModelStr << "<sdf version ='" << SDF_VERSION << "'>"
-                << "<model name='plugin_unit_sphere_" << this->counter++ << "'>"
-                << "  <pose>0 0 1.5 0 0 0</pose>"
-                << "  <link name='link'>"
-                << "    <inertial><mass>1.0</mass></inertial>"
-                << "    <collision name='collision'>"
-                << "      <geometry>"
-                << "        <sphere><radius>0.5</radius></sphere>"
-                << "      </geometry>"
-                << "    </collision>"
-                << "    <visual name ='visual'>"
-                << "      <geometry>"
-                << "        <sphere><radius>0.5</radius></sphere>"
-                << "      </geometry>"
-                << "      <material>"
-                << "        <script>"
-                << "          <uri>file://media/materials/scripts/gazebo.material</uri>"
-                << "          <name>Gazebo/Grey</name>"
-                << "        </script>"
-                << "      </material>"
-                << "    </visual>"
-                << "  </link>"
-                << "  </model>"
-                << "</sdf>";
-
-    // Send the model to the gazebo server
-    msgs::Factory msg;
-    msg.set_sdf(newModelStr.str());
-    this->factoryPub->Publish(msg);
-}
-*/
-
+/* ############################################ CODE END ############################################ */

@@ -8,20 +8,18 @@
 
 class GazeboMove : public gazebo::SystemPlugin
 {
-    // Q_OBJECT
 
     typedef actionlib::SimpleActionClient<move_base_msgs::MoveBaseAction> MoveBaseClient;
 
     struct RobotGoalClient
     {
         RobotGoalClient() {}
-        RobotGoalClient(const std::string& _name, MoveBaseClient* _actionclient): name(_name) , actionclient(_actionclient) {}
+        RobotGoalClient(const std::string& _name, MoveBaseClient* _actionclient): name(_name), actionclient(_actionclient) {}
         std::string name;                   ///< Name of the robot
         MoveBaseClient* actionclient;       ///< Pointer to the actionclient
     };
 
     typedef std::vector<RobotGoalClient> V_RobotGoalClient;
-
 
 public:
     /// \brief Constructor
@@ -29,14 +27,11 @@ public:
     GazeboMove();
     /// \brief Destructor
     virtual ~GazeboMove();
-    void Load(int _argc = 0, char **_argv = NULL) ; //redeclaring it, to be aware of it
+    void Load(int _argc = 0, char **_argv = NULL) ; // Called before Gazebo is loaded.
 
 private:
 
     V_RobotGoalClient VecGoalClients;
-
-    /// All the event connections.
-    std::vector<gazebo::event::ConnectionPtr> connections;
 
     /// Pointer the user camera.
     gazebo::rendering::UserCameraPtr userCam;
@@ -53,18 +48,11 @@ private:
 
     static bool HasNoMoveBaseActionGoal(const ros::master::TopicInfo& _info);
 
-
-    void Init();
-    void Update(); // only declared to be aware of
-
+    void Init(); // Called after Gazebo has been loaded
 
     bool CheckROS();
 
     void MoveRobotNav(gazebo::math::Vector3& _target, GazeboMove::MoveBaseClient* _ac);
-
-
-
-
 
     void goalCallback(const actionlib::SimpleClientGoalState& _state,
                       const move_base_msgs::MoveBaseResult::ConstPtr& _result);
@@ -75,48 +63,11 @@ private:
 
     bool OnMouseButtonPress(const gazebo::common::MouseEvent& _event);
 
-
-
-//    class communication
-//    {
-//        public ros::Publisher pub;
-//        public ros::NodeHandle nod;
-//    }
-//
-//private:
-//    communication com;
-
-    /*
-    private:
-            ros::NodeHandle nod;
-
-    */
-
-    //ros::Publisher * pub;
-
-
-//      public: int main();
-
-    /*
-
-        /// \brief Counter used to create unique model names
-    private:
-        unsigned int counter;
-
-
-
-        /// \brief Node used to establish communication with gzserver.
-    private:
-        transport::NodePtr node;
-
-
-        /// \brief Publisher of factory messages.
-    private:
-        transport::PublisherPtr factoryPub;
-    */
-
-
+    void DebugMBox(const std::string& message);
 
 };
 
 #endif
+
+
+/* ############################################ CODE END ############################################ */
