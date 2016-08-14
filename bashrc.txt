@@ -143,3 +143,13 @@ export PKG_CONFIG_PATH=/usr/lib/x86_64-linux-gnu/pkgconfig:$PKG_CONFIG_PATH
 
 # goto default folder
 cd ~/Gazebo_Strategy_Plugin/move_plugin
+
+
+# overwrite ROS MASTER (original: http://localhost:11311)
+#export ROS_MASTER_URI=http://192.168.137.10:11311 # turtlebot
+#export ROS_HOSTNAME=localhost
+export ROS_IP=192.168.137.9 # local ip
+
+# experimental for relay / use the strategy plugin with simulation and hardware simultaneously
+export  TURTLEBOT_GAZEBO_MAP_FILE=~/Gazebo_Strategy_Plugin/move_plugin/src/gazebo_move_v2/maps/empty.yaml
+

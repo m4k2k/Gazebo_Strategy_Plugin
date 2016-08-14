@@ -1,5 +1,10 @@
 *.*~
 /move_plugin/build/*
 /move_plugin/devel/*.*
-/move_plugin/devel/lib/pkgconfig/*
+/move_plugin/devel/lib/*/*
+# /move_plugin/devel/lib/pkgconfig/*
+# /move_plugin/devel/lib/python2.7/*
 /move_plugin/devel/share/*
+/move_plugin/devel/include/*
+
+/move_plugin/src/multimaster_experimental/*

@@ -12,13 +12,14 @@ Main launch file for dynamically launching multiple turtlebots
 <launch>
 
 	<!-- arguments -->
-	
+
     <arg name="nof_turtle" default="1" doc="number of turtlebots in simulation"/>
     <arg name="nav" default="true" doc="enable / disable navigation of the robots"/>
 	<arg name="world_file"  default="$(env TURTLEBOT_GAZEBO_WORLD_FILE)" doc="world file for gazebo"/>
 	<arg name="map_file" default="$(env TURTLEBOT_GAZEBO_MAP_FILE)" doc="the map for navigation"/>
+	<arg name="remote" default="false"/>
 
-    
+
     <!-- world -->
 
 	<!-- loads the physical world for the simulation -->
@@ -46,9 +47,7 @@ Main launch file for dynamically launching multiple turtlebots
 	<!-- uses a python node to spawn multiple robots -->
     <node name="spawn_multi_robots" pkg="gazebo_move_v2" type="spawn_multi_robots.py" args="-nof_turtle $(arg nof_turtle) -nav $(arg nav)" output="screen"/>
 
-	
-	<!-- manual model spawning -->
-	<!--
+    <!-- manual model spawning
 	<include file="$(find gazebo_move_v2)/launch/generic_turtle.launch">
 		<arg name="turtle_id" value="1"/>
 		<arg name="x" value="0"/>
@@ -60,7 +59,24 @@ Main launch file for dynamically launching multiple turtlebots
 		<arg name="x" value="1"/>
 		<arg name="y" value="0" />
 	</include>
-	-->
+    -->
+
+
+    <!-- experimental -->
+
+    <!-- remote robot (e.g. hardware) goal relay -->
+    <!-- this requires the foreign_relay package and advanced ROS knowledge -->
+    <!-- 1. set the ip adress to the ip of the remote robot -->
+    <!-- 2. set the ROS_IP variable to your ip adress -->
+    <!-- 3. configure relay topics, topic1 = remote, topic2 = local -->
+    <!-- 4. at least one topic message needs to be sent in order set up the relay -->
+    <!-- 5. p.r.n. set the amcl mapfile variable local and remote to gazebo_move_v2/maps/empty.yaml -->
+    <group if="$(arg remote)">
+      <node name="foreign_relay_goal_msgs" pkg="foreign_relay" type="foreign_relay" output="screen"
+       	args="adv http://192.168.137.10:11311 /move_base/goal /robot1/move_base/goal" />
+       	<!--="adv http://REMOTEIP:REMOTE_PORT /REMOTE_TOPIC   /LOCAL_TOPIC           -->
+        <!-- alternative cmdline: rosrun foreign_relay foreign_relay adv http://192.168.137.10:11311 /move_base/goal /robot1/move_base/goal -->
+    </group>
 
 </launch>
 
