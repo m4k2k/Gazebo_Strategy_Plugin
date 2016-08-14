@@ -124,10 +124,8 @@ source /opt/ros/indigo/setup.bash
 # setup Gazebo
 source /usr/share/gazebo/setup.sh
 
-# setup temp plugin path
-#export GAZEBO_PLUGIN_PATH=~/Gazebo_Strategy_Plugin/wkspace/gazebo_plugins_build:$GAZEBO_PLUGIN_PATH
-#export GAZEBO_PLUGIN_PATH=~/Gazebo_Strategy_Plugin/wkspace/guitest/build
-export GAZEBO_PLUGIN_PATH=~/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib:$GAZEBO_PLUGIN_PATH
+# setup gazebo plugin path
+#export GAZEBO_PLUGIN_PATH=~/Gazebo_Strategy_Plugin/wkspace/move_plugin/devel/lib:$GAZEBO_PLUGIN_PATH
 
 # import the workspace (with turtlebot)
 #source ~/Gazebo_Strategy_Plugin/turtle/overlayws/devel/setup.bash

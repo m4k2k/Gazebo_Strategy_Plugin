@@ -21,7 +21,7 @@
 #include "gazebo_move_v2.hh"
 
 #define PLUGIN_NAME "GazeboMove"
-#define PLUGIN_VERSION "2.04"
+#define PLUGIN_VERSION "3.10"
 
 /////////////////////////////////////////////
 /// \brief Constructor

@@ -1,6 +1,13 @@
 cmake_minimum_required(VERSION 2.8.3 FATAL_ERROR)
 project(gazebo_move_v2)
 
+
+###################
+## Configuration ##
+###################
+
+
+
 Set(ALL_TARGETS "" CACHE INTERNAL "")
 
 function(Add_library NAME)
@@ -39,7 +46,13 @@ endif()
 ## Find catkin macros and libraries
 find_package(catkin REQUIRED COMPONENTS
     gazebo_ros
-    roscpp)
+    roscpp
+    nodelet)
+
+catkin_package(
+    DEPENDS roscpp
+    gazebo_ros)
+    #nodelet)
 
 if(UNIX)
     if(EXISTS "/usr/share/OGRE/cmake/modules")
@@ -50,15 +63,11 @@ if(UNIX)
     endif(EXISTS "/usr/share/OGRE/cmake/modules")
 endif(UNIX)
 
-## System dependencies are found with CMake's conventions
-#include(FindBoost)
-#find_package(Boost ${MIN_BOOST_VERSION} REQUIRED system filesystem regex)
 find_package(Boost REQUIRED)
 find_package(Qt4 REQUIRED)
 find_package(Protobuf REQUIRED)
 find_package(gazebo REQUIRED)
 find_package(OGRE REQUIRED)
-#find_package(OIS REQUIRED)
 
 if(NOT QT4_FOUND)
     message(SEND_ERROR "Failed to find QT4.")
@@ -76,34 +85,14 @@ if(NOT OGRE_FOUND)
     message(SEND_ERROR "Failed to find OGRE.")
 endif()
 
-#message(WARNING "ogre_incl: ${OGRE_INCLUDE_DIRS}")
-#message(WARNING "ogre_lib: ${OGRE_LIBRARIES}")
-#message(WARNING "ogre_lib_dirs: ${OGRE_LIBRARY_DIRS}")
-
-
-#if(NOT OIS_FOUND)
-#    message(SEND_ERROR "Failed to find OIS.")
-#endif()
-
-include (${QT_USE_FILE})
-#add_definitions(${QT_DEFINITIONS})
-
 set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${GAZEBO_CXX_FLAGS} ${QT_DEFINITIONS} -Wall")
 message(STATUS "the compiler flags are: ${CMAKE_CXX_FLAGS}")
-
-#include(FindBoost)
-#find_package(Boost ${MIN_BOOST_VERSION} REQUIRED system filesystem regex)
-
-catkin_package(
-    DEPENDS roscpp
-    gazebo_ros)
-
-
-#QT4_WRAP_CPP(headers_MOC src/${PROJECT_NAME}.hh)
 
 ###########
 ## Build ##
 ###########
+
+include (${QT_USE_FILE})
 
 include_directories(
     ${Boost_INCLUDE_DIR}
@@ -130,6 +119,15 @@ target_link_libraries(${PROJECT_NAME}
     ${PROTOBUF_LIBRARIES}
     ${catkin_LIBRARIES}
     )
+
+# node testing
+#add_executable(turtlebot_gazebo_network src/turtlebot_gazebo_network.cc)
+#target_link_libraries(turtlebot_gazebo_network ${catkin_LIBRARIES})
+
+# nodelet testing
+#add_library(nodelet_test src/nodelet_test.cc)
+#target_link_libraries(nodelet_test ${catkin_LIBRARIES})
+
 
 
 #############
