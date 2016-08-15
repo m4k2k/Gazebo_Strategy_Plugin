@@ -73,7 +73,10 @@ Main launch file for dynamically launching multiple turtlebots
     <!-- 5. p.r.n. set the amcl mapfile variable local and remote to gazebo_move_v2/maps/empty.yaml -->
     <group if="$(arg remote)">
       <node name="foreign_relay_goal_msgs" pkg="foreign_relay" type="foreign_relay" output="screen"
-       	args="adv http://192.168.137.10:11311 /move_base/goal /robot1/move_base/goal" />
+
+                args="adv http://192.168.137.10:11311 /cmd_vel_mux/input/navi /robot1/cmd_vel_mux/input/navi" />
+        <!--	args="adv http://192.168.137.10:11311 /move_base/goal /robot1/move_base/goal"   /> -->
+
        	<!--="adv http://REMOTEIP:REMOTE_PORT /REMOTE_TOPIC   /LOCAL_TOPIC           -->
         <!-- alternative cmdline: rosrun foreign_relay foreign_relay adv http://192.168.137.10:11311 /move_base/goal /robot1/move_base/goal -->
     </group>
