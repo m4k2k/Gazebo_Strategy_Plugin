@@ -5,26 +5,26 @@ The Gazebo Strategy Plugin is an implementation of the Real Time Strategy based 
 The project is the result of an MSc dissertation project.
 
 
-# How to use it
+## How to use it
 
 an manual how to start the program
 
-# The folders
+## The Folders
 
 directory listing with more information
 
 
-# The branches
+## The Branches
 
 The three branches and more information
 
 
-# The releases
+## The Releases
 
 the four releases and more information
 
 
-# Additional Information
+## Additional Information
 
 some more information and background - and maybe a link to the dissertation
 
