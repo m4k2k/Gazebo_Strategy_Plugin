@@ -1,0 +1,6 @@
+{
+  "name": "Gazebo Strategy Plugin",
+  "tagline": "The Gazebo Strategy Plugin (RTS HSI)",
+  "body": "## Welcome to the GitHub webpage of The Gazebo Strategy Plugin (RTS HSI)\r\n\r\nIf you want to download the different prototypes, please proceed to the release section ([releases](https://github.com/m4k2k/Gazebo_Strategy_Plugin/releases))\r\n\r\nThe Gazebo Strategy Plugin is an implementation of the Real Time Strategy based Human-Swarm Interaction (RTS HSI) technique using ROS and Gazebo.\r\n\r\nThe project is the result of an MSc dissertation project.\r\n\r\n\r\n## How to use it\r\n\r\nan manual how to start the program\r\n\r\n## The Folders\r\n\r\ndirectory listing with more information\r\n\r\n\r\n## The Branches\r\n\r\nThe three branches and more information\r\n\r\n\r\n## The Releases\r\n\r\nthe four releases and more information\r\n\r\n\r\n## Additional Information\r\n\r\nsome more information and background - and maybe a link to the dissertation\r\n\r\n\r\nMore updates coming soon.\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
