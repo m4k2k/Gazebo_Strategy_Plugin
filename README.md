@@ -7,24 +7,36 @@ The project is the result of an MSc dissertation project.
 
 ## How to use it
 
-an manual how to start the program
+soon..
 
-## The Folders
+## The Folders and Files..
 
-directory listing with more information
+###### gazebo2-develop branch explained:
+
+TurtleBot_Hardware
+move_plugin
+.gitignore
+README.md
+bashrc.txt
 
 
 ## The Branches
 
-The three branches and more information
+branch | description
+----- | -----
+gazebo2-develop | current development branch (might not work)
+gazebo2-release | the latest release branch (should work)
+gazebo5-broken | historic broken gazebo5 development
+dissertation | freeze for of the dissertation version
+gh-pages | the webpage
 
 
 ## The Releases
 
-the four releases and more information
+see the [release page] (https://github.com/m4k2k/Gazebo_Strategy_Plugin/releases)
 
 
 ## Additional Information
 
-some more information and background - and maybe a link to the dissertation
+to be continued..
 
